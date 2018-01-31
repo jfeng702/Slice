@@ -1,2 +1,53 @@
 push to heroku lecture @ 4 pm?
 bench bnb part 1 has a master checklist
+
+1. heroku.com
+2. new button,
+app name
+US region
+3. download and install the heroku CLI
+and run the command.
+
+4. heroku login in command line
+
+Use heroku git CLI method.
+
+5.  for existing git repositories, add heroku remote
+
+6. add a key in package.json to tell heroku what versions.
+
+"scripts": {
+  "postinstall": "webpack"
+}
+"engines": {
+  "npm": "3.10.7",
+  "node": "6.7.0"
+}
+
+(check npm -v to get npm version)
+(check node -v to get node version)
+
+7. add buildpack
+Add nodejs buildpack first.
+then add ruby buildpack.
+
+8. push to heroku
+git add .
+git commit -m 'initial heroku push'
+(only push master branch to heroku)
+git push heroku master
+
+9. need to setup db
+
+10. heroku logs ( to debug)
+
+11. heroku run rails db:migrate
+(to migrate)
+(can prefix any command with 'heroku run')
+
+heroku run rails db:seed
+(to seed)
+
+12. look for asset directories.
+assets get put into a directory called 'public'
+need to use asset_url helper method to bind assets. 
