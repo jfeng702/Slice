@@ -4,11 +4,15 @@ class Api::UsersController < ApplicationController
     if @user.save
       login(@user)
       render 'api/users/show'
+      # render json: @user
     else
+      #how to return errors
+      render json: @user.errors.full_messages, status: 422
     end
   end
 
   private
+  
   def user_params
     params.require(:user).permit(:username, :password)
   end
