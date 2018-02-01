@@ -8,6 +8,7 @@ import { login, logout, signup } from './actions/session_actions';
 document.addEventListener('DOMContentLoaded', () => {
   const root = document.getElementById('root');
   let store;
+  console.log(window.currentUser);
   if (window.currentUser) {
     const preloadedState = { session: { currentUser: window.currentUser } };
     store = configureStore(preloadedState);

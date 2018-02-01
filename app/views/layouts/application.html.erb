@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <script id="bootstrap-current-user" type="text/javascript">
+      <% if logged_in? %>
+      	window.currentUser = <%= render("api/users/user.json.jbuilder",
+      		user: current_user).html_safe %>
+      <% end %>
+    </script>
+    
     <title>Slice</title>
     <%= csrf_meta_tags %>
 
