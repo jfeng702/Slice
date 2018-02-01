@@ -1,0 +1,58 @@
+[class*='login-form'] {
+  color: gray;
+}
+
+.login-form-container {
+  font: normal 15px 'Proxima Nova', sans-serif;
+  background: url("https://static.pexels.com/photos/218983/pexels-photo-218983.jpeg");
+  height: 100vh;
+  width: 100%;
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.header-group {
+  color: gray;
+}
+
+.header-name {
+  color: gray;
+}
+
+a:hover {
+ color: #c0c0c0;
+ cursor: pointer;
+}
+
+
+button {
+  background-color: gray;
+  border: none;
+  color: white;
+  padding: 5px 5px;
+  border-radius: 3px;
+  text-align: center;
+  font-size: 16px;
+}
+
+button:hover {
+  cursor: pointer;
+  color: #c0c0c0;
+}
+
+h1 {
+  font-size: 20px;
+}
+
+header {
+  font: normal 15px 'Proxima Nova', sans-serif;
+  background: url("https://static.pexels.com/photos/218983/pexels-photo-218983.jpeg");
+
+}
+
+.login-signup {
+  font: normal 15px 'Proxima Nova', sans-serif;
+  float: right;
+}

@@ -17,6 +17,7 @@ const Protected = ({ component: Component, path, loggedIn, exact }) => (
      loggedIn ? (
       <Component {...props} />
     ) : (
+      // change to splash
       <Redirect to="/login" />
     )
   )} />

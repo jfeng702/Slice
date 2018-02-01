@@ -11,8 +11,10 @@ class sessionForm extends React.Component {
       password: ''
     };
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleDemo = this.handleDemo.bind(this);
   }
 
+// what does this do?
   componentWillReceiveProps(nextProps) {
     if (nextProps.loggedIn) {
       this.props.history.push('/');
@@ -23,6 +25,15 @@ class sessionForm extends React.Component {
     return e => this.setState({
       [field]: e.currentTarget.value
     });
+  }
+
+  handleDemo(e) {
+    e.preventDefault();
+    const user = {
+      username: 'username',
+      password: 'password'
+    };
+    this.props.processForm({user});
   }
 
   handleSubmit(e) {
@@ -40,8 +51,8 @@ class sessionForm extends React.Component {
   }
 
   renderErrors() {
-    return (
-      <ul>
+    if (this.props.errors) {
+      return (<ul>
         {this.props.errors.map((error,i) => (
           <li key={`error-${i}`}>
             {error}
@@ -49,14 +60,14 @@ class sessionForm extends React.Component {
         ))}
       </ul>
     );
+    }
   }
 
   render() {
     return (
       <div className="login-form-container">
         <form>
-          <h3>Welcome to Slice</h3>
-          <br/>
+
           Please {this.props.formType} or {this.navLink()}
           {this.renderErrors()}
           <div className="login-form">
@@ -69,16 +80,18 @@ class sessionForm extends React.Component {
                 className="login-input"
                 />
             </label>
-          <label>Password:
-            <input
-              type="password"
-              value={this.state.password}
-              onChange={this.update('password')}
-              className="login-update"
-              />
-          </label>
-          <br/>
-          <button onClick={this.handleSubmit}>Submit</button>
+            <label>Password:
+              <input
+                type="password"
+                value={this.state.password}
+                onChange={this.update('password')}
+                className="login-update"
+                />
+            </label>
+            <br/>
+            <button onClick={this.handleSubmit}>Submit</button>
+            &nbsp;
+            <button onClick={this.handleDemo}>Demo</button>
           </div>
         </form>
       </div>
