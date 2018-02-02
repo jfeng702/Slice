@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 const sessionLinks = () => (
   <nav className="login-signup">
-    <img src={window.staticImage.headerImage}></img>
+    <img src='https://www.graphicsprings.com/filestorage/stencils/93228689ce11d950ebe07a89b12ecfbe.svg'></img>
     <Link to="/login">Login</Link>
     {<br></br>}
     <Link to="/signup">Sign Up</Link>
