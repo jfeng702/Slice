@@ -21,6 +21,13 @@ class Splash extends React.Component {
     ReactModal.setAppElement('#root');
   }
 
+  componentWillReceiveProps(newProps) {
+    // console log state here to check
+    if (this.props.location.pathname !== newProps.location.pathname) {
+      this.setState( { showModal: true, type: newProps.location.pathname.slice(1)});
+    }
+  }
+
   handleOpenModal (type) {
     return () =>  this.setState({ showModal: true, type });
   }
@@ -33,7 +40,8 @@ class Splash extends React.Component {
     return (
       <div className="splash">
         <div className="splash-nav">
-          <img src='https://i.imgur.com/T1xSEOK.png'></img>
+          {/*<img src='https://i.imgur.com/T1xSEOK.png'></img>*/}
+          <h2 className="splash-logo">slice</h2>
           <button onClick={this.handleOpenModal('login')}>Log In</button>
           &nbsp;
           <button onClick={this.handleOpenModal('signup')}>Sign Up</button>

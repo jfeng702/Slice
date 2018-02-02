@@ -26,7 +26,7 @@ class sessionForm extends React.Component {
   componentDidMount() {
     // var auto = document.getElementById('autofocus');
     document.forms[0].elements[0].focus();
-
+    console.log('newmount');
   }
 
 
@@ -42,7 +42,7 @@ class sessionForm extends React.Component {
       username: 'username',
       password: 'password'
     };
-    this.props.processForm({user});
+    this.props.login({user});
   }
 
   handleSubmit(e) {
@@ -65,15 +65,22 @@ class sessionForm extends React.Component {
 
   renderErrors() {
     if (this.props.errors) {
-      return (<ul>
-        {this.props.errors.map((error,i) => (
-          <li key={`error-${i}`}>
-            {error}
-          </li>
-        ))}
-      </ul>
-    );
+      return (
+        <ul className='error-display'>
+          {this.props.errors.map((error,i) => (
+            <li key={`error-${i}`}>
+              {error}
+            </li>
+          ))}
+        </ul>
+      );
     }
+  }
+
+  clearErrors() {
+    this.setState({
+      errors: null
+    });
   }
 
   render() {
@@ -81,11 +88,9 @@ class sessionForm extends React.Component {
     return (
       <div className="login-form-container">
         <form>
-
-          Please {this.props.formType}:
-          {/*
+          Please {this.props.formType}
+          &nbsp;
           or {this.navLink()}
-          */}
           {this.renderErrors()}
           <div className="login-form">
             <br/>
@@ -103,7 +108,6 @@ class sessionForm extends React.Component {
                 value={this.state.password}
                 onChange={this.update('password')}
                 className="login-update"
-                refs='auto'
                 />
             </label>
             <br/>

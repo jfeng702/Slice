@@ -9,7 +9,7 @@ import {
 } from 'react-router-dom';
 import GreetingContainer from './greeting/greeting_container';
 import SessionFormContainer from './session_form/session_form_container';
-import SplashContainer from './splash/splash_container';
+import Splash from './splash/splash';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 
 const App = () => (
@@ -22,9 +22,9 @@ const App = () => (
       <GreetingContainer/>
     </header>
     <Switch>
-      <AuthRoute exact path="/login" component={SessionFormContainer} />
-      <AuthRoute exact path="/signup" component={SessionFormContainer} />
-      <AuthRoute exact path="/" component={SplashContainer} />
+      <AuthRoute exact path="/login" component={Splash} />
+      <AuthRoute exact path="/signup" component={Splash} />
+      <AuthRoute exact path="/" component={Splash} />
     </Switch>
   </div>
 );

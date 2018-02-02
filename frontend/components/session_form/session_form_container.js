@@ -20,7 +20,8 @@ const mapDispatchToProps = (dispatch, { formType }) => {
   return {
     // this replaces processForm with login or signup actions.
     processForm: user => dispatch(processForm(user)),
-    formType
+    formType,
+    login: user => dispatch(login(user))
   };
 };
 

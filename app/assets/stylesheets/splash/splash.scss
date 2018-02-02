@@ -10,6 +10,15 @@
   background-size: cover;
 }
 
+.splash-logo {
+  font: normal 45px 'Proxima Nova', sans-serif;
+  top: 8px;
+  display:inline-block;
+  position: relative;
+  color: white;
+  left: 15px;
+}
+
 .splash-nav > button {
   font: normal 15px 'Proxima Nova', sans-serif;
   margin-right: 25px;
@@ -38,9 +47,10 @@
   transform: translate(-50%,0);
   position: absolute;
 
+
 }
 
 .splash-title > h1  {
   font: normal 30px 'Proxima Nova', sans-serif;
-
+text-shadow: 2px 2px 5px black, 0 0 25px blue, 0 0 5px darkblue;
 }
