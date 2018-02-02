@@ -1,3 +1,8 @@
+Controllers
+Photos-
+new create destroy show edit update index
+
+
 push to heroku lecture @ 4 pm?
 bench bnb part 1 has a master checklist
 
@@ -50,4 +55,4 @@ heroku run rails db:seed
 
 12. look for asset directories.
 assets get put into a directory called 'public'
-need to use asset_url helper method to bind assets. 
+need to use asset_url helper method to bind assets.

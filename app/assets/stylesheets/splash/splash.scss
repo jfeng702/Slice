@@ -15,6 +15,13 @@
   float: right;
 }
 
+.splash-logo img {
+  position: relative;
+  left: 20px;
+  top: 20px;
+  width:60px; /* you can use % */
+  height: auto;
+}
 
 
 .splash-title {
