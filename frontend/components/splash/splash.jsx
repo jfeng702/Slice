@@ -36,6 +36,7 @@ class Splash extends React.Component {
           <button onClick={this.handleOpenModal('login')}>Log In</button>
           <button onClick={this.handleOpenModal('signup')}>Sign Up</button>
         </div>
+
         <ReactModal
              isOpen={this.state.showModal}
              contentLabel="onRequestClose Example"
@@ -45,6 +46,11 @@ class Splash extends React.Component {
           >
             <SessionFormContainer formType={this.state.type}/>
         </ReactModal>
+
+        <div className="splash-title">
+          <h1>Capture moments in life, one slice at a time.</h1>
+
+        </div>
       </div>
 
     );

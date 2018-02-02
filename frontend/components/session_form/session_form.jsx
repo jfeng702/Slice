@@ -43,6 +43,10 @@ class sessionForm extends React.Component {
     this.props.processForm({user});
   }
 
+  submitOrDemoBtn({formType}) {
+
+  }
+
   navLink() {
     if (this.props.formType === 'login') {
       return <Link to="/signup">sign up instead</Link>;
