@@ -7,6 +7,7 @@ class sessionForm extends React.Component {
   constructor(props) {
     // console.log(props);
     super(props);
+
     this.state = {
       username: '',
       password: ''
@@ -21,6 +22,13 @@ class sessionForm extends React.Component {
       this.props.history.push('/');
     }
   }
+
+  componentDidMount() {
+    // var auto = document.getElementById('autofocus');
+    document.forms[0].elements[0].focus();
+
+  }
+
 
   update(field) {
     return e => this.setState({
@@ -95,10 +103,11 @@ class sessionForm extends React.Component {
                 value={this.state.password}
                 onChange={this.update('password')}
                 className="login-update"
+                refs='auto'
                 />
             </label>
             <br/>
-            
+
 
             <button onClick={this.handleSubmit}>Submit</button>
             &nbsp;

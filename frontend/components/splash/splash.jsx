@@ -32,10 +32,8 @@ class Splash extends React.Component {
   render () {
     return (
       <div className="splash">
-        <div className="splash-logo">
-          <img src='https://i.imgur.com/T1xSEOK.png'></img>
-        </div>
         <div className="splash-nav">
+          <img src='https://i.imgur.com/T1xSEOK.png'></img>
           <button onClick={this.handleOpenModal('login')}>Log In</button>
           &nbsp;
           <button onClick={this.handleOpenModal('signup')}>Sign Up</button>
