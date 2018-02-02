@@ -17,7 +17,9 @@ class Splash extends React.Component {
     this.handleCloseModal = this.handleCloseModal.bind(this);
   }
 
-
+  componentDidMount(){
+    ReactModal.setAppElement('#root');
+  }
 
   handleOpenModal (type) {
     return () =>  this.setState({ showModal: true, type });
