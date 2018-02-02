@@ -44,7 +44,7 @@ class Splash extends React.Component {
              overlayClassName="Overlay"
           >
             <SessionFormContainer formType={this.state.type}/>
-          </ReactModal>
+        </ReactModal>
       </div>
 
     );

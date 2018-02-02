@@ -17,8 +17,13 @@ const personalGreeting = (currentUser, logout) => (
   </hgroup>
 );
 
+// const Greeting = ({currentUser, logout}) => (
+//   currentUser ? personalGreeting(currentUser, logout) : sessionLinks()
+// );
+
 const Greeting = ({currentUser, logout}) => (
-  currentUser ? personalGreeting(currentUser, logout) : sessionLinks()
+  currentUser ? personalGreeting(currentUser, logout) : null
 );
+
 
 export default Greeting;

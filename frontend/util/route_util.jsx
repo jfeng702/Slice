@@ -8,6 +8,7 @@ const Auth = ({ component: Component, path, loggedIn, exact }) => (
       <Component {...props} />
     ) : (
       <Redirect to="/" />
+      // Change to /home
     )
   )} />
 );
@@ -18,7 +19,7 @@ const Protected = ({ component: Component, path, loggedIn, exact }) => (
       <Component {...props} />
     ) : (
       // change to splash
-      <Redirect to="/login" />
+      <Redirect to="/" />
     )
   )} />
 );

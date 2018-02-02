@@ -70,7 +70,10 @@ class sessionForm extends React.Component {
       <div className="login-form-container">
         <form>
 
-          Please {this.props.formType} or {this.navLink()}
+          Please {this.props.formType}
+          {/*
+          or {this.navLink()}
+          */}
           {this.renderErrors()}
           <div className="login-form">
             <br/>

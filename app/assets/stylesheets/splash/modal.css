@@ -1,18 +1,27 @@
 .Modal {
+
   position: absolute;
-  top: 40px;
-  left: 40px;
-  right: 40px;
-  bottom: 40px;
-  background-color: papayawhip;
+  top: 100px;
+  left: 50%;
+  right: 50%;
+  margin-left: -220px;
+  width: 200px;
+  padding: 20px;
+  background: #fff;
+  z-index: 3;
+  border-radius: 5px;
+  border: 1px solid #000;
 }
 
 .Overlay {
+  background: rgba(0,0,0,0.3);
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: black;
-  opacity: .5;
+  z-index: 2;
+
+
+  /* opacity: .5; */
 }
