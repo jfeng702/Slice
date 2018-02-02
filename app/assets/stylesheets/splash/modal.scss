@@ -4,13 +4,15 @@
   top: 100px;
   left: 50%;
   right: 50%;
-  margin-left: -220px;
+  // margin-left: -220px;
+  transform: translate(-50%,75%);
   width: 200px;
   padding: 20px;
   background: #fff;
   z-index: 3;
   border-radius: 5px;
   border: 1px solid #000;
+  font: normal 15px 'Proxima Nova', sans-serif;
 }
 
 .Overlay {
@@ -24,4 +26,8 @@
 
 
   /* opacity: .5; */
+}
+
+.login-form button {
+  color: white;
 }

@@ -74,7 +74,7 @@ class sessionForm extends React.Component {
       <div className="login-form-container">
         <form>
 
-          Please {this.props.formType}
+          Please {this.props.formType}:
           {/*
           or {this.navLink()}
           */}
@@ -98,6 +98,8 @@ class sessionForm extends React.Component {
                 />
             </label>
             <br/>
+            
+
             <button onClick={this.handleSubmit}>Submit</button>
             &nbsp;
             <button onClick={this.handleDemo}>Demo</button>

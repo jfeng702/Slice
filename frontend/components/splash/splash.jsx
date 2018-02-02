@@ -34,6 +34,7 @@ class Splash extends React.Component {
       <div className="splash">
         <div className="splash-nav">
           <button onClick={this.handleOpenModal('login')}>Log In</button>
+          &nbsp;
           <button onClick={this.handleOpenModal('signup')}>Sign Up</button>
         </div>
 
