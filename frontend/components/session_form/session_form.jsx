@@ -114,7 +114,7 @@ class sessionForm extends React.Component {
 
             <button className="submit-btn" onClick={this.handleSubmit}>Submit</button>
             &nbsp;
-            <button onClick={this.handleDemo}>Demo</button>
+            <button onClick={this.handleDemo}>Demo Login</button>
           </div>
         </form>
       </div>

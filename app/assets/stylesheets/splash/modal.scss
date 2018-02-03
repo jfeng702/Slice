@@ -13,6 +13,8 @@
   border-radius: 5px;
   border: 1px solid #000;
   font: normal 15px 'Proxima Nova', sans-serif;
+  // box-shadow: 1px 1px AliceBlue;
+
 }
 
 .error-display {
@@ -33,5 +35,6 @@
 }
 
 .login-form button {
-  color: white;
+  // color: white;
+  margin-top: 10px;
 }

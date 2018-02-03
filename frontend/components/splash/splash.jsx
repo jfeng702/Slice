@@ -64,7 +64,7 @@ class Splash extends React.Component {
         </ReactModal>
 
         <div className="splash-title">
-          <h1>Capture moments in life, one slice at a time.</h1>
+          <h1>Capture moments in life, one slice at a time</h1>
 
         </div>
       </div>
