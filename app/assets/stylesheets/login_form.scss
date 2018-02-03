@@ -1,10 +1,33 @@
 [class*='login-form'] {
   color: gray;
-  font-family: Helvetica;
+  font-family: arial;
+}
+
+.logn-form {
+  font-family: helvetica;
 }
 
 .login-signup img {
   height: 5px;
+}
+
+.error-display {
+  height: 10px;
+}
+
+.submit-btn {
+  width: 300px;
+}
+
+.login-input {
+  width: 300px;
+  font-family: helvetica;
+}
+
+.login-update {
+  width: 300px;
+  font-family: helvetica;
+
 }
 
 .header-group {
@@ -19,6 +42,8 @@ a:hover {
  color: #c0c0c0;
  cursor: pointer;
 }
+
+
 
 
 button {

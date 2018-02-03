@@ -17,6 +17,8 @@
   position: relative;
   color: white;
   left: 15px;
+  text-shadow: 2px 2px 5px black, 0 0 25px blue, 0 0 5px darkblue;
+
 }
 
 .splash-nav > button {
@@ -26,6 +28,8 @@
   position: relative;
   top: 20px;
   padding: 10px 20px;
+  background: transparent;
+  border: 2px solid white;
 }
 
 .splash-nav img {
@@ -52,5 +56,5 @@
 
 .splash-title > h1  {
   font: normal 30px 'Proxima Nova', sans-serif;
-text-shadow: 2px 2px 5px black, 0 0 25px blue, 0 0 5px darkblue;
+  text-shadow: 2px 2px 5px black, 0 0 25px blue, 0 0 5px darkblue;
 }

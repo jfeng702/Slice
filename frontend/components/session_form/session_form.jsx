@@ -26,6 +26,7 @@ class sessionForm extends React.Component {
   componentDidMount() {
     // var auto = document.getElementById('autofocus');
     document.forms[0].elements[0].focus();
+    this.props.clearErrors();
     console.log('newmount');
   }
 
@@ -57,9 +58,9 @@ class sessionForm extends React.Component {
 
   navLink() {
     if (this.props.formType === 'login') {
-      return <Link to="/signup">sign up instead</Link>;
+      return <Link onClick={() => this.props.clearErrors()} to="/signup">sign up instead</Link>;
     } else {
-      return <Link to="/login">log in instead</Link>;
+      return <Link onClick={() => this.props.clearErrors()} to="/login">log in instead</Link>;
     }
   }
 
@@ -87,33 +88,35 @@ class sessionForm extends React.Component {
     // debugger;
     return (
       <div className="login-form-container">
-        <form>
+        <form className="logn-form">
           Please {this.props.formType}
           &nbsp;
           or {this.navLink()}
           {this.renderErrors()}
           <div className="login-form">
             <br/>
-            <label>Username:
+            <label>
               <input
                 type="text"
                 value={this.state.username}
                 onChange={this.update('username')}
                 className="login-input"
+                placeholder="Username"
                 />
             </label>
-            <label>Password:
+            <label>
               <input
                 type="password"
                 value={this.state.password}
                 onChange={this.update('password')}
                 className="login-update"
+                placeholder="Password"
                 />
             </label>
             <br/>
 
 
-            <button onClick={this.handleSubmit}>Submit</button>
+            <button className="submit-btn" onClick={this.handleSubmit}>Submit</button>
             &nbsp;
             <button onClick={this.handleDemo}>Demo</button>
           </div>

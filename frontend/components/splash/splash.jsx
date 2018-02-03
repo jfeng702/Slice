@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import ReactModal from 'react-modal';
+import { connect } from 'react-redux';
+import { clearErrors } from '../../actions/session_actions';
 import SessionFormContainer from '../session_form/session_form_container';
 //has a nav bar, Sign Up button, and text in the center.
 //no need for state right? just links
@@ -19,10 +21,14 @@ class Splash extends React.Component {
 
   componentDidMount(){
     ReactModal.setAppElement('#root');
+    const { removeErrors } = this.props;
+    removeErrors();
   }
 
   componentWillReceiveProps(newProps) {
     // console log state here to check
+
+
     if (this.props.location.pathname !== newProps.location.pathname) {
       this.setState( { showModal: true, type: newProps.location.pathname.slice(1)});
     }
@@ -67,6 +73,10 @@ class Splash extends React.Component {
   }
 }
 
+const mapDispatchToProps = (dispatch) => {
+   return {
+     removeErrors: () => dispatch(clearErrors())
+   };
+};
 
-
-export default Splash;
+export default connect(null, mapDispatchToProps)(Splash);
