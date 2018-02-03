@@ -14,7 +14,7 @@ class Splash extends React.Component {
       showModal: false,
       type: 'login'
     };
-
+    
     this.handleOpenModal = this.handleOpenModal.bind(this);
     this.handleCloseModal = this.handleCloseModal.bind(this);
   }
@@ -58,17 +58,14 @@ class Splash extends React.Component {
              contentLabel="onRequestClose Example"
              onRequestClose={this.handleCloseModal}
              className="Modal"
-             overlayClassName="Overlay"
-          >
+             overlayClassName="Overlay">
             <SessionFormContainer formType={this.state.type}/>
         </ReactModal>
 
         <div className="splash-title">
           <h1>Capture moments in life, one slice at a time</h1>
-
         </div>
       </div>
-
     );
   }
 }

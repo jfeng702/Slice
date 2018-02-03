@@ -1,3 +1,16 @@
+# == Schema Information
+#
+# Table name: photos
+#
+#  id          :integer          not null, primary key
+#  img_url     :string           not null
+#  title       :string
+#  description :text
+#  owner_id    :integer          not null
+#  created_at  :datetime         not null
+#  updated_at  :datetime         not null
+#
+
 class Photo < ApplicationRecord
   validates :img_url, :owner_id, presence: true
 
@@ -6,10 +19,7 @@ class Photo < ApplicationRecord
     foreign_key: :owner_id,
     class_name: :User
 
-  belongs_to :album,
-    primary_key: :id,
-    foreign_key: :album_id,
-    class_name: :Album
+
 
 
 end

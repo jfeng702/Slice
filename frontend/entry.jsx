@@ -4,6 +4,7 @@ import * as SessionApiUtil from './util/session_api_util';
 import configureStore from './store/store';
 import Root from './components/root';
 import { login, logout, signup } from './actions/session_actions';
+import { fetchPhotos, fetchPhoto, createPhoto } from './util/photo_api_util';
 
 document.addEventListener('DOMContentLoaded', () => {
   const root = document.getElementById('root');
@@ -23,6 +24,9 @@ document.addEventListener('DOMContentLoaded', () => {
   window.login = login;
   window.signup = signup;
   window.logout = logout;
+  window.fetchPhotos = fetchPhotos;
+  window.fetchPhoto = fetchPhoto;
+  window.createPhoto = createPhoto;
 
 // TESTING END
 

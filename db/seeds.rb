@@ -5,3 +5,8 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+photos = Photo.create([{ img_url: 'https://static.pexels.com/photos/46710/pexels-photo-46710.jpeg' },
+ { owner_id: 1 }])
+
+users = User.create([{ username: 'James' }, { password: 'password' }])
