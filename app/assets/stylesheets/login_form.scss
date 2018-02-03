@@ -7,7 +7,11 @@
   font-family: helvetica;
 }
 
-.login-signup img {
+.logn-form > button {
+  padding: 10px;
+}
+
+.login-signup > img {
   height: 5px;
 }
 
@@ -16,18 +20,21 @@
 }
 
 .submit-btn {
-  width: 300px;
+  width: 100%;
+  background: #188fff;
+  height: 46px;
 }
 
 .login-input {
-  width: 300px;
+  width: 100%;
   font-family: helvetica;
+  height: 32px;
 }
 
 .login-update {
-  width: 300px;
+  width: 100%;
   font-family: helvetica;
-
+  height: 32px;
 }
 
 .header-group {
@@ -43,19 +50,6 @@ a:hover {
  cursor: pointer;
 }
 
-
-
-
-button {
-  background-color: gray;
-  border: none;
-  color: white;
-  padding: 5px 5px;
-  border-radius: 3px;
-  text-align: center;
-  font-size: 16px;
-}
-
 button:hover {
   cursor: pointer;
   color: #c0c0c0;
@@ -68,7 +62,6 @@ h1 {
 header {
   font: normal 15px 'Proxima Nova', sans-serif;
   background: url("https://static.pexels.com/photos/218983/pexels-photo-218983.jpeg");
-
 }
 
 .login-signup {

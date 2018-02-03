@@ -52,9 +52,6 @@ class sessionForm extends React.Component {
     this.props.processForm({user});
   }
 
-  submitOrDemoBtn({formType}) {
-
-  }
 
   navLink() {
     if (this.props.formType === 'login') {
@@ -89,8 +86,7 @@ class sessionForm extends React.Component {
     return (
       <div className="login-form-container">
         <form className="logn-form">
-          Please {this.props.formType}
-          &nbsp;
+          Please {this.props.formType}&nbsp;
           or {this.navLink()}
           {this.renderErrors()}
           <div className="login-form">
