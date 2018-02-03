@@ -30,8 +30,9 @@ input {
 }
 
 .error-display {
-  height: 30px;
-  display:flex;
+  // height: 30px;
+  position: absolute;
+
 }
 
 .submit-btn {
@@ -68,8 +69,6 @@ input:focus::-webkit-input-placeholder {
   color: dodgerblue;
 }
 
-
-
 .header-group {
   color: gray;
 }
@@ -77,8 +76,6 @@ input:focus::-webkit-input-placeholder {
 .header-name {
   color: gray;
 }
-
-
 
 header {
   font: normal 15px 'Proxima Nova', sans-serif;
