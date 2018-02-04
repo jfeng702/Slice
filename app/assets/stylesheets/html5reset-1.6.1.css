@@ -29,6 +29,15 @@ time, mark, audio, video {
 
 body {
     line-height:1;
+    margin: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
 }
 
 article,aside,details,figcaption,figure,

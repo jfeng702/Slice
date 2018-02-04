@@ -9,6 +9,7 @@ import {
 } from 'react-router-dom';
 import GreetingContainer from './greeting/greeting_container';
 import SessionFormContainer from './session_form/session_form_container';
+import PhotoIndexContainer from './photo/photo_index_container';
 import Splash from './splash/splash';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 
@@ -26,6 +27,7 @@ const App = () => (
       <AuthRoute exact path="/signup" component={Splash} />
       <AuthRoute exact path="/" component={Splash} />
     </Switch>
+      <Route exact path="/" component={ PhotoIndexContainer } />
   </div>
 );
 

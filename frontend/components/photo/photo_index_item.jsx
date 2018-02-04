@@ -2,9 +2,9 @@ import React from 'react';
 
 const PhotoIndexItem = ({photo}) => {
   return (
-    <li>
-      this.props.photo
-    </li>
+    <div className="media">
+      <img src={`${photo.img_url}`}/>
+    </div>
   );
 };
 
