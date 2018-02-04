@@ -5,6 +5,7 @@ import configureStore from './store/store';
 import Root from './components/root';
 import { login, logout, signup } from './actions/session_actions';
 import { fetchPhotos, fetchPhoto, createPhoto } from './actions/photo_actions';
+import { updatePhoto, deletePhoto } from './util/photo_api_util';
 
 document.addEventListener('DOMContentLoaded', () => {
   const root = document.getElementById('root');
@@ -26,6 +27,8 @@ document.addEventListener('DOMContentLoaded', () => {
   window.logout = logout;
   window.fetchPhoto = fetchPhoto;
   window.fetchPhotos = fetchPhotos;
+  window.updatePhoto = updatePhoto;
+  window.deletePhoto = deletePhoto;
 
 
 // TESTING END

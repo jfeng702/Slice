@@ -9,7 +9,6 @@ const Root = ({ store }) => (
   <Provider store={ store }>
     <HashRouter>
       <App/>
-      < PhotoIndexContainer />
     </HashRouter>
   </Provider>
 );

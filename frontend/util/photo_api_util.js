@@ -22,3 +22,17 @@ export const createPhoto = photo => (
     error: (err) => console.log(err)
   })
 );
+
+export const updatePhoto = photo => {
+  return $.ajax({
+    method: 'PATCH',
+    url: `api/photos/${photo.id}`
+  });
+};
+
+export const deletePhoto = id => {
+  return $.ajax({
+    method: 'DESTROY',
+    url: `api/photos/${id}`
+  });
+};
