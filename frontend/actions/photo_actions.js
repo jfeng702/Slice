@@ -32,8 +32,8 @@ export const removePhoto = id => {
   };
 };
 
-export const fetchPhoto = () => dispatch => {
-  return PhotoApiUtil.fetchPhoto()
+export const fetchPhoto = (id) => dispatch => {
+  return PhotoApiUtil.fetchPhoto(id)
     .then(serverPhoto => dispatch(receivePhoto(serverPhoto)),
       serverError => dispatch(receivePhotoErrors(serverError)));
 };
@@ -45,6 +45,11 @@ export const fetchPhotos = () => dispatch => {
 };
 
 export const deletePhoto = (id) => dispatch => {
-  return PhotoApiUtil.deletePhoto()
-    .then(post => dispatch(removePhoto(id)));
+  return PhotoApiUtil.deletePhoto(id)
+    .then(serverPhoto => dispatch(removePhoto(id)));
+};
+
+export const createPhoto = photo => dispatch => {
+  return PhotoApiUtil.createPhoto(photo)
+    .then(serverPhoto => dispatch(receivePhoto(serverPhoto)));
 };

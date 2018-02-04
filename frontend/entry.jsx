@@ -4,8 +4,8 @@ import * as SessionApiUtil from './util/session_api_util';
 import configureStore from './store/store';
 import Root from './components/root';
 import { login, logout, signup } from './actions/session_actions';
-import { fetchPhotos, fetchPhoto, createPhoto } from './actions/photo_actions';
-import { updatePhoto, deletePhoto } from './util/photo_api_util';
+import { } from './actions/photo_actions';
+import { updatePhoto, deletePhoto, fetchPhotos, fetchPhoto, createPhoto  } from './actions/photo_actions';
 
 document.addEventListener('DOMContentLoaded', () => {
   const root = document.getElementById('root');
@@ -29,6 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
   window.fetchPhotos = fetchPhotos;
   window.updatePhoto = updatePhoto;
   window.deletePhoto = deletePhoto;
+  window.createPhoto = createPhoto;
 
 
 // TESTING END

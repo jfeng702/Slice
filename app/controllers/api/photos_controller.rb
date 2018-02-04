@@ -11,7 +11,6 @@ class Api::PhotosController < ApplicationController
 
   def create
     @photo = Photo.new(photo_params)
-    @photo.owner_id = current_user.id
     if @photo.save
       render :show
     else
@@ -21,7 +20,7 @@ class Api::PhotosController < ApplicationController
 
   def destroy
     @photo = current_user.photos.find_by(id: params[:id])
-    photo.destroy
+    @photo.destroy
 
     render :show
   end
@@ -32,7 +31,7 @@ class Api::PhotosController < ApplicationController
   end
 
   def update
-    @photo = current_user.find_by(id: params[:id])
+    @photo = current_user.photos.find_by(id: params[:id])
 
     if @photo.update(photo_params)
       render :show
