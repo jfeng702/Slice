@@ -27,7 +27,7 @@ const App = () => (
       <AuthRoute exact path="/signup" component={Splash} />
       <AuthRoute exact path="/" component={Splash} />
     </Switch>
-      <Route exact path="/" component={ PhotoIndexContainer } />
+      <Route exact path="/homepage" component={ PhotoIndexContainer } />
   </div>
 );
 

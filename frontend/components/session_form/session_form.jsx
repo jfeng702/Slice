@@ -50,6 +50,9 @@ class sessionForm extends React.Component {
     e.preventDefault();
     const user = this.state;
     this.props.processForm({user});
+    this.props.history.push({
+      pathname: '/homepage'
+    });
   }
 
 
@@ -83,6 +86,7 @@ class sessionForm extends React.Component {
 
   render() {
     // debugger;
+    debugger;
     return (
       <div className="login-form-container">
         <form className="logn-form">
