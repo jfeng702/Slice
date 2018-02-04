@@ -11,6 +11,7 @@ class Api::PhotosController < ApplicationController
 
   def create
     @photo = Photo.new(photo_params)
+    @photo.owner_id = current_user.id
     if @photo.save
       render :show
     else
@@ -19,20 +20,25 @@ class Api::PhotosController < ApplicationController
   end
 
   def destroy
-    photo = Photo.find(params[:id])
+    @photo = current_user.photos.find_by(id: params[:id])
     photo.destroy
 
+    render :show
   end
 
   def show
     @photo = Photo.find(params[:id])
-  end
-
-  def edit
-    @photo = Photo.find(params[:id])
+    render :show
   end
 
   def update
+    @photo = current_user.find_by(id: params[:id])
+
+    if @photo.update(photo_params)
+      render :show
+    else
+      render json: @photo.errors.full_messages, status: 422
+    end
   end
 
   private
