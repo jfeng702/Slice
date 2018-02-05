@@ -10,6 +10,7 @@ import {
 import GreetingContainer from './greeting/greeting_container';
 import SessionFormContainer from './session_form/session_form_container';
 import PhotoIndexContainer from './photo/photo_index_container';
+import PhotoShowContainer from './photo/photo_show_container';
 import Splash from './splash/splash';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 
@@ -26,8 +27,9 @@ const App = () => (
       <AuthRoute exact path="/login" component={Splash} />
       <AuthRoute exact path="/signup" component={Splash} />
       <AuthRoute exact path="/" component={Splash} />
+      <Route exact path="/photos/:photoId" component={PhotoShowContainer}/>
     </Switch>
-      <Route exact path="/homepage" component={ PhotoIndexContainer } />
+      <ProtectedRoute exact path="/homepage" component={ PhotoIndexContainer } />
   </div>
 );
 

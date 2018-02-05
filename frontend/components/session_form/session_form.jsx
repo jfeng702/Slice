@@ -18,8 +18,10 @@ class sessionForm extends React.Component {
 
 // what does this do?
   componentWillReceiveProps(nextProps) {
+    console.log('next props received');
     if (nextProps.loggedIn) {
-      this.props.history.push('/');
+      console.log('Next Props contains logged in');
+      this.props.history.push('/homepage');
     }
   }
 
@@ -27,7 +29,7 @@ class sessionForm extends React.Component {
     // var auto = document.getElementById('autofocus');
     document.forms[0].elements[0].focus();
     this.props.clearErrors();
-    console.log('newmount');
+    console.log('component did mount');
   }
 
 
@@ -50,9 +52,7 @@ class sessionForm extends React.Component {
     e.preventDefault();
     const user = this.state;
     this.props.processForm({user});
-    this.props.history.push({
-      pathname: '/homepage'
-    });
+    // this.props.history.push('/homepage');
   }
 
 
@@ -86,7 +86,6 @@ class sessionForm extends React.Component {
 
   render() {
     // debugger;
-    debugger;
     return (
       <div className="login-form-container">
         <form className="logn-form">

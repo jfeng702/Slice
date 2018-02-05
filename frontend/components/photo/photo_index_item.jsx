@@ -1,9 +1,13 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const PhotoIndexItem = ({photo}) => {
+  console.log(photo);
   return (
     <div className="media">
-      <img src={`${photo.img_url}`}/>
+      <Link to={`/photos/${photo.id}`}>
+        <img src={`${photo.img_url}`}/>
+      </Link>
     </div>
   );
 };
