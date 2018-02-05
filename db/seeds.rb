@@ -18,4 +18,5 @@ photos = Photo.create([{ img_url: 'https://static.pexels.com/photos/46710/pexels
 
  ])
 
-users = User.create([{ username: 'username' }, { password: 'password' }])
+users = User.create([{ username: 'guest', password: 'password' },
+  { username: 'user', password: 'password'}])
