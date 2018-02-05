@@ -11,16 +11,15 @@ const mapStateToProps = (state, ownProps) => {
   };
 };
 
-const mapDispatchToProps = (dispatch, { formType }) => {
+const mapDispatchToProps = (dispatch, ownProps) => {
   // debugger;
   // This slices "login" from "/login"
   // const formType = location.pathname.slice(1);
-  const processForm = (formType === 'login') ? login : signup;
+  const processForm = ownProps.location.pathname === '/login' ? login : signup;
 
   return {
     // this replaces processForm with login or signup actions.
     processForm: user => dispatch(processForm(user)),
-    formType,
     login: user => dispatch(login(user)),
     clearErrors: () => dispatch(clearErrors())
   };

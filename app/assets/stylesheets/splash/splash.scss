@@ -21,19 +21,21 @@
 
 }
 
-.splash-nav > button {
+.splash-nav button {
+  height: 30px;
   font: normal 15px 'Proxima Nova', sans-serif;
   margin-right: 25px;
   float: right;
   position: relative;
   top: 20px;
-  padding: 10px 20px;
+  // padding: 10px 20px;
+  padding: 5px 15px 15px 15px;
   background: transparent;
   border: 2px solid white;
   color: white;
 }
 
-.splash-nav > button:hover {
+.splash-nav button:hover {
   color: #c0c0c0;
   cursor: pointer;
   background: rgba(255, 255, 255, 0.1);

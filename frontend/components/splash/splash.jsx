@@ -11,8 +11,7 @@ class Splash extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      showModal: false,
-      type: 'login'
+      showModal: false
     };
 
     this.handleOpenModal = this.handleOpenModal.bind(this);
@@ -27,15 +26,16 @@ class Splash extends React.Component {
 
   componentWillReceiveProps(newProps) {
     // console log state here to check
-
-
-    if (this.props.location.pathname !== newProps.location.pathname) {
-      this.setState( { showModal: true, type: newProps.location.pathname.slice(1)});
-    }
+    console.log(newProps.location.pathname);
   }
 
-  handleOpenModal (type) {
-    return () =>  this.setState({ showModal: true, type });
+  componentWillUnmount() {
+    console.log('unmounted');
+    this.setState( { showModal: false });
+  }
+
+  handleOpenModal () {
+    return () =>  this.setState({ showModal: true });
   }
 
   handleCloseModal () {
@@ -50,9 +50,13 @@ class Splash extends React.Component {
           <Link to="/">
             <h2 className="splash-logo">slice</h2>
           </Link>
-          <button onClick={this.handleOpenModal('login')}>Log In</button>
+          <Link to="login">
+            <button onClick={this.handleOpenModal('login')}>Log In</button>
+          </Link>
           &nbsp;
-          <button onClick={this.handleOpenModal('signup')}>Sign Up</button>
+          <Link to="signup">
+            <button onClick={this.handleOpenModal('signup')}>Sign Up</button>
+          </Link>
         </div>
 
         <ReactModal
@@ -61,7 +65,7 @@ class Splash extends React.Component {
              onRequestClose={this.handleCloseModal}
              className="Modal"
              overlayClassName="Overlay">
-            <SessionFormContainer formType={this.state.type}/>
+            <SessionFormContainer/>
         </ReactModal>
 
         <div className="splash-title">

@@ -7,7 +7,7 @@
   margin-left: -190px;
   // transform: translate(-50%,75%);
   width: 320px;
-  height: 350px;
+  height: auto;
   padding: 20px;
   background: #fff;
   z-index: 3;
@@ -33,9 +33,4 @@
 
 
   /* opacity: .5; */
-}
-
-.login-form button {
-  // color: white;
-  margin-top: 10px;
 }

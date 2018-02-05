@@ -57,7 +57,7 @@ class sessionForm extends React.Component {
 
 
   navLink() {
-    if (this.props.formType === 'login') {
+    if (this.props.location.pathname === '/login') {
       return <Link onClick={() => this.props.clearErrors()} to="/signup">sign up instead</Link>;
     } else {
       return <Link onClick={() => this.props.clearErrors()} to="/login">log in instead</Link>;
@@ -86,11 +86,14 @@ class sessionForm extends React.Component {
 
   render() {
     // debugger;
+    console.log(this.props.formType);
+    console.error(this.props.location);
+    const formType = this.props.location.pathname.slice(1);
+
     return (
       <div className="login-form-container">
         <form className="logn-form">
-          Please {this.props.formType}&nbsp;
-          or {this.navLink()}
+          Please {formType} or {this.navLink()}
           {this.renderErrors()}
           <br/>
           <br/>
@@ -110,8 +113,6 @@ class sessionForm extends React.Component {
               placeholder="Password"
               />
             <br/>
-
-
             <button className="submit-btn" onClick={this.handleSubmit}>Submit</button>
             &nbsp;
             <button className="demo-btn" onClick={this.handleDemo}>Demo Login</button>

@@ -24,12 +24,13 @@ const App = () => (
       <GreetingContainer/>
     </header>
     <Switch>
-      <AuthRoute exact path="/login" component={Splash} />
-      <AuthRoute exact path="/signup" component={Splash} />
-      <Route exact path="/photos/:photoId" component={PhotoShowContainer}/>
-      <AuthRoute path="/" component={Splash} />
+      <AuthRoute path="/login" component={Splash} />
+      <AuthRoute path="/signup" component={Splash} />
+      <Route path="/photos/:photoId" component={PhotoShowContainer}/>
+      <Redirect to="/" />
     </Switch>
-      <ProtectedRoute exact path="/homepage" component={ PhotoIndexContainer } />
+      <AuthRoute path="/" component={Splash} />
+      <ProtectedRoute path="/" component={ PhotoIndexContainer } />
   </div>
 );
 
