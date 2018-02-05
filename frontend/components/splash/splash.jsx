@@ -14,7 +14,7 @@ class Splash extends React.Component {
       showModal: false,
       type: 'login'
     };
-    
+
     this.handleOpenModal = this.handleOpenModal.bind(this);
     this.handleCloseModal = this.handleCloseModal.bind(this);
   }
@@ -47,7 +47,9 @@ class Splash extends React.Component {
       <div className="splash">
         <div className="splash-nav">
           {/*<img src='https://i.imgur.com/T1xSEOK.png'></img>*/}
-          <h2 className="splash-logo">slice</h2>
+          <Link to="/">
+            <h2 className="splash-logo">slice</h2>
+          </Link>
           <button onClick={this.handleOpenModal('login')}>Log In</button>
           &nbsp;
           <button onClick={this.handleOpenModal('signup')}>Sign Up</button>

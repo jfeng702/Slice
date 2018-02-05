@@ -11,10 +11,15 @@
 .logn-form {
   font-family: helvetica;
   // font-family: arial;
+  top: 10px;
 }
 
 .logn-form > button {
   padding: 10px;
+}
+
+.login-form {
+
 }
 
 .login-signup > img {
@@ -23,9 +28,9 @@
 
 input {
   // border: #000;
-  padding: 3px;
-  font-size: 1.2em;
-  font-family: Helvetica, Arial;
+  // padding: 3px;
+  // font-size: 1.2em;
+  // font-family: Helvetica, Arial;
   // width: 100%;
 }
 
@@ -42,23 +47,51 @@ input {
   height: 46px;
   font-size: 16px;
   color: white;
+
 }
 
 .submit-btn:hover {
   background: #3fa2ff;
+  cursor: pointer;
 }
 
-.login-input {
+.demo-btn {
+  // margin-top: 5px;
   width: 100%;
-  font-family: helvetica;
-  height: 32px;
-
+  background: #188fff;
+  height: 46px;
+  font-size: 16px;
+  color: white;
 }
 
-.login-update {
+.demo-btn:hover {
+  background: #3fa2ff;
+  cursor: pointer;
+}
+
+
+.login-username {
+
   width: 100%;
   font-family: helvetica;
-  height: 32px;
+  height: 40px;
+  margin-top: 25px;
+  margin-bottom: 10px;
+  // padding: 3px;
+  padding: 3px;
+  font-size: 1.2em;
+  font-family: Helvetica, Arial;
+}
+
+.login-password {
+  width: 100%;
+  font-family: helvetica;
+  height: 40px;
+  margin: 3px;
+  padding: 3px;
+  font-size: 1.2em;
+  font-family: Helvetica, Arial;
+
 }
 
 // input[type=text]:focus {

@@ -42,7 +42,7 @@ class sessionForm extends React.Component {
   handleDemo(e) {
     e.preventDefault();
     const user = {
-      username: 'username',
+      username: 'guest',
       password: 'password'
     };
     this.props.login({user});
@@ -99,14 +99,14 @@ class sessionForm extends React.Component {
               type="text"
               value={this.state.username}
               onChange={this.update('username')}
-              className="login-input"
+              className="login-username"
               placeholder="Username"
               />
             <input
               type="password"
               value={this.state.password}
               onChange={this.update('password')}
-              className="login-update"
+              className="login-password"
               placeholder="Password"
               />
             <br/>
@@ -114,7 +114,7 @@ class sessionForm extends React.Component {
 
             <button className="submit-btn" onClick={this.handleSubmit}>Submit</button>
             &nbsp;
-            <button onClick={this.handleDemo}>Demo Login</button>
+            <button className="demo-btn" onClick={this.handleDemo}>Demo Login</button>
           </div>
         </form>
       </div>

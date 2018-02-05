@@ -11,7 +11,7 @@
 }
 
 .splash-logo {
-  font: normal 45px 'Proxima Nova', sans-serif;
+  font: normal 40px 'Proxima Nova', sans-serif;
   top: 8px;
   display:inline-block;
   position: relative;
@@ -35,7 +35,8 @@
 
 .splash-nav > button:hover {
   color: #c0c0c0;
-
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.1);
 }
 
 .splash-nav img {

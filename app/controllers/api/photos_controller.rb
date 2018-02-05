@@ -4,6 +4,10 @@ class Api::PhotosController < ApplicationController
   end
 
   def index
+    cloud_name = ENV['CLOUD_NAME']
+    upload_preset = ENV['UPLOAD_PRESET']
+    puts "API KEYS: #{cloud_name} #{upload_preset}"
+
     @photos = Photo.all
     render :index
   end
@@ -14,7 +18,7 @@ class Api::PhotosController < ApplicationController
     if @photo.save
       render :show
     else
-      render json: @photo.errors.full_messages, status: 422
+      render json: @photo.errors.full_messages, status: :unprocessable_entity
     end
   end
 
@@ -27,12 +31,17 @@ class Api::PhotosController < ApplicationController
 
   def show
     @photo = Photo.find(params[:id])
-    render :show
+    if @photo
+      render :show
+    else
+      render json: @photo.errors.full_messages, status: 422
+    end
+
   end
 
   def update
     @photo = current_user.photos.find_by(id: params[:id])
-
+    debugger
     if @photo.update(photo_params)
       render :show
     else
