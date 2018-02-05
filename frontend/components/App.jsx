@@ -30,7 +30,7 @@ const App = () => (
       <Redirect to="/" />
     </Switch>
       <AuthRoute path="/" component={Splash} />
-      <ProtectedRoute path="/" component={ PhotoIndexContainer } />
+      <ProtectedRoute exact path="/" component={ PhotoIndexContainer } />
   </div>
 );
 
