@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactModal from 'react-modal';
 import { Link } from 'react-router-dom';
+import CommentIndexContainer from '../comment/comment_index_container';
 
 
 class PhotoShow extends React.Component {
@@ -58,6 +59,9 @@ class PhotoShow extends React.Component {
       <div className="show">
         <div className="show-image">
           <img src={`${photo.img_url}`}/>
+        </div>
+        <div className="comment-index">
+          <CommentIndexContainer/>
         </div>
         <div className="show-image-info">
           <h1>{photo.title}</h1>

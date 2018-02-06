@@ -5,6 +5,8 @@ import configureStore from './store/store';
 import Root from './components/root';
 import { login, logout, signup } from './actions/session_actions';
 import { updatePhoto, deletePhoto, fetchPhotos, fetchPhoto, createPhoto  } from './actions/photo_actions';
+import { createComment, fetchComments } from './actions/comment_actions';
+
 
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -30,6 +32,9 @@ document.addEventListener('DOMContentLoaded', () => {
   window.updatePhoto = updatePhoto;
   window.deletePhoto = deletePhoto;
   window.createPhoto = createPhoto;
+  window.createComment = createComment;
+  window.fetchComments = fetchComments;
+
 
 
 // TESTING END
