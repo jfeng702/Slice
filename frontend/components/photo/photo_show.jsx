@@ -53,7 +53,6 @@ class PhotoShow extends React.Component {
     if (!photo) {
       return <div>Loading...</div>;
     }
-    console.log(this.props);
 
     return (
       <div className="show">
@@ -61,7 +60,7 @@ class PhotoShow extends React.Component {
           <img src={`${photo.img_url}`}/>
         </div>
         <div className="comment-index">
-          <CommentIndexContainer/>
+          <CommentIndexContainer photo={photo}/>
         </div>
         <div className="show-image-info">
           <h1>{photo.title}</h1>

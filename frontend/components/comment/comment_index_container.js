@@ -3,9 +3,12 @@ import CommentIndex from './comment_index';
 import { fetchComments } from '../../actions/comment_actions';
 
 
-const mapStateToProps = state => {
+const mapStateToProps = (state, ownProps) => {
+  // console.log(state, 'state reporting in');
+  // console.log(ownProps, 'commentindexcontainer reporting in');
   return {
-    comments: Object.values(state.entities.comments)
+    comments: Object.values(state.entities.comments),
+    photo: ownProps.photo
   };
 };
 

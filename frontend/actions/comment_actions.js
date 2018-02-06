@@ -11,7 +11,7 @@ export const receiveComment = comment => {
 };
 
 export const receiveComments = comments => {
-  console.log(comments);
+  // console.log(comments);
   return {
     type: RECEIVE_COMMENTS,
     comments
