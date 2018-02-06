@@ -26,7 +26,7 @@ class Splash extends React.Component {
 
   componentWillReceiveProps(newProps) {
     // console log state here to check
-    console.log(newProps.location.pathname);
+    // console.log(newProps.location.pathname);
   }
 
   componentWillUnmount() {
@@ -34,8 +34,11 @@ class Splash extends React.Component {
     this.setState( { showModal: false });
   }
 
-  handleOpenModal () {
-    return () =>  this.setState({ showModal: true });
+  handleOpenModal (formType) {
+    return (e) => {
+      this.setState({ showModal: true });
+      this.props.history.push(formType);
+    };
   }
 
   handleCloseModal () {
@@ -50,13 +53,9 @@ class Splash extends React.Component {
           <Link to="/">
             <h2 className="splash-logo">slice</h2>
           </Link>
-          <Link to="login">
-            <button onClick={this.handleOpenModal('login')}>Log In</button>
-          </Link>
+          <button onClick={this.handleOpenModal('login')}>Log In</button>
           &nbsp;
-          <Link to="signup">
-            <button onClick={this.handleOpenModal('signup')}>Sign Up</button>
-          </Link>
+          <button onClick={this.handleOpenModal('signup')}>Sign Up</button>
         </div>
 
         <ReactModal

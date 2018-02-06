@@ -18,7 +18,7 @@ class sessionForm extends React.Component {
 
 // what does this do?
   componentWillReceiveProps(nextProps) {
-    console.log('next props received');
+    // console.log('next props received');
     if (nextProps.loggedIn) {
       console.log('Next Props contains logged in');
       this.props.history.push('/homepage');
@@ -29,7 +29,7 @@ class sessionForm extends React.Component {
     // var auto = document.getElementById('autofocus');
     document.forms[0].elements[0].focus();
     this.props.clearErrors();
-    console.log('component did mount');
+    // console.log('component did mount');
   }
 
 
@@ -86,8 +86,8 @@ class sessionForm extends React.Component {
 
   render() {
     // debugger;
-    console.log(this.props.formType);
-    console.error(this.props.location);
+    // console.log(this.props.formType);
+    // console.error(this.props.location);
     const formType = this.props.location.pathname.slice(1);
 
     return (

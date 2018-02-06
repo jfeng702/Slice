@@ -41,7 +41,6 @@ class Api::PhotosController < ApplicationController
 
   def update
     @photo = current_user.photos.find_by(id: params[:id])
-    debugger
     if @photo.update(photo_params)
       render :show
     else

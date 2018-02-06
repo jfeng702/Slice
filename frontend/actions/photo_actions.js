@@ -26,9 +26,10 @@ export const receivePhotoErrors = errors => {
   };
 };
 
-export const removePhoto = id => {
+export const removePhoto = photo => {
   return {
     type: REMOVE_PHOTO,
+    photo
   };
 };
 
@@ -51,7 +52,7 @@ export const fetchPhotos = () => dispatch => {
 
 export const deletePhoto = (id) => dispatch => {
   return PhotoApiUtil.deletePhoto(id)
-    .then(serverPhoto => dispatch(removePhoto(id)));
+    .then(serverPhoto => dispatch(removePhoto(serverPhoto)));
 };
 
 export const createPhoto = photo => dispatch => {

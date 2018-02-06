@@ -17,7 +17,9 @@ const personalGreeting = (currentUser, logout) => (
       <h2 className="header-logo">slice</h2>
     </Link>
     <h2 className="header-name">Welcome, {currentUser.username}!</h2>
-    <button className="header-button" onClick={logout}>Log Out</button>
+    <Link to="/">
+      <button className="header-button" onClick={logout}>Log Out</button>
+    </Link>
   </hgroup>
 );
 

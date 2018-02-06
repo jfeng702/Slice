@@ -1,16 +1,14 @@
 export const fetchPhotos = () => (
   $.ajax({
     method: 'GET',
-    url: 'api/photos',
-    error: (err) => console.log(err)
+    url: 'api/photos'
   })
 );
 
 export const fetchPhoto = id => (
   $.ajax({
     method: 'GET',
-    url: `api/photos/${id}`,
-    error: (err) => console.log(err)
+    url: `api/photos/${id}`
   })
 );
 
@@ -18,8 +16,7 @@ export const createPhoto = photo => (
   $.ajax({
     method: 'POST',
     url: 'api/photos',
-    data: { photo },
-    error: (err) => console.log(err)
+    data: { photo }
   })
 );
 
