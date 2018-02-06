@@ -8,7 +8,7 @@ class CommentIndex extends React.Component {
   }
 
   render() {
-    console.log(this.props, 'props reporting');
+    // console.log(this.props, 'props reporting');
     return (
       <div className="comment-index">
         {
