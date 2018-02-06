@@ -6,12 +6,19 @@ import CommentIndexContainer from '../comment/comment_index_container';
 
 class PhotoShow extends React.Component {
   constructor(props) {
+    console.log(props, 'photoshow');
     super(props);
     this.state = {
       showModal: false,
       photo: {
         title: '',
         description: ''
+      },
+      comment: {
+        photo_id: props.match.params.photoId,
+        body: '',
+        author_id: props.currentUser.id,
+        post_date: ''
       }
     };
 
@@ -24,6 +31,14 @@ class PhotoShow extends React.Component {
     const newState = Object.assign(this.state);
     return e => {
       newState.photo[field] = e.currentTarget.value;
+      this.setState(newState);
+    };
+  }
+
+  updateComment(field) {
+    const newState = Object.assign(this.state);
+    return e => {
+      newState.comment[field] = e.currentTarget.value;
       this.setState(newState);
     };
   }
@@ -47,6 +62,13 @@ class PhotoShow extends React.Component {
     this.setState({ showModal: false });
   }
 
+  handleCommentSubmit(e) {
+    e.preventDefault();
+    this.setState({
+
+    });
+  }
+
 
   render() {
     const photo = this.props.photo;
@@ -59,13 +81,11 @@ class PhotoShow extends React.Component {
         <div className="show-image">
           <img src={`${photo.img_url}`}/>
         </div>
-        <div className="comment-index">
-          <CommentIndexContainer photo={photo}/>
-        </div>
         <div className="show-image-info">
-          <h1>{photo.title}</h1>
-          <h1>{photo.description}</h1>
+          <h1 className="photo-show-title">{photo.title}</h1>
+          <h3 className="photo-show-description">{photo.description}</h3>
         </div>
+
         <button onClick={this.handleOpenModal}>Edit</button>
 
         {
@@ -85,23 +105,36 @@ class PhotoShow extends React.Component {
           overlayClassName="photo-show-overlay">
 
           <form onSubmit={() => this.props.updatePhoto(this.state.photo)}>
-            <label>
+            <label>Title
               <input
                 type="text"
                 value={this.state.photo.title}
                 onChange={this.update('title')}
                 className="photo-edit-title"/>
             </label>
-            <label>
+            <label>Description
               <input
                 type="text"
                 value={this.state.photo.description}
                 onChange={this.update('description')}
                 className="photo-edit-description"/>
             </label>
-            <button>Edit</button>
+            <button onClick={() => this.handleCloseModal()}>Edit</button>
           </form>
         </ReactModal>
+
+        <div className="comment-index">
+          <CommentIndexContainer photo={photo}/>
+        </div>
+        <div className="comment-form">
+          <form onSubmit={() => this.props.createComment(this.state.comment)}>
+            <input
+              type="textarea"
+              placeholder="Add a comment"
+              onChange={this.updateComment('body')}
+              className="comment-textarea"/>
+          </form>
+        </div>
       </div>
     );
   }

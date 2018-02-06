@@ -1,0 +1,18 @@
+.comment-index {
+  position: relative;
+  top: 15px;
+  bottom: 15px;
+}
+
+.comment-index-item {
+  display: flex;
+}
+
+.comment-index-item li {
+padding-left: 20px;
+}
+
+.comment-form {
+  /* display: inline-block; */
+  padding: 50px;
+}

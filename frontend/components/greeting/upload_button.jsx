@@ -44,7 +44,7 @@ class UploadButton extends React.Component {
     return(
       <div>
         <form>
-          <button onClick={(e) => this.uploadImage(e)}>Upload Photo</button>
+          <button onClick={(e) => this.uploadImage(e)}>Upload</button>
           <img src={this.state.url}/>
           <button onClick={this.handleSubmit}>Post</button>
         </form>

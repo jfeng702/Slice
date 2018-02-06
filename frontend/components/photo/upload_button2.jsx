@@ -2,19 +2,17 @@ import React from 'react';
 import Dropzone from 'react-dropzone';
 import request from 'superagent';
 
-const CLOUDINARY_UPLOAD_PRESET = 'o5j61iln'
-const CLOUDINARY_UPLOAD_URK
+const CLOUDINARY_UPLOAD_PRESET = 'o5j61iln';
+const CLOUDINARY_UPLOAD_URL = 'https://api.cloudinary.com/v1_1/slicecloud/image/upload';
 
-CLOUD_NAME: 'slicecloud'
-UPLOAD_PRESET: 'o5j61iln'
 
 export default class UploadButton extends React.Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      uploadedFileCloudinaryUrl: ''
-    }
+      uploadedFileUrl: ''
+    };
   }
 
   onImageDrop(files) {
@@ -36,7 +34,7 @@ export default class UploadButton extends React.Component {
 
      if (response.body.secure_url !== '') {
        this.setState({
-         uploadedFileCloudinaryUrl: response.body.secure_url
+         uploadedFileUrl: response.body.secure_url
        });
      }
    });
@@ -55,12 +53,12 @@ export default class UploadButton extends React.Component {
           </div>
 
           <div>
-            {this.state.uploadedFileCloudinaryUrl === '' ? null :
+            {this.state.uploadedFileUrl === '' ? null :
             <div>
               <p>{this.state.uploadedFile.name}</p>
-              <img src={this.state.uploadedFileCloudinaryUrl} />
+              <img src={this.state.uploadedFileUrl} />
             </div>}
           </div>
-        </div>
+        </div>;
   }
 }

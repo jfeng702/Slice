@@ -6,6 +6,8 @@ const CommentIndexItem = ({comment}) => {
       <li>
         {comment.body}
       </li>
+      <div>{comment.username}</div>
+      Posted {comment.updated} ago
     </div>
   );
 };

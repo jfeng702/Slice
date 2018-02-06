@@ -7,6 +7,8 @@ class CommentIndex extends React.Component {
     this.props.fetchComments(this.props.photo.id);
   }
 
+
+
   render() {
     // console.log(this.props, 'props reporting');
     return (
