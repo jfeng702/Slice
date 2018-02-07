@@ -50,7 +50,7 @@ class UploadButton extends React.Component {
     return(
       <div>
         <form>
-          <button onClick={(e) => this.uploadImage(e)}>
+          <button className="header-cloud-button" onClick={(e) => this.uploadImage(e)}>
             <i className="fas fa-cloud-upload-alt"></i>
           </button>
         </form>

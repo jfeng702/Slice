@@ -2,11 +2,18 @@
   font-size: 36px;
   background: #181818;
   color: white;
+
 }
 
 .fa-cloud-upload-alt:hover {
   cursor: pointer;
-  background-color: gray;
+  color: gray;
+}
+
+.header-cloud-button {
+  padding: 0;
+  margin: 0;
+  border: none;
 }
 
 

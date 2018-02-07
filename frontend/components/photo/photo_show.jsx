@@ -78,69 +78,71 @@ class PhotoShow extends React.Component {
       return <div>Loading...</div>;
     }
 
+
     return (
       <div className="show">
         <div className="show-image">
           <img src={`${photo.img_url}`}/>
         </div>
-        <div className="show-image-info">
-          <h1 className="photo-show-title">{photo.title}</h1>
-          <h3 className="photo-show-description">{photo.description}</h3>
+        <div className="show-bot-half">
+          <div className="show-image-info">
+            <h1 className="photo-show-title">{photo.title}</h1>
+            <h3 className="photo-show-description">{photo.description}</h3>
+          </div>
+
+          <button className="photo-edit-btn" onClick={this.handleOpenModal}>Edit</button>
+
+          {
+            (this.props.photo.ownerOwns) ?
+            <Link to="/">
+              <button onClick={()=>this.props.deletePhoto(photo.id)}>Delete
+              </button>
+            </Link> : null
+          }
+
+          <ReactModal
+            isOpen={this.state.showModal}
+            contentLabel="onRequestClose"
+            onRequestClose={this.handleCloseModal}
+            className="photo-show-modal"
+            ariaHideApp={false}
+            overlayClassName="photo-show-overlay">
+
+            <form onSubmit={() => this.props.updatePhoto(this.state.photo)}>
+              <label>Title
+                <input
+                  type="text"
+                  value={this.state.photo.title}
+                  onChange={this.update('title')}
+                  className="photo-edit-title"/>
+              </label>
+              <label>Description
+                <input
+                  type="text"
+                  value={this.state.photo.description}
+                  onChange={this.update('description')}
+                  className="photo-edit-description"/>
+              </label>
+              <button onClick={() => this.handleCloseModal()}>Edit</button>
+            </form>
+          </ReactModal>
+
+          {/*<div className="comment-form">        </div>*/}
+          <div className="comments">
+            <form onSubmit={() => this.props.createComment(this.state.comment)}>
+              <input
+                type="textarea"
+                placeholder="Add a comment"
+                onChange={this.updateComment('body')}
+                className="comment-textarea"/>
+            </form>
+
+
+          {/*<div className="comment-index">        </div>*/}
+            <CommentIndexContainer photo={photo}/>
+          </div>
         </div>
 
-        <button className="photo-edit-btn" onClick={this.handleOpenModal}>Edit</button>
-
-        {
-          (this.props.photo.ownerOwns) ?
-          <Link to="/">
-            <button onClick={()=>this.props.deletePhoto(photo.id)}>Delete
-            </button>
-          </Link> : null
-        }
-
-        <ReactModal
-          isOpen={this.state.showModal}
-          contentLabel="onRequestClose"
-          onRequestClose={this.handleCloseModal}
-          className="photo-show-modal"
-          ariaHideApp={false}
-          overlayClassName="photo-show-overlay">
-
-          <form onSubmit={() => this.props.updatePhoto(this.state.photo)}>
-            <label>Title
-              <input
-                type="text"
-                value={this.state.photo.title}
-                onChange={this.update('title')}
-                className="photo-edit-title"/>
-            </label>
-            <label>Description
-              <input
-                type="text"
-                value={this.state.photo.description}
-                onChange={this.update('description')}
-                className="photo-edit-description"/>
-            </label>
-            <button onClick={() => this.handleCloseModal()}>Edit</button>
-          </form>
-        </ReactModal>
-
-        {/*<div className="comment-form">        </div>*/}
-        <div className="comments">
-
-
-          <form onSubmit={() => this.props.createComment(this.state.comment)}>
-            <input
-              type="textarea"
-              placeholder="Add a comment"
-              onChange={this.updateComment('body')}
-              className="comment-textarea"/>
-          </form>
-
-
-        {/*<div className="comment-index">        </div>*/}
-          <CommentIndexContainer photo={photo}/>
-        </div>
 
       </div>
     );

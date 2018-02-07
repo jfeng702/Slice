@@ -1,7 +1,34 @@
 
-.comments {
-  display: flex;
-  flex-direction: column;
+.show h1 {
+  font-size: 28px;
+}
+
+.show h3 {
+  font-size: 14px;
+}
+
+.show-bot-half {
+  width: 1000px;
+  margin: 0 auto;
+  font-family: Proxima Nova,helvetica neue,helvetica,arial,sans-serif;
+  // display: flex;
+  // flex-direction: row;
+  // align-content: space-between;
+  // justify-content: flex-start;
+}
+
+
+.show-bot-half button {
+  background: #188fff;
+  height: 40px;
+  font-size: 16px;
+  color: white;
+  padding: 10px;
+}
+
+.show-bot-half button:hover {
+  background: #3fa2ff;
+  cursor: pointer;
 }
 
 .show-image {
@@ -20,16 +47,17 @@
 }
 
 .photo-show-title {
-  padding: 15px;
+  padding: 15px 0 0;
   font-family: 'Libre Franklin', sans-serif;
-  font-weight: 700;
 }
 
 .photo-show-description {
-  padding: 15px;
+  padding: 5px 0 15px 0;
   font-family: 'Libre Franklin', sans-serif;
-  font-weight: 400;
-  font-size: 14px;
+}
+
+.photo-edit-btn {
+  // padding-right: 20px;
 }
 
 .photo-edit-title {

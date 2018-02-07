@@ -3,11 +3,15 @@ import React from 'react';
 const CommentIndexItem = ({comment}) => {
   return (
     <div className="comment-index-item">
-      <li>
+      <div className="cmt-username-row">
+        {comment.username}
+        <span>Posted {comment.updated} ago</span>
+      </div>
+
+      <div className="cmt-body">
         {comment.body}
-      </li>
-      <div>{comment.username}</div>
-      Posted {comment.updated} ago
+      </div>
+
     </div>
   );
 };

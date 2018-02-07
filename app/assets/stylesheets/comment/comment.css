@@ -4,9 +4,28 @@
   bottom: 15px;
 }
 
+.comments {
+  padding: 30px 0;
+}
+
+.cmt-username-row {
+color: #006dac;
+}
+
+.cmt-username-row span {
+  padding-left: 20px;
+  color: #898989;
+}
+
+.cmt-body {
+  padding: 5px;
+}
+
 .comment-index-item {
-  display: flex;
-  border: 1px solid black;}
+  /* display: flex;
+  justify-content: space-around; */
+
+}
 
 .comment-index-item li {
   padding-left: 20px;

@@ -7,7 +7,7 @@ end
 
 gem 'figaro'
 gem 'bcrypt'
-gem 'binding_of_caller'  
+gem 'binding_of_caller'
 gem 'pry-rails'
 gem 'jquery-rails'
 
@@ -53,6 +53,10 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'better_errors'
   gem 'annotate'
+  gem "guard", ">= 2.2.2", :require => false
+  gem "guard-livereload",  :require => false
+  gem "rack-livereload"
+  gem "rb-fsevent",        :require => false
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
