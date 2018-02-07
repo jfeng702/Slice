@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link, withRouter } from 'react-router-dom';
 
 class UploadButton extends React.Component {
   constructor(props) {
@@ -12,10 +13,10 @@ class UploadButton extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    this.props.createPhoto(this.state);
-    this.setState({
-        img_url: ''
-      });
+    // this.props.createPhoto(this.state);
+    // this.setState({
+    //     img_url: ''
+    //   });
   }
 
   updateInput(field) {
@@ -36,22 +37,25 @@ class UploadButton extends React.Component {
       (errors, result) => {
         if(!errors){
           this.postImage(result[0].url);
+          this.props.createPhoto(this.state).then(photo => this.props.history.push(`/photos/${photo.id}?new=true`));
+          this.setState({
+              img_url: ''
+            });
         }
       }
     );
   }
+
   render() {
     return(
       <div>
         <form>
-          <button onClick={(e) => this.uploadImage(e)}>Upload</button>
-          <img src={this.state.url}/>
-          <button onClick={this.handleSubmit}>Post</button>
-        </form>
 
+          <button onClick={(e) => this.uploadImage(e)}>Upload</button>
+        </form>
       </div>
     );
   }
 }
 
-export default UploadButton;
+export default withRouter(UploadButton);

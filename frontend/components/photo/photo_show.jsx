@@ -3,13 +3,13 @@ import ReactModal from 'react-modal';
 import { Link } from 'react-router-dom';
 import CommentIndexContainer from '../comment/comment_index_container';
 
-
 class PhotoShow extends React.Component {
   constructor(props) {
     console.log(props, 'photoshow');
     super(props);
     this.state = {
-      showModal: false,
+      showModal: !!this.props.location.search,
+      loading: true,
       photo: {
         title: '',
         description: ''
@@ -49,7 +49,9 @@ class PhotoShow extends React.Component {
 
   componentWillReceiveProps(nextProps) {
     if (nextProps.match.params.photoId !== this.props.match.params.photoId) {
-      nextProps.fetchPhoto(nextProps.match.params.photoId);
+      nextProps.fetchPhoto(nextProps.match.params.photoId).then(() => {
+        this.setState({showModal: !!this.props.location.search});
+      });
     }
     this.setState({photo: nextProps.photo});
   }
@@ -86,7 +88,7 @@ class PhotoShow extends React.Component {
           <h3 className="photo-show-description">{photo.description}</h3>
         </div>
 
-        <button onClick={this.handleOpenModal}>Edit</button>
+        <button className="photo-edit-btn" onClick={this.handleOpenModal}>Edit</button>
 
         {
           (this.props.photo.ownerOwns) ?
@@ -123,9 +125,6 @@ class PhotoShow extends React.Component {
           </form>
         </ReactModal>
 
-        <div className="comment-index">
-          <CommentIndexContainer photo={photo}/>
-        </div>
         <div className="comment-form">
           <form onSubmit={() => this.props.createComment(this.state.comment)}>
             <input
@@ -135,6 +134,11 @@ class PhotoShow extends React.Component {
               className="comment-textarea"/>
           </form>
         </div>
+
+        <div className="comment-index">
+          <CommentIndexContainer photo={photo}/>
+        </div>
+
       </div>
     );
   }

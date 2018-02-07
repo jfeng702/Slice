@@ -6,13 +6,25 @@
 
 .comment-index-item {
   display: flex;
-}
+  border: 1px solid black;}
 
 .comment-index-item li {
-padding-left: 20px;
+  padding-left: 20px;
+  flex-direction: column;
+
 }
 
 .comment-form {
   /* display: inline-block; */
-  padding: 50px;
+  padding: 25px;
+}
+
+.comment-textarea {
+  height: 150px;
+  width: 400px;
+}
+
+.comment-form input::placeholder {
+  text-align: left;
+
 }

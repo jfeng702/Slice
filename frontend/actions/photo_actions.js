@@ -57,5 +57,8 @@ export const deletePhoto = (id) => dispatch => {
 
 export const createPhoto = photo => dispatch => {
   return PhotoApiUtil.createPhoto(photo)
-    .then(serverPhoto => dispatch(receivePhoto(serverPhoto)));
+    .then(serverPhoto => {
+      dispatch(receivePhoto(serverPhoto));
+      return serverPhoto;
+    });
 };

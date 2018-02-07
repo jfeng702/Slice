@@ -18,7 +18,7 @@ const personalGreeting = (currentUser, logout, createPhoto) => {
         logout={logout}
         createPhoto={createPhoto}
         currentUser={currentUser} />
-      
+
       <Link to="/">
         <h2 className="header-logo">slice</h2>
       </Link>
