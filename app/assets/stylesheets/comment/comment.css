@@ -5,11 +5,18 @@
 }
 
 .comments {
-  padding: 30px 0;
+  padding: 15px 0;
+}
+
+.comment-btn {
+  display: block;
+  margin-top: 10px;
+  margin-left: 300px;
 }
 
 .cmt-username-row {
-color: #006dac;
+  padding-top: 7px;
+  color: #006dac;
 }
 
 .cmt-username-row span {

@@ -25,6 +25,7 @@ class PhotoShow extends React.Component {
     this.handleOpenModal = this.handleOpenModal.bind(this);
     this.handleCloseModal = this.handleCloseModal.bind(this);
     this.update = this.update.bind(this);
+    this.handleCommentSubmit = this.handleCommentSubmit.bind(this);
   }
 
   update(field) {
@@ -48,6 +49,7 @@ class PhotoShow extends React.Component {
   }
 
   componentWillReceiveProps(nextProps) {
+    console.log(nextProps, 'nextprops');
     if (nextProps.match.params.photoId !== this.props.match.params.photoId) {
       nextProps.fetchPhoto(nextProps.match.params.photoId).then(() => {
         this.setState({showModal: !!this.props.location.search});
@@ -66,9 +68,8 @@ class PhotoShow extends React.Component {
 
   handleCommentSubmit(e) {
     e.preventDefault();
-    this.setState({
-
-    });
+    this.props.createComment(this.state.comment);
+    this.setState({comment:{body:'', post_date: ''}});
   }
 
 
@@ -129,12 +130,14 @@ class PhotoShow extends React.Component {
 
           {/*<div className="comment-form">        </div>*/}
           <div className="comments">
-            <form onSubmit={() => this.props.createComment(this.state.comment)}>
+            <form onSubmit={this.handleCommentSubmit}>
               <input
                 type="textarea"
                 placeholder="Add a comment"
                 onChange={this.updateComment('body')}
+                value={this.state.comment.body}
                 className="comment-textarea"/>
+              <button className="comment-btn">Comment</button>
             </form>
 
 
