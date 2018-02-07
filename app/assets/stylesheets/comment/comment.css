@@ -51,6 +51,6 @@
 }
 
 .comment-form input::placeholder {
-  text-align: left;
-
+  /* text-align: left; */
+  /* line-height: 24px; */
 }

@@ -19,7 +19,17 @@ class Photo < ApplicationRecord
     foreign_key: :owner_id,
     class_name: :User
 
+  has_many :album_photos,
+    primary_key: :id,
+    foreign_key: :photo_id,
+    class_name: :AlbumPhoto
+
+  has_many :tags
+
+
   has_many :comments
+  has_many :tags
+
 
 
 

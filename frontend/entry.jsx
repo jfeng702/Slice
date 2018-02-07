@@ -6,7 +6,7 @@ import Root from './components/root';
 import { login, logout, signup } from './actions/session_actions';
 import { updatePhoto, deletePhoto, fetchPhotos, fetchPhoto, createPhoto  } from './actions/photo_actions';
 import { createComment, fetchComments } from './actions/comment_actions';
-
+import { fetchAlbums, fetchAlbum, createAlbum, updateAlbum, deleteAlbum } from './util/album_api_util';
 
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -34,7 +34,11 @@ document.addEventListener('DOMContentLoaded', () => {
   window.createPhoto = createPhoto;
   window.createComment = createComment;
   window.fetchComments = fetchComments;
-
+  window.fetchAlbums = fetchAlbums;
+  window.fetchAlbum = fetchAlbum;
+  window.createAlbum = createAlbum;
+  window.updateAlbum = updateAlbum;
+  window.deleteAlbum = deleteAlbum;
 
 
 // TESTING END

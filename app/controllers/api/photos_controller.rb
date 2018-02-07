@@ -4,10 +4,6 @@ class Api::PhotosController < ApplicationController
   end
 
   def index
-    cloud_name = ENV['CLOUD_NAME']
-    upload_preset = ENV['UPLOAD_PRESET']
-    puts "API KEYS: #{cloud_name} #{upload_preset}"
-
     @photos = Photo.all
     render :index
   end
@@ -51,6 +47,6 @@ class Api::PhotosController < ApplicationController
   private
 
   def photo_params
-    params.require(:photo).permit(:img_url, :title, :description, :owner_id)
+    params.require(:photo).permit(:img_url, :title, :description, :owner_id, :created_at)
   end
 end

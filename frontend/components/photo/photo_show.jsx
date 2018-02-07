@@ -69,7 +69,13 @@ class PhotoShow extends React.Component {
   handleCommentSubmit(e) {
     e.preventDefault();
     this.props.createComment(this.state.comment);
-    this.setState({comment:{body:'', post_date: ''}});
+    this.setState({comment:
+      {body:'',
+      post_date: '',
+      photo_id: this.props.match.params.photoId,
+      author_id: this.props.currentUser.id,
+    }
+});
   }
 
 
@@ -142,6 +148,9 @@ class PhotoShow extends React.Component {
 
           {/*<div className="comment-index">        </div>*/}
             <CommentIndexContainer photo={photo}/>
+          </div>
+          <div className="photo-date">
+            <h2>Posted on {photo.created_at}</h2>
           </div>
         </div>
 
