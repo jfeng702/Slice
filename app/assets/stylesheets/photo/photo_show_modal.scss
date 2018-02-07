@@ -4,17 +4,44 @@
   top: 300px;
   left: 50%;
   right: 50%;
-  margin-left: -190px;
+  margin-left: -100px;
   // transform: translate(-50%,75%);
-  width: 160px;
+  width: 300px;
   height: auto;
   padding: 20px;
   background: #fff;
   z-index: 3;
   border-radius: 5px;
   border: 1px solid #000;
-  font: normal 15px 'Proxima Nova', sans-serif;
+  font-family: Proxima Nova,helvetica neue,helvetica,arial,sans-serif;
+
+
   // box-shadow: 1px 1px AliceBlue;
+}
+
+.photo-modal-edit-btn {
+  margin-top: 10px;
+  width: 100%;
+  background: #188fff;
+  height: 46px;
+  font-size: 16px;
+  color: white;
+}
+
+.photo-edit-title {
+  width: 100%;
+  margin-bottom: 10px;
+  margin-top: 4px;
+  font: 18px helvetica;
+  font-family: Proxima Nova,helvetica neue,helvetica,arial,sans-serif;
+
+}
+
+.photo-edit-description {
+  height: 50px;
+  width: 100%;
+  margin-top: 4px;
+  font-family: Proxima Nova,helvetica neue,helvetica,arial,sans-serif;
 
 }
 
@@ -26,6 +53,8 @@
   right: 0;
   bottom: 0;
   z-index: 2;
+  width: 100%;
+  height: 100%;
 
 
   /* opacity: .5; */
