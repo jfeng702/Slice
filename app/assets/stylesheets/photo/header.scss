@@ -1,8 +1,15 @@
 .fa-cloud-upload-alt {
   font-size: 36px;
-  background: black;
+  background: #181818;
   color: white;
 }
+
+.fa-cloud-upload-alt:hover {
+  cursor: pointer;
+  background-color: gray;
+}
+
+
 
 .header-group {
   display: flex;
@@ -10,15 +17,13 @@
   background-color: #181818;
   justify-content: flex-end;
   height: 65px;
+  align-items: center;
 }
 
 .header-name {
-  // align-self: flex-end;
-  position: relative;
-  top: 27px;
-  right: 13px;
   color: WhiteSmoke;
   font: Helvetica;
+  padding-left: 20px;
 }
 
 .header-button {
@@ -26,12 +31,8 @@
   // position: relative;
   height: 30px;
   font: normal 15px 'Proxima Nova', sans-serif;
-  margin-right: 25px;
-  float: right;
-  position: relative;
-  top: 20px;
-  padding: 15px;
-  padding-top: 5px;
+  margin: 0 25px;
+
   background: transparent;
   border: 2px solid white;
   color: white;
@@ -42,7 +43,6 @@
   cursor: pointer;
   background: rgba(255, 255, 255, 0.1);
 }
-
 
 
 .header-logo {

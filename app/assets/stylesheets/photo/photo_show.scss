@@ -1,3 +1,9 @@
+
+.comments {
+  display: flex;
+  flex-direction: column;
+}
+
 .show-image {
   background: #212124;
 }
@@ -27,6 +33,10 @@
 }
 
 .photo-edit-title {
+
+}
+
+.photo-edit-title:hover {
 
 }
 

@@ -125,7 +125,10 @@ class PhotoShow extends React.Component {
           </form>
         </ReactModal>
 
-        <div className="comment-form">
+        {/*<div className="comment-form">        </div>*/}
+        <div className="comments">
+
+
           <form onSubmit={() => this.props.createComment(this.state.comment)}>
             <input
               type="textarea"
@@ -133,9 +136,9 @@ class PhotoShow extends React.Component {
               onChange={this.updateComment('body')}
               className="comment-textarea"/>
           </form>
-        </div>
 
-        <div className="comment-index">
+
+        {/*<div className="comment-index">        </div>*/}
           <CommentIndexContainer photo={photo}/>
         </div>
 
