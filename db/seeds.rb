@@ -5,6 +5,8 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+Photo.destroy_all
+User.destroy_all
 
 photos = Photo.create([{ img_url: 'https://static.pexels.com/photos/46710/pexels-photo-46710.jpeg', owner_id: 19, title: 'awesome pic', description: 'taken with nikon' },
   {img_url: 'https://static.pexels.com/photos/248797/pexels-photo-248797.jpeg', owner_id: 19, title: 'awesome pic', description: 'taken with nikon'},

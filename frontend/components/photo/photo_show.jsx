@@ -68,7 +68,8 @@ class PhotoShow extends React.Component {
 
   handleCommentSubmit(e) {
     e.preventDefault();
-    this.props.createComment(this.state.comment);
+    this.props.createComment(this.state.comment)
+      .then( () => window.scrollTo(0, document.body.scrollHeight));
     this.setState({comment:
       {body:'',
       post_date: '',
@@ -136,8 +137,7 @@ class PhotoShow extends React.Component {
           {/*<div className="comment-form">        </div>*/}
           <div className="comments">
             <form onSubmit={this.handleCommentSubmit}>
-              <input
-                type="textarea"
+              <textarea
                 placeholder="Add a comment"
                 onChange={this.updateComment('body')}
                 value={this.state.comment.body}
@@ -150,7 +150,7 @@ class PhotoShow extends React.Component {
             <CommentIndexContainer photo={photo}/>
           </div>
           <div className="photo-date">
-            <h2>Posted on {photo.created_at}</h2>
+            <h2>Posted on {new Date(photo.created_at).toDateString()}</h2>
           </div>
         </div>
 

@@ -4,6 +4,10 @@
   bottom: 15px;
 }
 
+textarea {
+  resize: none;
+}
+
 .comments {
   padding: 15px 0;
 }

@@ -2,10 +2,6 @@ import React from 'react';
 import Dropzone from 'react-dropzone';
 import request from 'superagent';
 
-const CLOUDINARY_UPLOAD_PRESET = 'o5j61iln';
-const CLOUDINARY_UPLOAD_URL = 'https://api.cloudinary.com/v1_1/slicecloud/image/upload';
-
-
 export default class UploadButton extends React.Component {
   constructor(props) {
     super(props);
