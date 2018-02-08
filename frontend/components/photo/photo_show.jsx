@@ -17,8 +17,7 @@ class PhotoShow extends React.Component {
       comment: {
         photo_id: props.match.params.photoId,
         body: '',
-        author_id: props.currentUser.id,
-        post_date: ''
+        author_id: props.currentUser.id
       }
     };
 
@@ -72,7 +71,6 @@ class PhotoShow extends React.Component {
       .then( () => window.scrollTo(0, document.body.scrollHeight));
     this.setState({comment:
       {body:'',
-      post_date: '',
       photo_id: this.props.match.params.photoId,
       author_id: this.props.currentUser.id,
     }
@@ -90,7 +88,7 @@ class PhotoShow extends React.Component {
         <div className="owner-btns">
           <button className="photo-edit-btn" onClick={this.handleOpenModal}>Edit</button>
           <Link to="/">
-            <button onClick={()=>this.props.deletePhoto(photo.id)}>Delete
+            <button className="photo-del-btn" onClick={()=>this.props.deletePhoto(photo.id)}>Delete
             </button>
           </Link>
         </div>
@@ -106,8 +104,11 @@ class PhotoShow extends React.Component {
           <div className="show-image-info">
             <div className="photo-show-top-row">
               <h1 className="photo-show-title">{photo.title}</h1>
-              <h2 className="photo-date">Posted on {new Date(photo.created_at).toDateString()}</h2>
-              {ownerButtons}
+              <div className="date-and-btns">
+                <h2 className="photo-date">Posted on {new Date(photo.created_at).toDateString()}</h2>
+                {ownerButtons}
+              </div>
+
             </div>
 
           </div>
@@ -152,7 +153,7 @@ class PhotoShow extends React.Component {
 
 
           {/*<div className="comment-index">        </div>*/}
-            <CommentIndexContainer photo={photo}/>
+            <CommentIndexContainer photo={photo} deleteComment={this.props.deleteComment}/>
           </div>
         </div>
 

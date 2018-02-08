@@ -7,6 +7,7 @@ Rails.application.routes.draw do
     resources :photos do
       resources :comments, only: [:create, :index]
     end
+    resources :comments, only: [:destroy]
   end
 
 

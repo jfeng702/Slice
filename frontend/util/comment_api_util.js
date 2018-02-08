@@ -12,3 +12,10 @@ export const fetchComments = (photoId) => {
     url: `api/photos/${photoId}/comments`
   });
 };
+
+export const deleteComment = id => {
+  return $.ajax({
+      method: 'DELETE',
+      url: `api/comments/${id}`
+  });
+};

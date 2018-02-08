@@ -1,7 +1,7 @@
 import PhotoShow from './photo_show';
 import { connect } from 'react-redux';
 import { fetchPhoto, deletePhoto, updatePhoto } from '../../actions/photo_actions';
-import { createComment } from '../../actions/comment_actions';
+import { createComment, deleteComment } from '../../actions/comment_actions';
 import { withRouter } from 'react-router-dom';
 
 
@@ -19,7 +19,8 @@ const mapDispatchToProps = dispatch => {
     fetchPhoto: id => dispatch(fetchPhoto(id)),
     deletePhoto: id => dispatch(deletePhoto(id)),
     updatePhoto: photo => dispatch(updatePhoto(photo)),
-    createComment: comment => dispatch(createComment(comment))
+    createComment: comment => dispatch(createComment(comment)),
+    deleteComment: id => dispatch(deleteComment(id))
   };
 };
 

@@ -14,9 +14,18 @@ textarea {
 }
 
 .comment-btn {
-  display: block;
   margin-top: 10px;
   margin-left: 300px;
+  background: #188fff;
+  height: 40px;
+  font-size: 16px;
+  color: white;
+  padding: 10px;
+
+}
+
+.comment-btn:hover {
+  background: #3fa2ff;
 }
 
 .cmt-username-row {
@@ -59,4 +68,23 @@ textarea {
 .comment-form input::placeholder {
   /* text-align: left; */
   /* line-height: 24px; */
+}
+
+.delete-comment-btn {
+  float: right;
+  border: none;
+}
+
+
+.delete-comment-btn:hover {
+  color: lightsteelblue;
+}
+
+.fa-times {
+  background: none;
+  height: auto;
+  font-size: auto;
+  color:
+  padding: 0px;
+  margin-right: 0px;
 }
