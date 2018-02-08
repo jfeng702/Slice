@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 class AlbumIndex extends React.Component {
   componentDidMount() {
@@ -9,9 +10,16 @@ class AlbumIndex extends React.Component {
   render() {
     return (
       <div>
-        this.props.albums.map(album => (
-          album.
-        ))
+        {
+          this.props.albums.map(album =>
+          <li>
+            <Link to={`albums/${album.id}`}>
+              <img src={`${album.cover_url}`}/>
+            </Link>
+            {album.title}
+          </li>
+          )
+        }
       </div>
     );
   }
