@@ -1,18 +1,24 @@
 import { connect } from 'react-redux';
 import AlbumShow from './album_show';
-import { fetchAlbums } from '../../actions/album_actions';
+import { fetchAlbums, fetchAlbumPhotos } from '../../actions/album_actions';
 
 const mapStateToProps = (state, ownProps) => {
   console.log(ownProps, 'album show');
+  console.log(state, 'album show state');
   return {
-    album: state.entities.albums[ownProps.match.params.id]
-
+    album: state.entities.albums[ownProps.match.params.id],
+    photos: Object.values(state.entities.photos),
+    albumId: ownProps.match.params.id
   };
+};
+
+const albumPhotos = (state, photo) => {
+
 };
 
 const mapDispatchToProps = dispatch => {
   return {
-    fetchAlbums: () => dispatch(fetchAlbums())
+    fetchAlbumPhotos: (id) => dispatch(fetchAlbumPhotos(id))
   };
 };
 

@@ -34,3 +34,24 @@ export const deleteAlbum = (albumId) => {
     url: `api/albums/${albumId}`
   });
 };
+
+export const fetchUserAlbums = () => {
+  return $.ajax({
+    method: 'GET',
+    url: 'api/users/user_albums'
+  });
+};
+
+export const fetchUserPhotos = () => {
+  return $.ajax({
+    method: 'GET',
+    url: 'api/users/user_photos'
+  });
+};
+
+export const fetchAlbumPhotos = (id) => {
+  return $.ajax({
+    method: 'GET',
+    url: `/api/albums/${id}/album_photos`
+  });
+};

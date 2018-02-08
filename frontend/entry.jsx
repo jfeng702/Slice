@@ -6,8 +6,7 @@ import Root from './components/root';
 import { login, logout, signup } from './actions/session_actions';
 import { updatePhoto, deletePhoto, fetchPhotos, fetchPhoto, createPhoto  } from './actions/photo_actions';
 import { createComment, fetchComments, deleteComment } from './actions/comment_actions';
-import { fetchAlbums, fetchAlbum, createAlbum, updateAlbum, deleteAlbum } from './actions/album_actions';
-
+import { fetchUserAlbums, fetchAlbumPhotos, fetchAlbums, fetchAlbum, createAlbum, updateAlbum, deleteAlbum } from './actions/album_actions';
 
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -41,7 +40,8 @@ document.addEventListener('DOMContentLoaded', () => {
   window.updateAlbum = updateAlbum;
   window.deleteAlbum = deleteAlbum;
   window.deleteComment = deleteComment;
-
+  window.fetchAlbumPhotos = fetchAlbumPhotos;
+  window.fetchUserAlbums = fetchUserAlbums;
 
 // TESTING END
 

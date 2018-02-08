@@ -3,11 +3,12 @@ import { Link } from 'react-router-dom';
 
 class AlbumIndex extends React.Component {
   componentDidMount() {
-    this.props.fetchAlbums();
+    this.props.fetchUserAlbums();
   }
 
 
   render() {
+    console.warn(this.props);
     return (
       <div>
         {

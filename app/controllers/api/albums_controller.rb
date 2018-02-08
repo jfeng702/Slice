@@ -45,6 +45,14 @@ class Api::AlbumsController < ApplicationController
     end
   end
 
+  def album_photos
+    p '============================'
+    p album = current_user.albums.find_by(id: params[:id])
+
+    @album_photos = album.photos
+    render :album_photos
+  end
+
   private
 
   def album_params
