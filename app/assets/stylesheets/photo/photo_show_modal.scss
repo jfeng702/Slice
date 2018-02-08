@@ -4,10 +4,10 @@
   top: 300px;
   left: 50%;
   right: 50%;
-  margin-left: -100px;
+  margin-left: -180px;
   // transform: translate(-50%,75%);
-  width: 300px;
-  height: auto;
+  width: 400px;
+  height: 300px;
   padding: 20px;
   background: #fff;
   z-index: 3;
@@ -22,9 +22,10 @@
   margin-top: 10px;
   width: 100%;
   background: #188fff;
-  height: 46px;
+  height: 40px;
   font-size: 16px;
   color: white;
+
 }
 
 .photo-edit-title {
@@ -33,13 +34,13 @@
   margin-top: 4px;
   font: 18px helvetica;
   font-family: Proxima Nova,helvetica neue,helvetica,arial,sans-serif;
-
+  height: 40px;
 }
 
 .photo-edit-description {
-  height: 50px;
+  height: 120px;
   width: 100%;
-  margin-top: 4px;
+  margin-top: 6px;
   font-family: Proxima Nova,helvetica neue,helvetica,arial,sans-serif;
 
 }

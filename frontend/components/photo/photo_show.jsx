@@ -120,7 +120,7 @@ class PhotoShow extends React.Component {
             className="photo-show-modal"
             ariaHideApp={false}
             overlayClassName="photo-show-overlay">
-            <form onSubmit={() => this.props.updatePhoto(this.state.photo)}>
+            <form className="photo-edit-modal-form" onSubmit={() => this.props.updatePhoto(this.state.photo)}>
               <label>Title:
                 <input
                   type="text"
@@ -130,7 +130,7 @@ class PhotoShow extends React.Component {
                   maxLength=""/>
               </label>
               <label>Description:
-                <input
+                <textarea
                   type="text"
                   value={this.state.photo.description}
                   onChange={this.update('description')}

@@ -11,6 +11,7 @@
 
 }
 
+
 .owner-btns {
   padding: 5px;
   float: right;
@@ -132,10 +133,18 @@
 
 }
 
+.photo-edit-modal-form input[type=text] {
+  font-family: 'Libre Franklin', sans-serif;
+  font-size: 18px;
+
+}
+
 .photo-edit-title:hover {
 
 }
 
 .photo-edit-description {
-
+  font-family: 'Libre Franklin', sans-serif;
+  font-size: 18px;
+  
 }
