@@ -120,7 +120,7 @@ class PhotoShow extends React.Component {
             className="photo-show-modal"
             ariaHideApp={false}
             overlayClassName="photo-show-overlay">
-            <form className="photo-edit-modal-form" onSubmit={() => this.props.updatePhoto(this.state.photo)}>
+            <form className="photo-edit-modal-form">
               <label>Title:
                 <input
                   type="text"
@@ -136,7 +136,9 @@ class PhotoShow extends React.Component {
                   onChange={this.update('description')}
                   className="photo-edit-description"/>
               </label>
-              <button className="photo-modal-edit-btn" onClick={() => this.handleCloseModal()}>Edit</button>
+              <button className="photo-modal-edit-btn"
+                onClick={()=>this.props.updatePhoto(this.state.photo)
+                  .then(this.handleCloseModal())}>Edit</button>
             </form>
           </ReactModal>
 
