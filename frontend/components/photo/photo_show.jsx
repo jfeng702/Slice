@@ -79,13 +79,23 @@ class PhotoShow extends React.Component {
 });
   }
 
-
   render() {
     const photo = this.props.photo;
     if (!photo) {
       return <div>Loading...</div>;
     }
-
+    let ownerButtons;
+    if (this.props.photo.ownerOwns) {
+      ownerButtons = (
+        <div>
+          <button className="photo-edit-btn" onClick={this.handleOpenModal}>Edit</button>
+          <Link to="/">
+            <button onClick={()=>this.props.deletePhoto(photo.id)}>Delete
+            </button>
+          </Link>
+        </div>
+      );
+    }
 
     return (
       <div className="show">
@@ -97,17 +107,7 @@ class PhotoShow extends React.Component {
             <h1 className="photo-show-title">{photo.title}</h1>
             <h3 className="photo-show-description">{photo.description}</h3>
           </div>
-
-          <button className="photo-edit-btn" onClick={this.handleOpenModal}>Edit</button>
-
-          {
-            (this.props.photo.ownerOwns) ?
-            <Link to="/">
-              <button onClick={()=>this.props.deletePhoto(photo.id)}>Delete
-              </button>
-            </Link> : null
-          }
-
+          {ownerButtons}
           <ReactModal
             isOpen={this.state.showModal}
             contentLabel="onRequestClose"

@@ -27,6 +27,10 @@ time, mark, audio, video {
     background:transparent;
 }
 
+button {
+  border-radius: 3px;
+}
+
 body {
     line-height:1;
     margin: 0;
