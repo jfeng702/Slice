@@ -1,22 +1,32 @@
 
 .show h1 {
-  font-size: 28px;
+  font-size: 33px;
 }
 
 .show h3 {
-  font-size: 14px;
+  font-size: 19px;
 }
 
 .show-bot-half {
-  width: 1000px;
-  margin: 0 auto;
+  // width: 1000px;
+  width: 100%;
+  // margin: 0 auto;
   font-family: Proxima Nova,helvetica neue,helvetica,arial,sans-serif;
   // display: flex;
   // flex-direction: row;
   // align-content: space-between;
   // justify-content: flex-start;
+  padding-left: 30px;
+  padding-right: 30px;
 }
 
+.show {
+
+}
+
+.owner-btns {
+
+}
 
 .show-bot-half button {
   background: #188fff;
@@ -32,8 +42,10 @@
   cursor: pointer;
 }
 
+
 .show-image {
   background: #212124;
+
 }
 
 .show-image img {
@@ -47,8 +59,24 @@
   margin-right: auto;
 }
 
+.show-image-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%
+}
+
+.photo-show-top-row {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 9px 0 0 0;
+}
+
 .photo-show-title {
-  padding: 15px 0 0;
+  // display: inline-block;
+  // padding: 15px 0 0;
   font-family: 'Libre Franklin', sans-serif;
 }
 

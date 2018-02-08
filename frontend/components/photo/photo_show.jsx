@@ -87,7 +87,7 @@ class PhotoShow extends React.Component {
     let ownerButtons;
     if (this.props.photo.ownerOwns) {
       ownerButtons = (
-        <div>
+        <div className="owner-btns">
           <button className="photo-edit-btn" onClick={this.handleOpenModal}>Edit</button>
           <Link to="/">
             <button onClick={()=>this.props.deletePhoto(photo.id)}>Delete
@@ -104,10 +104,13 @@ class PhotoShow extends React.Component {
         </div>
         <div className="show-bot-half">
           <div className="show-image-info">
-            <h1 className="photo-show-title">{photo.title}</h1>
-            <h3 className="photo-show-description">{photo.description}</h3>
+            <div className="photo-show-top-row">
+              <h1 className="photo-show-title">{photo.title}</h1>
+              {ownerButtons}
+            </div>
+
           </div>
-          {ownerButtons}
+            <h3 className="photo-show-description">{photo.description}</h3>
           <ReactModal
             isOpen={this.state.showModal}
             contentLabel="onRequestClose"

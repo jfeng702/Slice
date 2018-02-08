@@ -31,9 +31,14 @@ button {
   border-radius: 3px;
 }
 
+button:hover {
+  cursor: pointer;
+}
+
 body {
     line-height:1;
     margin: 0;
+    font-family: Proxima Nova,helvetica neue,helvetica,arial,sans-serif;
 }
 
 html {
