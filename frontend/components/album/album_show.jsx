@@ -17,6 +17,8 @@ class AlbumShow extends React.Component {
     return (
       <div>
         {album.title}
+      
+        <img src={`${album.cover_url}`}/>
       </div>
     );
   }

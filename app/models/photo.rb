@@ -34,7 +34,9 @@ class Photo < ApplicationRecord
   has_many :comments
   has_many :tags
 
-
+  def user_photos
+    current_user.photos 
+  end
 
 
 end
