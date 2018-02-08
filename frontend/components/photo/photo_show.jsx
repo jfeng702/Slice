@@ -106,6 +106,7 @@ class PhotoShow extends React.Component {
           <div className="show-image-info">
             <div className="photo-show-top-row">
               <h1 className="photo-show-title">{photo.title}</h1>
+              <h2 className="photo-date">Posted on {new Date(photo.created_at).toDateString()}</h2>
               {ownerButtons}
             </div>
 
@@ -124,7 +125,8 @@ class PhotoShow extends React.Component {
                   type="text"
                   value={this.state.photo.title}
                   onChange={this.update('title')}
-                  className="photo-edit-title"/>
+                  className="photo-edit-title"
+                  maxLength=""/>
               </label>
               <label>Description:
                 <input
@@ -151,9 +153,6 @@ class PhotoShow extends React.Component {
 
           {/*<div className="comment-index">        </div>*/}
             <CommentIndexContainer photo={photo}/>
-          </div>
-          <div className="photo-date">
-            <h2>Posted on {new Date(photo.created_at).toDateString()}</h2>
           </div>
         </div>
 
