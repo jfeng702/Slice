@@ -4,10 +4,10 @@ import Masonry from 'react-masonry-component';
 import { Link } from 'react-router-dom';
 
 var masonryOptions = {
-    transitionDuration: '0.8s',
+    // transitionDuration: '0.8s',
     fitWidth: true,
-    horizontalOrder: true,
-    stagger: 90,
+    // horizontalOrder: true,
+    // stagger: 90,
     itemSelector: '.photo-index-child',
     gutter: 0
     // columnWidth: '.grid-sizer'

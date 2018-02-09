@@ -21,7 +21,7 @@
 }
 
 .my-gallery-class {
-  width: 100%;
+  // width: 100%;
   margin: 0 auto;
 }
 
@@ -36,4 +36,8 @@
   // padding-left: 5px;
   // padding-right: 5px;
   // padding: 1px;
+}
+
+.my-gallery-class img:hover {
+  opacity: .7;
 }

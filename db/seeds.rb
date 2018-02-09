@@ -8,9 +8,9 @@
 # Photo.destroy_all
 # User.destroy_all
 
-user1 = User.create!({ username: 'test2', password: 'password' })
+user1 = User.create!({ username: 'test1', password: 'password' })
 
-user2 = User.create!({ username: 'test3', password: 'password'})
+user2 = User.create!({ username: 'test2', password: 'password'})
 
 
 photos = Photo.create!([{ img_url: 'https://static.pexels.com/photos/46710/pexels-photo-46710.jpeg', owner_id: user1.id, title: 'awesome pic', description: 'taken with nikon' },
