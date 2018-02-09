@@ -6,7 +6,7 @@ import { withRouter } from 'react-router-dom';
 
 
 const mapStateToProps = (state, ownProps) => {
-  console.log(state, 'photo show state');
+  // console.log(state, 'photo show state');
   return {
     photo: state.entities.photos[ownProps.match.params.photoId],
     currentUser: state.session.currentUser,

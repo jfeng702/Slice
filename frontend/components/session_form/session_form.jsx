@@ -20,7 +20,7 @@ class sessionForm extends React.Component {
   componentWillReceiveProps(nextProps) {
     // console.log('next props received');
     if (nextProps.loggedIn) {
-      console.log('Next Props contains logged in');
+      // console.log('Next Props contains logged in');
       this.props.history.push('/homepage');
     }
   }

@@ -26,7 +26,7 @@ class AlbumShow extends React.Component {
   }
 
   render() {
-    console.warn(this.props);
+    // console.warn(this.props);
 
     var childElements = this.props.photos.map(function(photo){
        return (

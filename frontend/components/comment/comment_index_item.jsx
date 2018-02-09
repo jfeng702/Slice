@@ -1,7 +1,7 @@
 import React from 'react';
 
 const CommentIndexItem = ({comment, deleteComment}) => {
-  console.log(deleteComment, 'this is delete comment');
+  // console.log(deleteComment, 'this is delete comment');
   // console.log(fetchComments, 'this is fetch comments');
   return (
     <div className="comment-index-item">

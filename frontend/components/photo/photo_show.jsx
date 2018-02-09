@@ -48,7 +48,7 @@ class PhotoShow extends React.Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    console.log(nextProps, 'nextprops');
+    // console.log(nextProps, 'nextprops');
     if (nextProps.match.params.photoId !== this.props.match.params.photoId) {
       nextProps.fetchPhoto(nextProps.match.params.photoId).then(() => {
         this.setState({showModal: !!this.props.location.search});

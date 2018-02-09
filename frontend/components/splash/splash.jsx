@@ -30,7 +30,7 @@ class Splash extends React.Component {
   }
 
   componentWillUnmount() {
-    console.log('unmounted');
+    // console.log('unmounted');
     this.setState( { showModal: false });
   }
 

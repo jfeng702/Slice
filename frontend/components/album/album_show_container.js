@@ -3,8 +3,8 @@ import AlbumShow from './album_show';
 import { fetchAlbums, fetchAlbum, fetchAlbumPhotos, updateAlbum, deleteAlbum } from '../../actions/album_actions';
 
 const mapStateToProps = (state, ownProps) => {
-  console.log(ownProps, 'album show');
-  console.log(state, 'album show state');
+  // console.log(ownProps, 'album show');
+  // console.log(state, 'album show state');
   return {
     album: state.entities.albums[ownProps.match.params.id],
     photos: Object.values(state.entities.photos),

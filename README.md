@@ -37,7 +37,7 @@ Users are able to upload photos via drag and drop or by selecting the file. Afte
 #### Photo edits and deletion
   Owners of photos are able to gain access to owner buttons that allow them to make edits and delete photos. This is done through a conditional statement that checks JBuilder expression evaluating whether the current photo's owner id is the same as the current user's id.
 
-![Photo edits in real time](docs/images/edit.gif)
+![Photo edits in real time](docs/images/snowedit.gif)
 
 ## Future Improvements
 
