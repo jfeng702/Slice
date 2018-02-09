@@ -7,13 +7,12 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 # Photo.destroy_all
 # User.destroy_all
-
+#
 # user1 = User.create!({ username: 'test1', password: 'password' })
 #
 # user2 = User.create!({ username: 'test2', password: 'password'})
+#
 
-photo_id = 78
-album_id = 2
 
 # photos = Photo.create!([{ img_url: 'https://static.pexels.com/photos/46710/pexels-photo-46710.jpeg', owner_id: user1.id, title: 'awesome pic', description: 'taken with nikon' },
 #   {img_url: 'https://static.pexels.com/photos/248797/pexels-photo-248797.jpeg', owner_id: user1.id, title: 'awesome pic', description: 'taken with nikon'},
@@ -26,29 +25,15 @@ album_id = 2
 #   {img_url: 'https://images.freeimages.com/images/small-previews/25d/eagle-1523807.jpg', owner_id: user2.id, title: 'awesome pic', description: 'taken with nikon'}
 #  ])
 
-# album_photos = AlbumPhoto.create!([{ album_id: album_id, photo_id: 75 },
-#   { album_id: album_id, photo_id: 76 },
-#   { album_id: album_id, photo_id: 77 },
-#   { album_id: album_id, photo_id: 78 },
-#   { album_id: album_id, photo_id: 79 },
-#   { album_id: album_id, photo_id: 80 },
-#   { album_id: album_id, photo_id: 81 },
-#   { album_id: album_id, photo_id: 82 },
-#   { album_id: album_id, photo_id: 83 },
-#   { album_id: album_id, photo_id: 84 },
-#   { album_id: album_id, photo_id: 74 },
-#   { album_id: album_id, photo_id: 75 },
-#   { album_id: album_id, photo_id: 85 },
-#   { album_id: album_id, photo_id: 86 },
-#   { album_id: album_id, photo_id: 87 },
-#   { album_id: album_id, photo_id: 88 },
-#   { album_id: album_id, photo_id: 89 },
-#   { album_id: album_id, photo_id: 90 },
-#   { album_id: album_id, photo_id: 91 },
-#   { album_id: album_id, photo_id: 92 }])
+ Photo.create!([{img_url: 'http://www.hd-freewallpapers.com/free-parrots-wallpapers/beautiful-images-of-parrots-wallpaper.jpg', owner_id: 16 },
+   {img_url:'https://www.thephotoargus.com/wp-content/uploads/2016/12/peacock-9.jpg', owner_id:},
+   {img_url:'http://cdn2.stylecraze.com/wp-content/uploads/2013/08/1791_25-Most-Beautiful-Pink-Roses_-is-tock-675065828.jpg', owner_id:},
+   {img_url:'http://hdfreewallpaper.net/wp-content/uploads/2015/10/beautiful-waterfall-and-pink-flowers-free-hd-for-desktop.jpg', owner_id:},
+   {img_url:'https://static.pexels.com/photos/326055/pexels-photo-326055.jpeg', owner_id:},
+   {img_url:'https://cdn.pixabay.com/photo/2017/02/19/15/28/italy-2080072_960_720.jpg', owner_id:},
+   {img_url:'https://static.pexels.com/photos/206359/pexels-photo-206359.jpeg', owner_id:}])
 
-albums = Album.create!([{title: 'cool pics', owner_id: 21},
-{title: 'cool pics', owner_id: 21},
-{title: 'cool pics', owner_id: 21},
-{title: 'cool pics', owner_id: 21},
-{title: 'cool pics', owner_id: 21}  ])
+album_photos = AlbumPhoto.create!([{ album_id: album_id, photo_id: 75 },
+
+
+beautiful_pics = Album.create!([{title: 'Beautiful Sights', owner_id: 16}])

@@ -22,7 +22,7 @@ const personalGreeting = (currentUser, logout, createPhoto) => {
       <Link to="/">
         <h2 className="header-logo">slice</h2>
       </Link>
-      <Link to="/albums">
+      <Link className="album-link" to="/albums">
         Albums
       </Link>
       <h2 className="header-name">Welcome, {currentUser.username}!</h2>
