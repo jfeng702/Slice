@@ -1,0 +1,58 @@
+/* line 1, /Users/joeyfeng/Library/Mobile Documents/com~apple~CloudDocs/AppAcademy/Projects/FSP/flickr/app/assets/stylesheets/photo/photo_show_modal.scss */
+.photo-show-modal {
+  position: absolute;
+  top: 300px;
+  left: 50%;
+  right: 50%;
+  margin-left: -180px;
+  width: 400px;
+  height: 300px;
+  padding: 20px;
+  background: #fff;
+  z-index: 3;
+  border-radius: 5px;
+  border: 1px solid #000;
+  font-family: Proxima Nova,helvetica neue,helvetica,arial,sans-serif;
+}
+
+/* line 21, /Users/joeyfeng/Library/Mobile Documents/com~apple~CloudDocs/AppAcademy/Projects/FSP/flickr/app/assets/stylesheets/photo/photo_show_modal.scss */
+.photo-modal-edit-btn {
+  margin-top: 10px;
+  width: 100%;
+  background: #188fff;
+  height: 40px;
+  font-size: 16px;
+  color: white;
+}
+
+/* line 31, /Users/joeyfeng/Library/Mobile Documents/com~apple~CloudDocs/AppAcademy/Projects/FSP/flickr/app/assets/stylesheets/photo/photo_show_modal.scss */
+.photo-edit-title {
+  width: 100%;
+  margin-bottom: 10px;
+  margin-top: 4px;
+  font: 18px helvetica;
+  font-family: Proxima Nova,helvetica neue,helvetica,arial,sans-serif;
+  height: 40px;
+}
+
+/* line 40, /Users/joeyfeng/Library/Mobile Documents/com~apple~CloudDocs/AppAcademy/Projects/FSP/flickr/app/assets/stylesheets/photo/photo_show_modal.scss */
+.photo-edit-description {
+  height: 120px;
+  width: 100%;
+  margin-top: 6px;
+  font-family: Proxima Nova,helvetica neue,helvetica,arial,sans-serif;
+}
+
+/* line 48, /Users/joeyfeng/Library/Mobile Documents/com~apple~CloudDocs/AppAcademy/Projects/FSP/flickr/app/assets/stylesheets/photo/photo_show_modal.scss */
+.photo-show-overlay {
+  background: rgba(0, 0, 0, 0.7);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  /* opacity: .5; */
+}

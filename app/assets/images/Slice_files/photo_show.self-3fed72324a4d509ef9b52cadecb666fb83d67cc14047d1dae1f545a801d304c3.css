@@ -1,0 +1,119 @@
+/* line 2, /Users/joeyfeng/Library/Mobile Documents/com~apple~CloudDocs/AppAcademy/Projects/FSP/flickr/app/assets/stylesheets/photo/photo_show.scss */
+.show h1 {
+  font-size: 33px;
+}
+
+/* line 6, /Users/joeyfeng/Library/Mobile Documents/com~apple~CloudDocs/AppAcademy/Projects/FSP/flickr/app/assets/stylesheets/photo/photo_show.scss */
+.show h3 {
+  font-size: 19px;
+}
+
+/* line 15, /Users/joeyfeng/Library/Mobile Documents/com~apple~CloudDocs/AppAcademy/Projects/FSP/flickr/app/assets/stylesheets/photo/photo_show.scss */
+.owner-btns {
+  padding: 5px;
+  float: right;
+}
+
+/* line 20, /Users/joeyfeng/Library/Mobile Documents/com~apple~CloudDocs/AppAcademy/Projects/FSP/flickr/app/assets/stylesheets/photo/photo_show.scss */
+.photo-edit-btn {
+  background: #188fff;
+  height: 40px;
+  font-size: 16px;
+  color: white;
+  padding: 10px;
+}
+
+/* line 29, /Users/joeyfeng/Library/Mobile Documents/com~apple~CloudDocs/AppAcademy/Projects/FSP/flickr/app/assets/stylesheets/photo/photo_show.scss */
+.photo-edit-btn:hover {
+  background: #3fa2ff;
+}
+
+/* line 33, /Users/joeyfeng/Library/Mobile Documents/com~apple~CloudDocs/AppAcademy/Projects/FSP/flickr/app/assets/stylesheets/photo/photo_show.scss */
+.photo-del-btn:hover {
+  background: #3fa2ff;
+}
+
+/* line 37, /Users/joeyfeng/Library/Mobile Documents/com~apple~CloudDocs/AppAcademy/Projects/FSP/flickr/app/assets/stylesheets/photo/photo_show.scss */
+.photo-del-btn {
+  background: #188fff;
+  height: 40px;
+  font-size: 16px;
+  color: white;
+  padding: 10px;
+  margin-left: 7px;
+}
+
+/* line 46, /Users/joeyfeng/Library/Mobile Documents/com~apple~CloudDocs/AppAcademy/Projects/FSP/flickr/app/assets/stylesheets/photo/photo_show.scss */
+.show-bot-half {
+  width: 100%;
+  font-family: Proxima Nova,helvetica neue,helvetica,arial,sans-serif;
+  padding-left: 160px;
+  padding-right: 160px;
+  padding-bottom: 50px;
+}
+
+/* line 71, /Users/joeyfeng/Library/Mobile Documents/com~apple~CloudDocs/AppAcademy/Projects/FSP/flickr/app/assets/stylesheets/photo/photo_show.scss */
+.show-bot-half button:hover {
+  cursor: pointer;
+}
+
+/* line 77, /Users/joeyfeng/Library/Mobile Documents/com~apple~CloudDocs/AppAcademy/Projects/FSP/flickr/app/assets/stylesheets/photo/photo_show.scss */
+.show-image {
+  background: #212124;
+}
+
+/* line 82, /Users/joeyfeng/Library/Mobile Documents/com~apple~CloudDocs/AppAcademy/Projects/FSP/flickr/app/assets/stylesheets/photo/photo_show.scss */
+.show-image img {
+  height: 713px;
+  max-width: 100%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* line 97, /Users/joeyfeng/Library/Mobile Documents/com~apple~CloudDocs/AppAcademy/Projects/FSP/flickr/app/assets/stylesheets/photo/photo_show.scss */
+.photo-date {
+  padding: 5px;
+}
+
+/* line 101, /Users/joeyfeng/Library/Mobile Documents/com~apple~CloudDocs/AppAcademy/Projects/FSP/flickr/app/assets/stylesheets/photo/photo_show.scss */
+.show-image-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+
+/* line 108, /Users/joeyfeng/Library/Mobile Documents/com~apple~CloudDocs/AppAcademy/Projects/FSP/flickr/app/assets/stylesheets/photo/photo_show.scss */
+.photo-show-top-row {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 9px 0 0 0;
+}
+
+/* line 116, /Users/joeyfeng/Library/Mobile Documents/com~apple~CloudDocs/AppAcademy/Projects/FSP/flickr/app/assets/stylesheets/photo/photo_show.scss */
+.photo-show-title {
+  font-family: 'Libre Franklin', sans-serif;
+  width: 40%;
+}
+
+/* line 123, /Users/joeyfeng/Library/Mobile Documents/com~apple~CloudDocs/AppAcademy/Projects/FSP/flickr/app/assets/stylesheets/photo/photo_show.scss */
+.photo-show-description {
+  padding: 5px 0 15px 0;
+  font-family: 'Libre Franklin', sans-serif;
+  width: 40%;
+}
+
+/* line 137, /Users/joeyfeng/Library/Mobile Documents/com~apple~CloudDocs/AppAcademy/Projects/FSP/flickr/app/assets/stylesheets/photo/photo_show.scss */
+.photo-edit-modal-form input[type=text] {
+  font-family: 'Libre Franklin', sans-serif;
+  font-size: 18px;
+}
+
+/* line 147, /Users/joeyfeng/Library/Mobile Documents/com~apple~CloudDocs/AppAcademy/Projects/FSP/flickr/app/assets/stylesheets/photo/photo_show.scss */
+.photo-edit-description {
+  font-family: 'Libre Franklin', sans-serif;
+  font-size: 18px;
+}

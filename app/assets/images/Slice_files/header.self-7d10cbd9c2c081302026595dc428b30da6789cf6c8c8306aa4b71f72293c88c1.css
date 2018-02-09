@@ -1,0 +1,68 @@
+/* line 1, /Users/joeyfeng/Library/Mobile Documents/com~apple~CloudDocs/AppAcademy/Projects/FSP/flickr/app/assets/stylesheets/photo/header.scss */
+.fa-cloud-upload-alt {
+  font-size: 36px;
+  background: #181818;
+  color: white;
+}
+
+/* line 8, /Users/joeyfeng/Library/Mobile Documents/com~apple~CloudDocs/AppAcademy/Projects/FSP/flickr/app/assets/stylesheets/photo/header.scss */
+.fa-cloud-upload-alt:hover {
+  cursor: pointer;
+  color: gray;
+}
+
+/* line 13, /Users/joeyfeng/Library/Mobile Documents/com~apple~CloudDocs/AppAcademy/Projects/FSP/flickr/app/assets/stylesheets/photo/header.scss */
+.header-cloud-button {
+  padding: 0;
+  margin: 0;
+  border: none;
+}
+
+/* line 21, /Users/joeyfeng/Library/Mobile Documents/com~apple~CloudDocs/AppAcademy/Projects/FSP/flickr/app/assets/stylesheets/photo/header.scss */
+.header-group {
+  display: flex;
+  background-color: #181818;
+  justify-content: flex-end;
+  height: 65px;
+  align-items: center;
+  font-family: Proxima Nova,helvetica neue,helvetica,arial,sans-serif;
+}
+
+/* line 31, /Users/joeyfeng/Library/Mobile Documents/com~apple~CloudDocs/AppAcademy/Projects/FSP/flickr/app/assets/stylesheets/photo/header.scss */
+.header-name {
+  color: WhiteSmoke;
+  font: Helvetica;
+  padding-left: 20px;
+}
+
+/* line 37, /Users/joeyfeng/Library/Mobile Documents/com~apple~CloudDocs/AppAcademy/Projects/FSP/flickr/app/assets/stylesheets/photo/header.scss */
+.button {
+  border-radius: 3px;
+}
+
+/* line 41, /Users/joeyfeng/Library/Mobile Documents/com~apple~CloudDocs/AppAcademy/Projects/FSP/flickr/app/assets/stylesheets/photo/header.scss */
+.header-button {
+  height: 30px;
+  font: normal 15px 'Proxima Nova', sans-serif;
+  margin: 0 25px;
+  background: transparent;
+  border: 2px solid white;
+  color: white;
+}
+
+/* line 53, /Users/joeyfeng/Library/Mobile Documents/com~apple~CloudDocs/AppAcademy/Projects/FSP/flickr/app/assets/stylesheets/photo/header.scss */
+.header-group button:hover {
+  color: #c0c0c0;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* line 60, /Users/joeyfeng/Library/Mobile Documents/com~apple~CloudDocs/AppAcademy/Projects/FSP/flickr/app/assets/stylesheets/photo/header.scss */
+.header-logo {
+  font: normal 40px 'Proxima Nova', sans-serif;
+  top: 8px;
+  position: absolute;
+  color: white;
+  left: 15px;
+  text-shadow: 2px 2px 5px black, 0 0 25px gray, 0 0 5px gray;
+}

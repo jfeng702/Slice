@@ -1,0 +1,33 @@
+/* line 1, /Users/joeyfeng/Library/Mobile Documents/com~apple~CloudDocs/AppAcademy/Projects/FSP/flickr/app/assets/stylesheets/splash/modal.scss */
+.Modal {
+  position: absolute;
+  top: 300px;
+  left: 50%;
+  right: 50%;
+  margin-left: -190px;
+  width: 320px;
+  height: auto;
+  padding: 20px;
+  background: #fff;
+  z-index: 3;
+  border-radius: 5px;
+  border: 1px solid #000;
+  font: normal 15px 'Proxima Nova', sans-serif;
+}
+
+/* line 21, /Users/joeyfeng/Library/Mobile Documents/com~apple~CloudDocs/AppAcademy/Projects/FSP/flickr/app/assets/stylesheets/splash/modal.scss */
+.error-display {
+  color: red;
+}
+
+/* line 25, /Users/joeyfeng/Library/Mobile Documents/com~apple~CloudDocs/AppAcademy/Projects/FSP/flickr/app/assets/stylesheets/splash/modal.scss */
+.Overlay {
+  background: rgba(0, 0, 0, 0.3);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  /* opacity: .5; */
+}

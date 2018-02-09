@@ -1,0 +1,70 @@
+/* line 1, /Users/joeyfeng/Library/Mobile Documents/com~apple~CloudDocs/AppAcademy/Projects/FSP/flickr/app/assets/stylesheets/splash/splash.scss */
+.splash {
+  background: url("https://static.pexels.com/photos/218983/pexels-photo-218983.jpeg");
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* line 13, /Users/joeyfeng/Library/Mobile Documents/com~apple~CloudDocs/AppAcademy/Projects/FSP/flickr/app/assets/stylesheets/splash/splash.scss */
+.splash-logo {
+  font: normal 40px 'Proxima Nova', sans-serif;
+  top: 8px;
+  display: inline-block;
+  position: relative;
+  color: white;
+  left: 15px;
+  text-shadow: 2px 2px 5px black, 0 0 25px blue, 0 0 5px darkblue;
+}
+
+/* line 24, /Users/joeyfeng/Library/Mobile Documents/com~apple~CloudDocs/AppAcademy/Projects/FSP/flickr/app/assets/stylesheets/splash/splash.scss */
+.splash-nav button {
+  height: 30px;
+  font: normal 15px 'Proxima Nova', sans-serif;
+  margin-right: 25px;
+  float: right;
+  position: relative;
+  top: 20px;
+  padding: 5px 15px 15px 15px;
+  background: transparent;
+  border: 2px solid white;
+  color: white;
+}
+
+/* line 38, /Users/joeyfeng/Library/Mobile Documents/com~apple~CloudDocs/AppAcademy/Projects/FSP/flickr/app/assets/stylesheets/splash/splash.scss */
+.splash-nav button:hover {
+  color: #c0c0c0;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* line 44, /Users/joeyfeng/Library/Mobile Documents/com~apple~CloudDocs/AppAcademy/Projects/FSP/flickr/app/assets/stylesheets/splash/splash.scss */
+.splash-nav img {
+  position: relative;
+  left: 20px;
+  top: 15px;
+  width: 40px;
+  /* you can use % */
+  height: auto;
+}
+
+/* line 53, /Users/joeyfeng/Library/Mobile Documents/com~apple~CloudDocs/AppAcademy/Projects/FSP/flickr/app/assets/stylesheets/splash/splash.scss */
+.splash-title {
+  /* font-size: 10px; */
+  text-align: center;
+  margin: 0 auto;
+  color: white;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  position: absolute;
+}
+
+/* line 66, /Users/joeyfeng/Library/Mobile Documents/com~apple~CloudDocs/AppAcademy/Projects/FSP/flickr/app/assets/stylesheets/splash/splash.scss */
+.splash-title > h1 {
+  font: normal 30px 'Proxima Nova', sans-serif;
+  text-shadow: 2px 2px 5px black, 0 0 25px blue, 0 0 5px darkblue;
+}

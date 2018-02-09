@@ -1,0 +1,90 @@
+.comment-index {
+  position: relative;
+  top: 15px;
+  bottom: 15px;
+}
+
+textarea {
+  resize: none;
+}
+
+.comments {
+  padding: 15px 0;
+  width: 40%;
+}
+
+.comment-btn {
+  margin-top: 10px;
+  margin-left: 300px;
+  background: #188fff;
+  height: 40px;
+  font-size: 16px;
+  color: white;
+  padding: 10px;
+
+}
+
+.comment-btn:hover {
+  background: #3fa2ff;
+}
+
+.cmt-username-row {
+  padding-top: 7px;
+  color: #006dac;
+}
+
+.cmt-username-row span {
+  padding-left: 20px;
+  color: #898989;
+}
+
+.cmt-body {
+  padding: 5px;
+  overflow-wrap: break-word;
+}
+
+.comment-index-item {
+  /* display: flex;
+  justify-content: space-around; */
+
+}
+
+.comment-index-item li {
+  padding-left: 20px;
+  flex-direction: column;
+
+}
+
+.comment-form {
+  /* display: inline-block; */
+  padding: 25px;
+}
+
+.comment-textarea {
+  height: 80px;
+  width: 400px;
+  font-size: 16px
+}
+
+.comment-form input::placeholder {
+  /* text-align: left; */
+  /* line-height: 24px; */
+}
+
+.delete-comment-btn {
+  float: right;
+  border: none;
+}
+
+
+.delete-comment-btn:hover {
+  color: lightsteelblue;
+}
+
+.fa-times {
+  background: none;
+  height: auto;
+  font-size: auto;
+  padding: 0;
+  margin-right: 0px;
+}

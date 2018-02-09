@@ -1,0 +1,110 @@
+/* line 1, /Users/joeyfeng/Library/Mobile Documents/com~apple~CloudDocs/AppAcademy/Projects/FSP/flickr/app/assets/stylesheets/login_form.scss */
+[class*='login-form'] {
+  color: gray;
+  font-family: arial;
+}
+
+/* line 6, /Users/joeyfeng/Library/Mobile Documents/com~apple~CloudDocs/AppAcademy/Projects/FSP/flickr/app/assets/stylesheets/login_form.scss */
+.login-form-container {
+  font-family: helvetica;
+}
+
+/* line 11, /Users/joeyfeng/Library/Mobile Documents/com~apple~CloudDocs/AppAcademy/Projects/FSP/flickr/app/assets/stylesheets/login_form.scss */
+.logn-form {
+  font-family: helvetica;
+  top: 10px;
+}
+
+/* line 17, /Users/joeyfeng/Library/Mobile Documents/com~apple~CloudDocs/AppAcademy/Projects/FSP/flickr/app/assets/stylesheets/login_form.scss */
+.logn-form > button {
+  padding: 10px;
+}
+
+/* line 25, /Users/joeyfeng/Library/Mobile Documents/com~apple~CloudDocs/AppAcademy/Projects/FSP/flickr/app/assets/stylesheets/login_form.scss */
+.login-signup > img {
+  height: 5px;
+}
+
+/* line 37, /Users/joeyfeng/Library/Mobile Documents/com~apple~CloudDocs/AppAcademy/Projects/FSP/flickr/app/assets/stylesheets/login_form.scss */
+.error-display {
+  display: inline-block;
+  list-style-type: none;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+/* line 46, /Users/joeyfeng/Library/Mobile Documents/com~apple~CloudDocs/AppAcademy/Projects/FSP/flickr/app/assets/stylesheets/login_form.scss */
+.submit-btn {
+  margin-top: 25px;
+  width: 100%;
+  background: #188fff;
+  height: 46px;
+  font-size: 16px;
+  color: white;
+}
+
+/* line 56, /Users/joeyfeng/Library/Mobile Documents/com~apple~CloudDocs/AppAcademy/Projects/FSP/flickr/app/assets/stylesheets/login_form.scss */
+.submit-btn:hover {
+  background: #3fa2ff;
+  cursor: pointer;
+}
+
+/* line 61, /Users/joeyfeng/Library/Mobile Documents/com~apple~CloudDocs/AppAcademy/Projects/FSP/flickr/app/assets/stylesheets/login_form.scss */
+.demo-btn {
+  margin-top: -5px;
+  width: 100%;
+  background: #188fff;
+  height: 46px;
+  font-size: 16px;
+  color: white;
+}
+
+/* line 70, /Users/joeyfeng/Library/Mobile Documents/com~apple~CloudDocs/AppAcademy/Projects/FSP/flickr/app/assets/stylesheets/login_form.scss */
+.demo-btn:hover {
+  background: #3fa2ff;
+  cursor: pointer;
+}
+
+/* line 76, /Users/joeyfeng/Library/Mobile Documents/com~apple~CloudDocs/AppAcademy/Projects/FSP/flickr/app/assets/stylesheets/login_form.scss */
+.login-username {
+  width: 100%;
+  font-family: helvetica;
+  height: 40px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 3px;
+  font-size: 1.2em;
+  font-family: Helvetica, Arial;
+}
+
+/* line 89, /Users/joeyfeng/Library/Mobile Documents/com~apple~CloudDocs/AppAcademy/Projects/FSP/flickr/app/assets/stylesheets/login_form.scss */
+.login-password {
+  width: 100%;
+  font-family: helvetica;
+  height: 40px;
+  margin: 3px;
+  padding: 3px;
+  font-size: 1.2em;
+  font-family: Helvetica, Arial;
+}
+
+/* line 104, /Users/joeyfeng/Library/Mobile Documents/com~apple~CloudDocs/AppAcademy/Projects/FSP/flickr/app/assets/stylesheets/login_form.scss */
+input:focus::-webkit-input-placeholder {
+  color: dodgerblue;
+}
+
+/* line 108, /Users/joeyfeng/Library/Mobile Documents/com~apple~CloudDocs/AppAcademy/Projects/FSP/flickr/app/assets/stylesheets/login_form.scss */
+.header-group {
+  color: gray;
+}
+
+/* line 112, /Users/joeyfeng/Library/Mobile Documents/com~apple~CloudDocs/AppAcademy/Projects/FSP/flickr/app/assets/stylesheets/login_form.scss */
+.header-name {
+  color: gray;
+}
+
+/* line 116, /Users/joeyfeng/Library/Mobile Documents/com~apple~CloudDocs/AppAcademy/Projects/FSP/flickr/app/assets/stylesheets/login_form.scss */
+.login-signup {
+  font: normal 15px 'Proxima Nova', sans-serif;
+  float: right;
+}
