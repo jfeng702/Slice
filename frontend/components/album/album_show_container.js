@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import AlbumShow from './album_show';
-import { fetchAlbums, fetchAlbumPhotos } from '../../actions/album_actions';
+import { fetchAlbums, fetchAlbum, fetchAlbumPhotos, updateAlbum, deleteAlbum } from '../../actions/album_actions';
 
 const mapStateToProps = (state, ownProps) => {
   console.log(ownProps, 'album show');
@@ -18,7 +18,10 @@ const albumPhotos = (state, photo) => {
 
 const mapDispatchToProps = dispatch => {
   return {
-    fetchAlbumPhotos: (id) => dispatch(fetchAlbumPhotos(id))
+    fetchAlbumPhotos: (id) => dispatch(fetchAlbumPhotos(id)),
+    fetchAlbum: id => dispatch(fetchAlbum(id)),
+    updateAlbum: album => dispatch(updateAlbum(album)),
+    deleteAlbum: id => dispatch(deleteAlbum(id))
   };
 };
 

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Masonry from 'react-masonry-component';
+import ReactModal from 'react-modal';
 
 var masonryOptions = {
     // transitionDuration: '0.8s',
@@ -8,7 +9,7 @@ var masonryOptions = {
     // horizontalOrder: true,
     // stagger: 90,
     // itemSelector: '.album-show-child',
-    gutter: 1,
+    gutter: 2,
     // columnWidth: '.grid-show-sizer',
     // percentPosition: true
 };
@@ -16,16 +17,16 @@ var masonryOptions = {
 class AlbumShow extends React.Component {
   constructor(props) {
     super(props);
+
   }
 
   componentDidMount() {
     this.props.fetchAlbumPhotos(this.props.albumId);
+    this.props.fetchAlbum(this.props.albumId);
   }
 
-
-
-
   render() {
+    console.warn(this.props);
 
     var childElements = this.props.photos.map(function(photo){
        return (
@@ -34,18 +35,26 @@ class AlbumShow extends React.Component {
             </Link>
         );
     });
+    let title;
+    if (this.props.album){
+      title = this.props.album.title;
+    }
 
-    console.warn(this.props);
     return (
-      <Masonry
-        className={'album-show-gallery'}
-        elementType={'ul'}
-        options={masonryOptions}
-        disableImagesLoaded={false}
-        updateOnEachImageLoad={false}>
-    <div className="grid-show-sizer"></div>
-        {childElements}
-    </Masonry>
+      <div className="album-show-container">
+
+        <h1 className="album-show-title">{title}</h1>
+        <Masonry
+          className={'album-show-gallery'}
+          elementType={'ul'}
+          options={masonryOptions}
+          disableImagesLoaded={false}
+          updateOnEachImageLoad={false}>
+      <div className="grid-show-sizer"></div>
+          {childElements}
+      </Masonry>
+      </div>
+
     );
   }
 }
