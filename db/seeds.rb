@@ -26,14 +26,14 @@
 #  ])
 
  Photo.create!([{img_url: 'http://www.hd-freewallpapers.com/free-parrots-wallpapers/beautiful-images-of-parrots-wallpaper.jpg', owner_id: 16 },
-   {img_url:'https://www.thephotoargus.com/wp-content/uploads/2016/12/peacock-9.jpg', owner_id:},
-   {img_url:'http://cdn2.stylecraze.com/wp-content/uploads/2013/08/1791_25-Most-Beautiful-Pink-Roses_-is-tock-675065828.jpg', owner_id:},
-   {img_url:'http://hdfreewallpaper.net/wp-content/uploads/2015/10/beautiful-waterfall-and-pink-flowers-free-hd-for-desktop.jpg', owner_id:},
-   {img_url:'https://static.pexels.com/photos/326055/pexels-photo-326055.jpeg', owner_id:},
-   {img_url:'https://cdn.pixabay.com/photo/2017/02/19/15/28/italy-2080072_960_720.jpg', owner_id:},
-   {img_url:'https://static.pexels.com/photos/206359/pexels-photo-206359.jpeg', owner_id:}])
+   {img_url:'https://www.thephotoargus.com/wp-content/uploads/2016/12/peacock-9.jpg', owner_id:16},
+   {img_url:'http://cdn2.stylecraze.com/wp-content/uploads/2013/08/1791_25-Most-Beautiful-Pink-Roses_-is-tock-675065828.jpg', owner_id:16},
+   {img_url:'http://hdfreewallpaper.net/wp-content/uploads/2015/10/beautiful-waterfall-and-pink-flowers-free-hd-for-desktop.jpg', owner_id:16},
+   {img_url:'https://static.pexels.com/photos/326055/pexels-photo-326055.jpeg', owner_id:16},
+   {img_url:'https://cdn.pixabay.com/photo/2017/02/19/15/28/italy-2080072_960_720.jpg', owner_id:16},
+   {img_url:'https://static.pexels.com/photos/206359/pexels-photo-206359.jpeg', owner_id:16}])
 
-album_photos = AlbumPhoto.create!([{ album_id: album_id, photo_id: 75 },
+# album_photos = AlbumPhoto.create!([{ album_id: album_id, photo_id: 75 },
 
 
 beautiful_pics = Album.create!([{title: 'Beautiful Sights', owner_id: 16}])
