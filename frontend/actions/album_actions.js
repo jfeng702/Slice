@@ -51,8 +51,8 @@ export const fetchAlbum = id => dispatch => {
     .then(serverAlbum => dispatch(receiveAlbum(serverAlbum)));
 };
 
-export const fetchAlbumPhotos = () => dispatch => {
-  return AlbumApiUtil.fetchAlbumPhotos()
+export const fetchAlbumPhotos = (id) => dispatch => {
+  return AlbumApiUtil.fetchAlbumPhotos(id)
     .then(serverPhotos => dispatch(receivePhotos(serverPhotos)));
 };
 

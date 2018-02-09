@@ -1,0 +1,39 @@
+.album-show-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 900px;
+}
+
+.img-test {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  margin-left: 5px;
+  // flex-wrap: wrap;
+}
+
+.album-show-gallery {
+  // max-width: 1000px;
+  width: 800px;
+  margin: 0 auto;
+
+  // left: 130px;
+}
+
+// .album-show-gallery:after {
+//   display: block;
+//   clear: both;
+// }
+
+.album-show-gallery img {
+  width: 450px;
+  margin-bottom: 15px;
+}
+
+.album-show-gallery img:hover {
+  opacity: .7;
+}
+
+.grid-show-sizer, .album-show-child {
+  width: 30%
+}

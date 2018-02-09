@@ -10,15 +10,15 @@ class AlbumIndex extends React.Component {
   render() {
     console.warn(this.props);
     return (
-      <div>
+      <div className="album-index">
         {
           this.props.albums.map(album =>
-          <li>
+          <div className="album-tile" key={`${album.id}`} >
             <Link to={`albums/${album.id}`}>
-              <img src={`${album.cover_url}`}/>
+              <img className="album-tile-img" src={`${album.cover_url}`}/>
             </Link>
-            {album.title}
-          </li>
+            <h3>{album.title}</h3>
+          </div>
           )
         }
       </div>

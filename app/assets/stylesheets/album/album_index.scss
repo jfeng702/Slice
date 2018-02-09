@@ -1,0 +1,24 @@
+
+
+.album-index {
+  // width: 100px;
+  // display: flex;
+  // flex-direction: row;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.album-tile {
+  // height: 300px;
+  // width: 300px;
+  // overflow-wrap: wrap;
+  // margin: 1px;
+  flex: 1 0 10em;
+  margin: 1em;
+}
+
+.album-tile img {
+  display: block;
+  width: 100%;
+}
