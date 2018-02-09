@@ -95,7 +95,7 @@
 }
 
 .photo-date {
-  padding: 5px;
+  padding: 0 5px 5px 5px;
 }
 
 .show-image-info {
@@ -109,8 +109,7 @@
   display: flex;
   width: 100%;
   justify-content: space-between;
-  align-items: center;
-  padding: 9px 0 0 0;
+  padding: 15px 0 0 0;
 }
 
 .photo-show-title {

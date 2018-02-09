@@ -36,6 +36,9 @@
   // padding-left: 5px;
   // padding-right: 5px;
   // padding: 1px;
+  -webkit-box-shadow: 0 10px 50px -6px #777;
+     -moz-box-shadow: 0 10px 50px -6px #777;
+          box-shadow: 0 10px 50px -6px #777;
 }
 
 .my-gallery-class img:hover {

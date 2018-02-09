@@ -22,4 +22,11 @@
 .album-tile img {
   display: block;
   width: 100%;
+  -webkit-box-shadow: 0 10px 50px -6px #777;
+     -moz-box-shadow: 0 10px 50px -6px #777;
+          box-shadow: 0 10px 50px -6px #777;
+}
+
+.album-tile h3 {
+  padding-top: 5px;
 }
