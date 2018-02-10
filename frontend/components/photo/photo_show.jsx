@@ -5,7 +5,7 @@ import CommentIndexContainer from '../comment/comment_index_container';
 
 class PhotoShow extends React.Component {
   constructor(props) {
-    console.log(props, 'photoshow');
+    // console.log(props, 'photoshow');
     super(props);
     this.state = {
       showModal: !!this.props.location.search,
