@@ -9,10 +9,12 @@ Photo.destroy_all
 User.destroy_all
 AlbumPhoto.destroy_all
 Album.destroy_all
+Comment.destroy_all
 
 # Users
 user1 = User.create!({ username: 'guest', password: 'password' })
 user2 = User.create!({ username: 'JamesBond', password: 'password'})
+user3 = User.create!({ username: 'TonyParker', password: 'password'})
 
 # Photos
 # Beautiful Sights
@@ -239,7 +241,7 @@ AlbumPhoto.create!(
   photo_id: photo25.id
 )
 
-
+comments = ['That is an amazing shot!', 'What kind of camera did you use?', 'Wow, truly amazing.']
 
 
 
