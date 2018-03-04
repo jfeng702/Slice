@@ -35,8 +35,27 @@ Users are able to upload photos via drag and drop or by selecting the file. Afte
   }
 ```
 #### Photo edits and deletion
-  Owners of photos are able to gain access to owner buttons that allow them to make edits and delete photos. This is done through a conditional statement that checks JBuilder expression evaluating whether the current photo's owner id is the same as the current user's id.
+  Owners of photos are able to gain access to owner buttons that allow them to make edits and delete photos. The logic for the display of these buttons start in a JBuilder file that checks whether the current photo's owner id is the same as the current user's id, and returns a boolean value.
 
+  ```ruby
+    json.ownerOwns (photo.owner_id == current_user.id)
+  ```
+  If the ownerOwns value is truthy, then an ownerButtons variable becomes defined and later rendered. The edit button opens a modal for editing of photo details while the delete button directly executes a photo deletion. Non-owner users who are browsing through photos do not get access to these buttons.
+
+  ```js
+    let ownerButtons;
+    if (this.props.photo.ownerOwns) {
+      ownerButtons = (
+        <div className="owner-btns">
+          <button className="photo-edit-btn" onClick={this.handleOpenModal}>Edit</button>
+          <Link to="/">
+            <button className="photo-del-btn" onClick={()=>this.props.deletePhoto(photo.id)}>Delete
+            </button>
+          </Link>
+        </div>
+      );
+    }
+  ```
 ![Photo edits in real time](docs/images/snowedit.gif)
 
 ## Future Improvements

@@ -19,27 +19,25 @@ class PhotoIndex extends React.Component {
   }
 
   render() {
-
-
-        var childElements = this.props.photos.map(function(photo){
-           return (
-                <Link key={photo.id} to={`/photos/${photo.id}`}>
-                  <img className="photo-index-child" src={photo.img_url}/>
-                </Link>
-            );
-        });
+    var childElements = this.props.photos.map(function(photo){
+       return (
+            <Link key={photo.id} to={`/photos/${photo.id}`}>
+              <img className="photo-index-child" src={photo.img_url}/>
+            </Link>
+        );
+    });
 
     return (
       <Masonry
-
         className={'my-gallery-class'}
         elementType={'ul'}
         options={masonryOptions}
         disableImagesLoaded={false}
         updateOnEachImageLoad={false}
-    ><div className="grid-sizer"></div>
-        {childElements}
-    </Masonry>
+      >
+        <div className="grid-sizer"></div>
+          {childElements}
+      </Masonry>
     );
   }
 }
