@@ -13,7 +13,8 @@
   z-index: 3;
   border-radius: 5px;
   border: 1px solid #000;
-  font-family: Proxima Nova,helvetica neue,helvetica,arial,sans-serif;
+  font-family: 'Montserrat', sans-serif;
+
 
   // box-shadow: 1px 1px AliceBlue;
 }
@@ -36,6 +37,8 @@
   height: 40px;
   font-size: 16px;
   color: white;
+  font-family: 'Montserrat', sans-serif;
+
 
 }
 
@@ -43,8 +46,11 @@
   width: 100%;
   margin-bottom: 10px;
   margin-top: 4px;
-  font: 18px helvetica;
-  font-family: Proxima Nova,helvetica neue,helvetica,arial,sans-serif;
+
+  font: 18px 'Montserrat';
+  font-family: 'Montserrat', sans-serif;
+
+  // font-family: Proxima Nova,helvetica neue,helvetica,arial,sans-serif;
   height: 40px;
 }
 
@@ -52,7 +58,9 @@
   height: 120px;
   width: 100%;
   margin-top: 6px;
-  font-family: Proxima Nova,helvetica neue,helvetica,arial,sans-serif;
+  font-family: 'Montserrat', sans-serif;
+
+  // font-family: Proxima Nova,helvetica neue,helvetica,arial,sans-serif;
 
 }
 

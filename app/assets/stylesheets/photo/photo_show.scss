@@ -41,13 +41,18 @@
   color: white;
   padding: 10px;
   margin-left: 7px;
+  font-family: 'Montserrat', sans-serif;
+
 }
 
 .show-bot-half {
   // width: 1000px;
   width: 100%;
   // margin: 0 auto;
-  font-family: Proxima Nova,helvetica neue,helvetica,arial,sans-serif;
+  // font-family: 'Libre Franklin', sans-serif;
+  // font-family: 'Montserrat', sans-serif;
+
+
   // display: flex;
   // flex-direction: row;
   // align-content: space-between;
@@ -115,17 +120,18 @@
 .photo-show-title {
   // display: inline-block;
   // padding: 15px 0 0;
-  font-family: 'Libre Franklin', sans-serif;
+  // font-family: 'Libre Franklin', sans-serif;
   width: 40%;
 }
 
 .photo-show-description {
   padding: 5px 0 15px 0;
-  font-family: 'Libre Franklin', sans-serif;
+  // font-family: 'Libre Franklin', sans-serif;
   width: 40%;
 }
 
 .photo-edit-btn {
+  font-family: 'Montserrat', sans-serif;
 
 }
 
@@ -134,7 +140,7 @@
 }
 
 .photo-edit-modal-form input[type=text] {
-  font-family: 'Libre Franklin', sans-serif;
+  // font-family: 'Libre Franklin', sans-serif;
   font-size: 18px;
 
 }
@@ -144,7 +150,7 @@
 }
 
 .photo-edit-description {
-  font-family: 'Libre Franklin', sans-serif;
+  // font-family: 'Libre Franklin', sans-serif;
   font-size: 18px;
 
 }

@@ -20,7 +20,8 @@ textarea {
   height: 40px;
   font-size: 16px;
   color: white;
-  padding: 10px;
+  /* padding: 10px; */
+  font-family: 'Montserrat', sans-serif;
 
 }
 
@@ -43,12 +44,19 @@ textarea {
 .cmt-body {
   padding: 5px;
   overflow-wrap: break-word;
+  font-family: 'Libre Franklin', sans-serif;
+
 }
 
 .comment-index-item {
   /* display: flex;
   justify-content: space-around; */
+  width: 400px;
+}
 
+.comment-index-item:hover {
+  /* background: yellow; */
+  background: #e6f7ff;
 }
 
 /* .comment-index-item li {
@@ -65,7 +73,11 @@ textarea {
 .comment-textarea {
   height: 80px;
   width: 400px;
+  font-family: 'Montserrat', sans-serif;
   font-size: 16px
+
+
+
 }
 
 .comment-form input::placeholder {
@@ -76,11 +88,13 @@ textarea {
 .delete-comment-btn {
   float: right;
   border: none;
+  background: transparent;
 }
 
 
 .delete-comment-btn:hover {
   color: lightsteelblue;
+  /* color: white; */
 }
 
 .fa-times {
