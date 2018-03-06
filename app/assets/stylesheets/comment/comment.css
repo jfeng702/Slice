@@ -31,6 +31,8 @@ textarea {
 .cmt-username-row {
   padding-top: 7px;
   color: #006dac;
+  width: 400px;
+
 }
 
 .cmt-username-row span {
@@ -49,11 +51,11 @@ textarea {
 
 }
 
-.comment-index-item li {
+/* .comment-index-item li {
   padding-left: 20px;
   flex-direction: column;
 
-}
+} */
 
 .comment-form {
   /* display: inline-block; */
