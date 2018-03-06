@@ -32,7 +32,9 @@
 
 .header-name {
   color: WhiteSmoke;
-  font: Helvetica;
+  // font: Helvetica;
+  font: normal 15px 'Montserrat', sans-serif;
+
   padding-left: 20px;
 }
 
@@ -44,8 +46,9 @@
   // align-self: flex-end;
   // position: relative;
   height: 30px;
-  font: normal 15px 'Proxima Nova', sans-serif;
-  margin: 0 25px;
+  font: normal 15px 'Montserrat', sans-serif;
+  margin: 0 40px;
+  padding: 4px 10px;
 
   background: transparent;
   border: 2px solid white;
@@ -60,7 +63,7 @@
 
 
 .header-logo {
-  font: normal 40px 'Proxima Nova', sans-serif;
+  font: normal 40px 'Montserrat', sans-serif;
   top: 8px;
   position: absolute;
   color: white;

@@ -14,7 +14,10 @@
 }
 
 .splash-logo {
-  font: normal 40px 'Proxima Nova', sans-serif;
+  // font: normal 40px 'Proxima Nova', sans-serif;
+  font: normal 40px 'Montserrat', sans-serif;
+  // font-family: 'Montserrat', sans-serif;
+
   top: 8px;
   display:inline-block;
   position: relative;
@@ -26,13 +29,16 @@
 
 .splash-nav button {
   height: 30px;
-  font: normal 15px 'Proxima Nova', sans-serif;
+  // font: normal 15px 'Proxima Nova', sans-serif;
+  font: normal 15px 'Montserrat', sans-serif;
   margin-right: 25px;
   float: right;
   position: relative;
   top: 20px;
   // padding: 10px 20px;
-  padding: 5px 15px 15px 15px;
+  padding: 3px 15px 15px 15px;
+  // padding: 15px;
+  // padding: 5px;
   background: transparent;
   border: 2px solid white;
   color: white;
@@ -67,6 +73,8 @@
 }
 
 .splash-title > h1  {
-  font: normal 30px 'Proxima Nova', sans-serif;
+  // font: normal 30px 'Proxima Nova', sans-serif;
+  font: normal 30px 'Montserrat', sans-serif;
+  font-size: 30px;
   text-shadow: 2px 2px 5px black, 0 0 25px blue, 0 0 5px darkblue;
 }
