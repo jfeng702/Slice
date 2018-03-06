@@ -1,7 +1,7 @@
 .Modal {
 
   position: absolute;
-  top: 300px;
+  top: 250px;
   left: 50%;
   right: 50%;
   margin-left: -190px;
@@ -13,8 +13,8 @@
   z-index: 3;
   border-radius: 5px;
   border: 1px solid #000;
-  font: normal 15px 'Slabo', sans-serif;
-  font-family: 'Slabo 27px', serif;
+  // font: normal 15px 'Slabo', sans-serif;
+  // font-family: 'Slabo 27px', serif;
   // box-shadow: 1px 1px AliceBlue;
 
 }
@@ -31,7 +31,7 @@
   right: 0;
   bottom: 0;
   z-index: 2;
-  font-family: Proxima Nova,helvetica neue,helvetica,arial,sans-serif;
+  // font-family: Proxima Nova,helvetica neue,helvetica,arial,sans-serif;
 
 
   /* opacity: .5; */

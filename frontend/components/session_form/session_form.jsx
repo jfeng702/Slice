@@ -94,7 +94,7 @@ class sessionForm extends React.Component {
       <div className="login-form-container">
         <form className="logn-form">
           Please {formType} or {this.navLink()}
-          {this.renderErrors()}
+
           <br/>
           <br/>
           <div className="login-form">
@@ -112,6 +112,7 @@ class sessionForm extends React.Component {
               className="login-password"
               placeholder="Password"
               />
+            {this.renderErrors()}
             <br/>
             <button className="submit-btn" onClick={this.handleSubmit}>Submit</button>
             &nbsp;
