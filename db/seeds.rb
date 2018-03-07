@@ -36,7 +36,7 @@ user3 = User.create!({ username: 'TonyParker', password: 'password'})
    body: 'nice shot bro!'
  )
  Comment.create(
-   photo_id: photo92id,
+   photo_id: photo2.id,
    author_id: user2.id,
    body: 'i concur'
  )
