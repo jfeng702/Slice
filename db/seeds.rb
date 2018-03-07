@@ -25,7 +25,7 @@ user3 = User.create!({ username: 'TonyParker', password: 'password'})
    body: 'gorgeous!'
  )
  Comment.create(
-   photo_id: photo9.id,
+   photo_id: photo1.id,
    author_id: user2.id,
    body: 'i concur'
  )
@@ -36,7 +36,7 @@ user3 = User.create!({ username: 'TonyParker', password: 'password'})
    body: 'nice shot bro!'
  )
  Comment.create(
-   photo_id: photo9.id,
+   photo_id: photo92id,
    author_id: user2.id,
    body: 'i concur'
  )
@@ -47,7 +47,7 @@ user3 = User.create!({ username: 'TonyParker', password: 'password'})
    body: 'nice shot bro!'
  )
  Comment.create(
-   photo_id: photo9.id,
+   photo_id: photo3.id,
    author_id: user2.id,
    body: 'i concur'
  )
@@ -58,7 +58,7 @@ user3 = User.create!({ username: 'TonyParker', password: 'password'})
    body: 'nice shot bro!'
  )
  Comment.create(
-   photo_id: photo9.id,
+   photo_id: photo4.id,
    author_id: user2.id,
    body: 'i concur'
  )
@@ -80,7 +80,7 @@ user3 = User.create!({ username: 'TonyParker', password: 'password'})
    body: 'nice shot bro!'
  )
  Comment.create(
-   photo_id: photo9.id,
+   photo_id: photo6.id,
    author_id: user2.id,
    body: 'i concur'
  )
@@ -91,7 +91,7 @@ user3 = User.create!({ username: 'TonyParker', password: 'password'})
    body: 'nice shot bro!'
  )
  Comment.create(
-   photo_id: photo9.id,
+   photo_id: photo7.id,
    author_id: user2.id,
    body: 'i concur'
  )
@@ -102,7 +102,7 @@ user3 = User.create!({ username: 'TonyParker', password: 'password'})
    body: 'nice shot bro!'
  )
  Comment.create(
-   photo_id: photo9.id,
+   photo_id: photo8.id,
    author_id: user2.id,
    body: 'i concur'
  )
@@ -149,7 +149,7 @@ user3 = User.create!({ username: 'TonyParker', password: 'password'})
     body: 'What a Silly bear!'
   )
   Comment.create(
-    photo_id: photo9.id,
+    photo_id: photo12.id,
     author_id: user3.id,
     body: 'i concur'
   )
