@@ -30,37 +30,37 @@ user3 = User.create!({ username: 'TonyParker', password: 'password'})
    author_id: user3.id,
    body: 'nice shot bro!'
  )
- photo3 = Photo.create!({img_url:'https://res.cloudinary.com/slicecloud/image/upload/v1518196107/pexels-photo-206359_dxcnlg.jpg', owner_id:user1.id})
+ photo3 = Photo.create!({img_url:'https://res.cloudinary.com/slicecloud/image/upload/v1518196107/pexels-photo-206359_dxcnlg.jpg', title: 'Cool Picture', owner_id:user1.id})
  Comment.create(
    photo_id: photo3.id,
    author_id: user3.id,
    body: 'nice shot bro!'
  )
- photo4 = Photo.create!({img_url:'https://res.cloudinary.com/slicecloud/image/upload/v1518196107/11671_djakcp.jpg', owner_id:user1.id})
+ photo4 = Photo.create!({img_url:'https://res.cloudinary.com/slicecloud/image/upload/v1518196107/11671_djakcp.jpg', title: 'Cool Picture', owner_id:user1.id})
  Comment.create(
    photo_id: photo4.id,
    author_id: user3.id,
    body: 'nice shot bro!'
  )
- photo5 = Photo.create!({img_url:'https://res.cloudinary.com/slicecloud/image/upload/v1518196107/1202759-beautiful-wallpaper_yvtlca.jpg', owner_id:user1.id})
+ photo5 = Photo.create!({img_url:'https://res.cloudinary.com/slicecloud/image/upload/v1518196107/1202759-beautiful-wallpaper_yvtlca.jpg', title: 'Cool Pic', owner_id:user1.id})
  Comment.create(
    photo_id: photo5.id,
    author_id: user3.id,
    body: 'nice shot bro!'
  )
- photo6 = Photo.create!({img_url:'https://res.cloudinary.com/slicecloud/image/upload/v1518196107/Beautiful-Wallpapers-55G_wvg5ak.jpg', owner_id:user2.id})
+ photo6 = Photo.create!({img_url:'https://res.cloudinary.com/slicecloud/image/upload/v1518196107/Beautiful-Wallpapers-55G_wvg5ak.jpg', title: 'Cool Pic', owner_id:user2.id})
  Comment.create(
    photo_id: photo6.id,
    author_id: user3.id,
    body: 'nice shot bro!'
  )
- photo7 = Photo.create!({img_url:'https://res.cloudinary.com/slicecloud/image/upload/v1518196106/224340939-pictures-beautiful_jbilvd.jpg', owner_id:user2.id})
+ photo7 = Photo.create!({img_url:'https://res.cloudinary.com/slicecloud/image/upload/v1518196106/224340939-pictures-beautiful_jbilvd.jpg', title: 'Cool Pic', owner_id:user2.id})
  Comment.create(
    photo_id: photo7.id,
    author_id: user3.id,
    body: 'nice shot bro!'
  )
- photo8 = Photo.create!({img_url:'https://res.cloudinary.com/slicecloud/image/upload/v1518196107/1563803_asq90z.jpg', owner_id: user2.id})
+ photo8 = Photo.create!({img_url:'https://res.cloudinary.com/slicecloud/image/upload/v1518196107/1563803_asq90z.jpg', title: 'Cool Pic', owner_id: user2.id})
  Comment.create(
    photo_id: photo8.id,
    author_id: user3.id,
@@ -86,7 +86,7 @@ user3 = User.create!({ username: 'TonyParker', password: 'password'})
   )
   photo11 = Photo.create(
     img_url:'https://res.cloudinary.com/slicecloud/image/upload/v1518201220/01-booktalk-animal-personalities-NationalGeographic_2495705_e2kx8q.jpg',
-    title: '',
+    title: 'Fox',
     owner_id: user1.id
   )
   photo12 = Photo.create(
@@ -142,12 +142,12 @@ user3 = User.create!({ username: 'TonyParker', password: 'password'})
   )
   photo19 = Photo.create(
     img_url: 'https://res.cloudinary.com/slicecloud/image/upload/v1518202548/amazing-animal-beautiful-beautifull_b400yj.jpg',
-    title: '',
+    title: 'cool pic',
     owner_id: user1.id
   )
   photo20 = Photo.create(
     img_url: 'https://res.cloudinary.com/slicecloud/image/upload/v1518202548/37F60FD200000578-0-image-a-5_1473156426673_gic86b.jpg',
-    title: '',
+    title: 'cool pic',
     owner_id: user1.id
   )
 

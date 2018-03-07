@@ -136,13 +136,14 @@
 }
 
 .photo-edit-title {
+  padding: 5px;
 
 }
 
 .photo-edit-modal-form input[type=text] {
   // font-family: 'Libre Franklin', sans-serif;
   font-size: 18px;
-
+  border: 1px solid gray;
 }
 
 .photo-edit-title:hover {
@@ -152,5 +153,5 @@
 .photo-edit-description {
   // font-family: 'Libre Franklin', sans-serif;
   font-size: 18px;
-
+  padding: 5px;
 }
