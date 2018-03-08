@@ -29,6 +29,11 @@ user3 = User.create!({ username: 'TonyParker', password: 'password'})
    author_id: user2.id,
    body: 'i concur'
  )
+ Comment.create(
+   photo_id: photo1.id,
+   author_id: user1.id,
+   body: 'thanks guys'
+ )
  photo2 = Photo.create!({img_url:'https://res.cloudinary.com/slicecloud/image/upload/v1518196107/italy-2080072_960_720_j41gyb.jpg', title: 'Snow', owner_id: user1.id})
  Comment.create(
    photo_id: photo2.id,
@@ -39,6 +44,11 @@ user3 = User.create!({ username: 'TonyParker', password: 'password'})
    photo_id: photo2.id,
    author_id: user2.id,
    body: 'i concur'
+ )
+ Comment.create(
+   photo_id: photo2.id,
+   author_id: user1.id,
+   body: 'thanks guys'
  )
  photo3 = Photo.create!({img_url:'https://res.cloudinary.com/slicecloud/image/upload/v1518196107/pexels-photo-206359_dxcnlg.jpg', title: 'Cool Picture', owner_id:user1.id})
  Comment.create(
@@ -51,6 +61,11 @@ user3 = User.create!({ username: 'TonyParker', password: 'password'})
    author_id: user2.id,
    body: 'i concur'
  )
+ Comment.create(
+   photo_id: photo3.id,
+   author_id: user1.id,
+   body: 'thanks guys'
+ )
  photo4 = Photo.create!({img_url:'https://res.cloudinary.com/slicecloud/image/upload/v1518196107/11671_djakcp.jpg', title: 'Cool Picture', owner_id:user1.id})
  Comment.create(
    photo_id: photo4.id,
@@ -61,6 +76,11 @@ user3 = User.create!({ username: 'TonyParker', password: 'password'})
    photo_id: photo4.id,
    author_id: user2.id,
    body: 'i concur'
+ )
+ Comment.create(
+   photo_id: photo4.id,
+   author_id: user1.id,
+   body: 'thanks guys'
  )
  photo5 = Photo.create!({img_url:'https://res.cloudinary.com/slicecloud/image/upload/v1518196107/1202759-beautiful-wallpaper_yvtlca.jpg', title: 'Cool Pic', owner_id:user1.id})
  Comment.create(
@@ -73,6 +93,11 @@ user3 = User.create!({ username: 'TonyParker', password: 'password'})
    author_id: user2.id,
    body: 'i concur'
  )
+ Comment.create(
+   photo_id: photo5.id,
+   author_id: user1.id,
+   body: 'thanks guys'
+ )
  photo6 = Photo.create!({img_url:'https://res.cloudinary.com/slicecloud/image/upload/v1518196107/Beautiful-Wallpapers-55G_wvg5ak.jpg', title: 'Cool Pic', owner_id:user2.id})
  Comment.create(
    photo_id: photo6.id,
@@ -83,6 +108,11 @@ user3 = User.create!({ username: 'TonyParker', password: 'password'})
    photo_id: photo6.id,
    author_id: user2.id,
    body: 'i concur'
+ )
+ Comment.create(
+   photo_id: photo6.id,
+   author_id: user1.id,
+   body: 'thanks guys'
  )
  photo7 = Photo.create!({img_url:'https://res.cloudinary.com/slicecloud/image/upload/v1518196106/224340939-pictures-beautiful_jbilvd.jpg', title: 'Cool Pic', owner_id:user2.id})
  Comment.create(
@@ -95,6 +125,11 @@ user3 = User.create!({ username: 'TonyParker', password: 'password'})
    author_id: user2.id,
    body: 'i concur'
  )
+ Comment.create(
+   photo_id: photo7.id,
+   author_id: user1.id,
+   body: 'thanks guys'
+ )
  photo8 = Photo.create!({img_url:'https://res.cloudinary.com/slicecloud/image/upload/v1518196107/1563803_asq90z.jpg', title: 'Cool Pic', owner_id: user2.id})
  Comment.create(
    photo_id: photo8.id,
@@ -105,6 +140,11 @@ user3 = User.create!({ username: 'TonyParker', password: 'password'})
    photo_id: photo8.id,
    author_id: user2.id,
    body: 'i concur'
+ )
+ Comment.create(
+   photo_id: photo8.id,
+   author_id: user1.id,
+   body: 'thanks guys'
  )
 
 # Animals
