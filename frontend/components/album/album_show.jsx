@@ -27,6 +27,12 @@ class AlbumShow extends React.Component {
 
   render() {
     // console.warn(this.props);
+    let albumButtons = (
+      <div className="album-btns">
+        <button>Upload</button>
+        <button onClick={()=>this.props.deleteAlbum(this.props.albumId)}>Delete</button>
+      </div>
+    );
 
     var childElements = this.props.photos.map(function(photo){
        return (
@@ -42,8 +48,8 @@ class AlbumShow extends React.Component {
 
     return (
       <div className="album-show-container">
-
         <h1 className="album-show-title">{title}</h1>
+        {albumButtons}
         <Masonry
           className={'album-show-gallery'}
           elementType={'ul'}

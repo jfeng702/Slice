@@ -94,7 +94,7 @@ class AlbumIndex extends React.Component {
         <div className="album-tile" key={`${album.id}`}>
           <Link to={`albums/${album.id}`}>
             <div className="album-tile-img" style={divStyle}>
-
+              <img className="album-tile-img" src={`${album.cover_url}`}/>
             </div>
           </Link>
           <h3>{album.title}</h3>
