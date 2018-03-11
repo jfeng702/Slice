@@ -9,6 +9,11 @@ class AlbumIndex extends React.Component {
   render() {
     // console.warn(this.props);
     let stuffToRender;
+    let newAlbumBtn = (
+      <button>
+        New Album
+      </button>
+    );
 
 
     if(this.props.albums === {}) {
@@ -31,6 +36,7 @@ class AlbumIndex extends React.Component {
 
     return (
       <div className="album-index">
+        { newAlbumBtn }
         { stuffToRender }
       </div>
     );
