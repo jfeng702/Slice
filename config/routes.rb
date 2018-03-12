@@ -10,6 +10,9 @@ Rails.application.routes.draw do
     resource :session, only: [:create, :destroy]
     resources :photos do
       resources :comments, only: [:create, :index]
+      member do
+        post 'create_album_photo'
+      end
     end
     resources :comments, only: [:destroy]
 

@@ -17,7 +17,10 @@ var masonryOptions = {
 class AlbumShow extends React.Component {
   constructor(props) {
     super(props);
-
+    this.state = {
+      img_url: '',
+      owner_id: props.currentUser.id
+    };
   }
 
   componentDidMount() {
@@ -25,12 +28,36 @@ class AlbumShow extends React.Component {
     this.props.fetchAlbum(this.props.albumId);
   }
 
+  postImage(img_url) {
+    this.setState({ img_url });
+  }
+
+  uploadImage(e) {
+    e.preventDefault();
+    cloudinary.openUploadWidget(
+      window.cloudinary_options,
+      (errors, result) => {
+        if (!errors) {
+          this.postImage(result[0].url);
+          this.props.createAlbumPhoto(this.state).then(photo => this.props.history.push(`/photos/${photo.id}?new=true`));
+          this.setState({
+            img_url: ''
+          });
+        }
+      }
+    );
+  }
+
   render() {
     // console.warn(this.props);
     let albumButtons = (
       <div className="album-btns">
-        <button>Upload</button>
-        <button onClick={()=>this.props.deleteAlbum(this.props.albumId)}>Delete</button>
+        <button onClick={(e)=> this.uploadImage(e)}>Upload</button>
+        <Link to="/albums">
+          <button onClick={()=>this.props.deleteAlbum(this.props.albumId).then()}>
+            Delete
+          </button>
+        </Link>
       </div>
     );
 
@@ -41,6 +68,7 @@ class AlbumShow extends React.Component {
             </Link>
         );
     });
+
     let title;
     if (this.props.album){
       title = this.props.album.title;
