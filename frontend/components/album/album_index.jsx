@@ -50,9 +50,12 @@ class AlbumIndex extends React.Component {
     // console.warn(this.props);
     let stuffToRender;
     let newAlbumBtn = (
-      <button onClick={this.handleOpenModal}>
-        New Album
-      </button>
+      <div className="new-album-container">
+        <button className="new-album-btn" onClick={this.handleOpenModal}>
+          New Album
+        </button>
+      </div>
+
     );
 
     let albumModal = (
@@ -107,7 +110,10 @@ class AlbumIndex extends React.Component {
       <div className="album-index">
         { albumModal }
         { newAlbumBtn }
-        { stuffToRender }
+        <div className="album-index-container">
+          { stuffToRender }
+        </div>
+
       </div>
     );
   }

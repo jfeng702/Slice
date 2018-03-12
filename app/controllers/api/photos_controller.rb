@@ -19,10 +19,11 @@ class Api::PhotosController < ApplicationController
   end
 
   def create_album_photo
-    photo = Photo.new(photo_params)
-    if photo.save
+    @photo = Photo.new(photo_params)
+    if @photo.save
       album_photo = AlbumPhoto.new
-      album_photo.photo_id = photo.id
+      album_photo.photo_id = @photo.id
+      # must change album.last
       album_photo.album_id = Album.last.id
       if album_photo.save
         render :show

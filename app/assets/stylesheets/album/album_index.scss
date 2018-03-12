@@ -1,4 +1,9 @@
-
+.album-index-container {
+  // display: block;
+  // margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+}
 
 .album-index {
   // width: 100px;
@@ -8,6 +13,33 @@
     justify-content: space-around;
     flex-wrap: wrap;
     padding-bottom: 40px;
+}
+
+.new-album-container {
+  width: 100%;
+
+}
+
+.new-album-btn:hover {
+  background: #3fa2ff;
+
+}
+
+.new-album-btn {
+
+  // float: right;
+  position: relative;
+  top: 8px;
+  background: #188fff;
+  height: 40px;
+  font-size: 16px;
+  color: white;
+  padding: 10px;
+  font-family: 'Montserrat', sans-serif;
+  margin: 0 auto;
+  display: block;
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
 
 .album-tile {

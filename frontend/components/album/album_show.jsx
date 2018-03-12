@@ -84,9 +84,9 @@ class AlbumShow extends React.Component {
           options={masonryOptions}
           disableImagesLoaded={false}
           updateOnEachImageLoad={false}>
-      <div className="grid-show-sizer"></div>
+          <div className="grid-show-sizer"></div>
           {childElements}
-      </Masonry>
+        </Masonry>
       </div>
 
     );
