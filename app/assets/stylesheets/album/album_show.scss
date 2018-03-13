@@ -3,6 +3,54 @@
 
 }
 
+.album-btns {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.album-upload-btn:hover {
+  background: #3fa2ff;
+}
+
+.album-delete-btn:hover {
+  background: #3fa2ff;
+}
+
+.album-delete-btn {
+  // position: relative;
+  // top: 8px;
+  background: #188fff;
+  height: 40px;
+  font-size: 16px;
+  color: white;
+  padding: 10px;
+  font-family: 'Montserrat', sans-serif;
+  margin-left: 5px;
+  // margin: 0 auto;
+  // display: block;
+  // margin-top: 15px;
+  // margin-bottom: 15px;
+}
+
+.album-upload-btn {
+
+  // float: right;
+  // position: relative;
+  // top: 8px;
+  background: #188fff;
+  height: 40px;
+  font-size: 16px;
+  color: white;
+  padding: 5px;
+  font-family: 'Montserrat', sans-serif;
+  margin-right: 5px;
+  // margin: 0 auto;
+  // display: block;
+  // margin-top: 15px;
+  // margin-bottom: 15px;
+}
+
 .album-modal-edit-btn {
   margin-top: 10px;
   width: 100%;

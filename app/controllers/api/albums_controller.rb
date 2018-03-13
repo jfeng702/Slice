@@ -6,6 +6,7 @@ class Api::AlbumsController < ApplicationController
   def destroy
     @album = current_user.albums.find_by(id: params[:id])
     @album.destroy
+    p "hitting destroy"
     render :show
   end
 
@@ -14,12 +15,14 @@ class Api::AlbumsController < ApplicationController
 
   def index
     @albums = Album.all
+    p "hitting index"
     render :index
   end
 
   def create
     @album = Album.new(album_params)
     @album.owner = current_user
+
     if @album.save
       render :show
     else

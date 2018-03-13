@@ -62,3 +62,11 @@ export const createPhoto = photo => dispatch => {
       return serverPhoto;
     });
 };
+
+export const createAlbumPhoto = albumphoto => dispatch => {
+  return PhotoApiUtil.createAlbumPhoto(albumphoto)
+  .then(serverAlbumPhoto => {
+    dispatch(receivePhoto(serverAlbumPhoto));
+    return serverAlbumPhoto;
+  });
+};

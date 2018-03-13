@@ -22,6 +22,7 @@ class Api::UsersController < ApplicationController
 
   def user_albums
     @user_albums = current_user.albums
+    p "hitting user_albums"
     if @user_albums
       render :user_albums
     else

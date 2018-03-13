@@ -17,16 +17,58 @@ var masonryOptions = {
 class AlbumShow extends React.Component {
   constructor(props) {
     super(props);
-
+    this.state = {
+      img_url: '',
+      owner_id: props.currentUser.id,
+      album_id: props.albumId
+    };
   }
 
   componentDidMount() {
     this.props.fetchAlbumPhotos(this.props.albumId);
-    this.props.fetchAlbum(this.props.albumId);
+    // this.props.fetchAlbum(this.props.albumId);
+  }
+
+  componentWillReceiveProps(nextProps) {
+    // console.log(nextProps, 'nextprops');
+  }
+
+  postImage(img_url) {
+    this.setState({ img_url });
+  }
+
+  uploadImage(e) {
+    e.preventDefault();
+    cloudinary.openUploadWidget(
+      window.cloudinary_options,
+      (errors, result) => {
+        if (!errors) {
+          this.setState({
+            photo : {
+              albumId: this.props.albumId
+            }
+          });
+          this.postImage(result[0].url);
+          this.props.createAlbumPhoto(this.state).then(photo => this.props.history.push(`/photos/${photo.id}?new=true`));
+          this.setState({
+            img_url: ''
+          });
+        }
+      }
+    );
   }
 
   render() {
     // console.warn(this.props);
+    let albumButtons = (
+      <div className="album-btns">
+        <button className="album-upload-btn" onClick={(e)=> this.uploadImage(e)}>Upload</button>
+        <button className="album-delete-btn" onClick={()=>this.props.deleteAlbum(this.props.albumId).then(() => this.props.history.push('/albums'))}>
+          Delete
+        </button>
+
+      </div>
+    );
 
     var childElements = this.props.photos.map(function(photo){
        return (
@@ -35,6 +77,7 @@ class AlbumShow extends React.Component {
             </Link>
         );
     });
+
     let title;
     if (this.props.album){
       title = this.props.album.title;
@@ -42,17 +85,17 @@ class AlbumShow extends React.Component {
 
     return (
       <div className="album-show-container">
-
         <h1 className="album-show-title">{title}</h1>
+        {albumButtons}
         <Masonry
           className={'album-show-gallery'}
           elementType={'ul'}
           options={masonryOptions}
           disableImagesLoaded={false}
           updateOnEachImageLoad={false}>
-      <div className="grid-show-sizer"></div>
+          <div className="grid-show-sizer"></div>
           {childElements}
-      </Masonry>
+        </Masonry>
       </div>
 
     );

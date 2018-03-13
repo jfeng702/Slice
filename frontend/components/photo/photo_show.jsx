@@ -126,8 +126,7 @@ class PhotoShow extends React.Component {
                   type="text"
                   value={this.state.photo.title}
                   onChange={this.update('title')}
-                  className="photo-edit-title"
-                  maxLength=""/>
+                  className="photo-edit-title"/>
               </label>
               <label>Description:
                 <textarea
@@ -136,7 +135,7 @@ class PhotoShow extends React.Component {
                   onChange={this.update('description')}
                   className="photo-edit-description"/>
               </label>
-              <button className="photo-modal-edit-btn"
+              <button type="button" className="photo-modal-edit-btn"
                 onClick={()=>this.props.updatePhoto(this.state.photo)
                   .then(this.handleCloseModal())}>Edit</button>
             </form>

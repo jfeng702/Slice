@@ -9,7 +9,7 @@ class UploadButton extends React.Component {
       img_url: '',
       owner_id: props.currentUser.id
     };
-    this.handleSubmit = this.handleSubmit.bind(this);
+    // this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   handleSubmit(e) {
