@@ -87,10 +87,9 @@ class PhotoShow extends React.Component {
       ownerButtons = (
         <div className="owner-btns">
           <button className="photo-edit-btn" onClick={this.handleOpenModal}>Edit</button>
-          <Link to="/">
-            <button className="photo-del-btn" onClick={()=>this.props.deletePhoto(photo.id)}>Delete
-            </button>
-          </Link>
+          <button className="photo-del-btn" onClick={()=>this.props.deletePhoto(photo.id).then(() => this.props.history.push('/albums'))}>
+            Delete
+          </button>
         </div>
       );
     }
