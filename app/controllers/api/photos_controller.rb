@@ -19,12 +19,13 @@ class Api::PhotosController < ApplicationController
   end
 
   def create_album_photo
+    # p album_params
     @photo = Photo.new(photo_params)
     if @photo.save
       album_photo = AlbumPhoto.new
       album_photo.photo_id = @photo.id
       # must change album.last
-      album_photo.album_id = Album.last.id
+      album_photo.album_id = @photo.album_id
       if album_photo.save
         render :show
       else
@@ -61,9 +62,13 @@ class Api::PhotosController < ApplicationController
     end
   end
 
+
+
   private
 
   def photo_params
-    params.require(:photo).permit(:img_url, :title, :description, :owner_id, :created_at)
+    params.require(:photo).permit(:img_url, :photo, :album_id, :title, :description, :owner_id, :created_at)
   end
+
+
 end

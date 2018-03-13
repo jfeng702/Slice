@@ -22,6 +22,7 @@ const albumPhotos = (state, photo) => {
 const mapDispatchToProps = dispatch => {
   return {
     fetchAlbumPhotos: (id) => dispatch(fetchAlbumPhotos(id)),
+    fetchAlbums: () => dispatch(fetchAlbums()),
     fetchAlbum: id => dispatch(fetchAlbum(id)),
     updateAlbum: album => dispatch(updateAlbum(album)),
     deleteAlbum: id => dispatch(deleteAlbum(id)),

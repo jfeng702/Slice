@@ -7,20 +7,20 @@
   margin-left: -180px;
   // transform: translate(-50%,75%);
   width: 400px;
-  height: 170px;
-  padding: 20px;
+  // height: 170px;
+  padding: 15px;
   background: #fff;
   z-index: 3;
   border-radius: 5px;
   border: 1px solid #000;
-  font-family: Proxima Nova,helvetica neue,helvetica,arial,sans-serif;
+  font-family: 'Montserrat', sans-serif;
 
   // box-shadow: 1px 1px AliceBlue;
 }
 
 
 .album-modal-edit-btn {
-  margin-top: 10px;
+  margin-top: 15px;
   width: 100%;
   background: #188fff;
   height: 40px;
@@ -30,22 +30,21 @@
 }
 
 
+.album-edit-modal-form input[type=text] {
+  // font-family: 'Libre Franklin', sans-serif;
+  font-size: 18px;
+  border: 1px solid gray;
+  // padding-top: 15px;
+  margin-top: 10px;
+}
 
 .album-edit-title {
   width: 100%;
-  margin-bottom: 10px;
-  margin-top: 4px;
-  font: 18px helvetica;
-  font-family: Proxima Nova,helvetica neue,helvetica,arial,sans-serif;
-  height: 40px;
-}
-
-.album-edit-description {
-  height: 120px;
-  width: 100%;
+  // margin-bottom: 10px;
   margin-top: 6px;
-  font-family: Proxima Nova,helvetica neue,helvetica,arial,sans-serif;
-
+  font-family: 'Montserrat', sans-serif;
+  height: 40px;
+  // padding: 5px;
 }
 
 .album-show-overlay {

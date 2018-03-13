@@ -5,19 +5,20 @@
   flex-wrap: wrap;
 }
 
+
+
 .album-index {
   // width: 100px;
   // display: flex;
   // flex-direction: row;
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    padding-bottom: 40px;
+    // display: flex;
+    // justify-content: space-around;
+    // flex-wrap: wrap;
+    // padding-bottom: 40px;
 }
 
 .new-album-container {
   width: 100%;
-
 }
 
 .new-album-btn:hover {
@@ -49,6 +50,16 @@
   // margin: 1px;
   flex: 1 0 10em;
   margin: 1em;
+  min-width: 300px;
+  max-width: 700px;
+}
+
+.showme {
+ height: 300px;
+ width: 300px;
+ // height: 100%;
+ // width: 100%;
+
 }
 
 .album-tile-img {
@@ -56,13 +67,57 @@
   width: 300px;
 }
 
-.album-tile img {
+.container {
+  position: relative;
+  // width: 50%;
+}
+
+.image {
   display: block;
   width: 100%;
-  -webkit-box-shadow: 0 10px 50px -6px #777;
-     -moz-box-shadow: 0 10px 50px -6px #777;
-          box-shadow: 0 10px 50px -6px #777;
+  height: auto;
 }
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  // background-color: #008CBA;
+}
+
+
+.container:hover .image {
+  // opacity: 0.3;
+}
+
+.container:hover .overlay {
+  opacity: 1;
+}
+
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+
+// .album-tile img {
+//   display: block;
+//   width: 100%;
+//   -webkit-box-shadow: 0 10px 50px -6px #777;
+//      -moz-box-shadow: 0 10px 50px -6px #777;
+//           box-shadow: 0 10px 50px -6px #777;
+// }
 
 .album-tile h3 {
   padding-top: 5px;

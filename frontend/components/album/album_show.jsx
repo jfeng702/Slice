@@ -19,13 +19,18 @@ class AlbumShow extends React.Component {
     super(props);
     this.state = {
       img_url: '',
-      owner_id: props.currentUser.id
+      owner_id: props.currentUser.id,
+      album_id: props.albumId
     };
   }
 
   componentDidMount() {
     this.props.fetchAlbumPhotos(this.props.albumId);
-    this.props.fetchAlbum(this.props.albumId);
+    // this.props.fetchAlbum(this.props.albumId);
+  }
+
+  componentWillReceiveProps(nextProps) {
+    // console.log(nextProps, 'nextprops');
   }
 
   postImage(img_url) {
@@ -38,6 +43,11 @@ class AlbumShow extends React.Component {
       window.cloudinary_options,
       (errors, result) => {
         if (!errors) {
+          this.setState({
+            photo : {
+              albumId: this.props.albumId
+            }
+          });
           this.postImage(result[0].url);
           this.props.createAlbumPhoto(this.state).then(photo => this.props.history.push(`/photos/${photo.id}?new=true`));
           this.setState({
@@ -52,9 +62,9 @@ class AlbumShow extends React.Component {
     // console.warn(this.props);
     let albumButtons = (
       <div className="album-btns">
-        <button onClick={(e)=> this.uploadImage(e)}>Upload</button>
+        <button className="album-upload-btn" onClick={(e)=> this.uploadImage(e)}>Upload</button>
         <Link to="/albums">
-          <button onClick={()=>this.props.deleteAlbum(this.props.albumId).then()}>
+          <button className="album-delete-btn" onClick={()=>this.props.deleteAlbum(this.props.albumId)}>
             Delete
           </button>
         </Link>

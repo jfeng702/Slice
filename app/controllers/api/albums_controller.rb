@@ -20,6 +20,7 @@ class Api::AlbumsController < ApplicationController
   def create
     @album = Album.new(album_params)
     @album.owner = current_user
+
     if @album.save
       render :show
     else
