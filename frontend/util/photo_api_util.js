@@ -23,7 +23,7 @@ export const createPhoto = photo => (
 export const createAlbumPhoto = photo => (
   $.ajax({
     method: 'POST',
-    url: `api/photos/${photo.id}/create_album_photo`,
+    url: `api/photos/1/create_album_photo`,
     data: { photo }
   })
 );

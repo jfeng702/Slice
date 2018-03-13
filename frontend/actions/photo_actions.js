@@ -64,6 +64,7 @@ export const createPhoto = photo => dispatch => {
 };
 
 export const createAlbumPhoto = albumphoto => dispatch => {
+  console.log(albumphoto);
   return PhotoApiUtil.createAlbumPhoto(albumphoto)
   .then(serverAlbumPhoto => {
     dispatch(receivePhoto(serverAlbumPhoto));
