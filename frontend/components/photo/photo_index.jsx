@@ -27,7 +27,6 @@ class PhotoIndex extends React.Component {
                 <div className="middle">
                 </div>
               </div>
-
             </Link>
         );
     });

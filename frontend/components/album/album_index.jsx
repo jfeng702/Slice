@@ -73,7 +73,7 @@ class AlbumIndex extends React.Component {
   }
 
   render() {
-    console.warn(this.props);
+    // console.warn(this.props);
     let stuffToRender;
     let newAlbumBtn = (
       <div className="new-album-container">

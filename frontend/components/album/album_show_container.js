@@ -1,4 +1,5 @@
 import { connect } from 'react-redux';
+import { withRouter } from 'react-router-dom';
 import AlbumShow from './album_show';
 import { createAlbumPhoto } from '../../actions/photo_actions';
 import { fetchAlbums, fetchAlbum, fetchAlbumPhotos, updateAlbum, deleteAlbum } from '../../actions/album_actions';
@@ -30,4 +31,4 @@ const mapDispatchToProps = dispatch => {
   };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(AlbumShow);
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(AlbumShow));

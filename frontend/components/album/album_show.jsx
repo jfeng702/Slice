@@ -63,11 +63,10 @@ class AlbumShow extends React.Component {
     let albumButtons = (
       <div className="album-btns">
         <button className="album-upload-btn" onClick={(e)=> this.uploadImage(e)}>Upload</button>
-        <Link to="/albums">
-          <button className="album-delete-btn" onClick={()=>this.props.deleteAlbum(this.props.albumId)}>
-            Delete
-          </button>
-        </Link>
+        <button className="album-delete-btn" onClick={()=>this.props.deleteAlbum(this.props.albumId).then(() => this.props.history.push('/albums'))}>
+          Delete
+        </button>
+
       </div>
     );
 
