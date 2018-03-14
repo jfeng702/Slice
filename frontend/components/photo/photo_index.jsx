@@ -7,9 +7,9 @@ var masonryOptions = {
     // transitionDuration: '0.8s',
     fitWidth: true,
     // horizontalOrder: true,
-    // stagger: 90,
+    stagger: 90,
     itemSelector: '.photo-index-child',
-    gutter: 1
+    gutter: 1,
     // columnWidth: '.grid-sizer'
 };
 
@@ -22,11 +22,7 @@ class PhotoIndex extends React.Component {
     var childElements = this.props.photos.map(function(photo){
        return (
             <Link key={photo.id} to={`/photos/${photo.id}`}>
-              <div className="container">
                 <img className="photo-index-child" src={photo.img_url}/>
-                <div className="middle">
-                </div>
-              </div>
             </Link>
         );
     });
