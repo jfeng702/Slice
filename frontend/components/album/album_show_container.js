@@ -1,7 +1,8 @@
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 import AlbumShow from './album_show';
-import { createAlbumPhoto } from '../../actions/photo_actions';
+// import { createAlbumPhoto } from '../../actions/photo_actions';
+import { createAlbumPhoto } from '../../actions/album_actions';
 import { fetchAlbums, fetchAlbum, fetchAlbumPhotos, updateAlbum, deleteAlbum } from '../../actions/album_actions';
 
 const mapStateToProps = (state, ownProps) => {

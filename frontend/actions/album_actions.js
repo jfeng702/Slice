@@ -1,5 +1,5 @@
 import * as AlbumApiUtil from '../util/album_api_util';
-import { receivePhotos } from './photo_actions';
+import { receivePhotos, receivePhoto } from './photo_actions';
 
 export const RECEIVE_ALBUM = 'RECEIVE_ALBUM';
 export const RECEIVE_ALBUMS = 'RECEIVE_ALBUMS';
@@ -59,4 +59,13 @@ export const fetchAlbumPhotos = (id) => dispatch => {
 export const fetchUserAlbums = () => dispatch => {
   return AlbumApiUtil.fetchUserAlbums()
     .then(serverAlbums => dispatch(receiveAlbums(serverAlbums)));
+};
+
+export const createAlbumPhoto = albumphoto => dispatch => {
+  console.log(albumphoto);
+  return AlbumApiUtil.createAlbumPhoto(albumphoto)
+  .then(serverAlbumPhoto => {
+    dispatch(receivePhoto(serverAlbumPhoto));
+    return serverAlbumPhoto;
+  });
 };

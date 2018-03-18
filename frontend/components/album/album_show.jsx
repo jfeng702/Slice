@@ -60,6 +60,7 @@ class AlbumShow extends React.Component {
   }
 
   render() {
+    console.log(this.state);
     // console.warn(this.props);
     let albumButtons = (
       <div className="album-btns">

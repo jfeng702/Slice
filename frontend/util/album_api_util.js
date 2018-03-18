@@ -20,6 +20,14 @@ export const createAlbum = album => {
   });
 };
 
+export const createAlbumPhoto = photo => (
+  $.ajax({
+    method: 'POST',
+    url: `api/albums/${photo.album_id}/create_album_photo`,
+    data: { photo }
+  })
+);
+
 export const updateAlbum = album => {
   return $.ajax({
     method: 'PATCH',

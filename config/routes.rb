@@ -5,6 +5,8 @@ Rails.application.routes.draw do
     resources :albums, only: [:create, :update, :index, :destroy, :show] do
       member do
         get 'album_photos'
+        post 'create_album_photo'
+
       end
     end
     resource :session, only: [:create, :destroy]
