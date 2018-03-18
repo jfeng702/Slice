@@ -54,7 +54,8 @@ class PhotoShow extends React.Component {
         this.setState({showModal: !!this.props.location.search});
       });
     }
-    this.setState({photo: nextProps.photo});
+    this.setState({
+      photo: nextProps.photo});
   }
 
   handleOpenModal() {
@@ -78,6 +79,7 @@ class PhotoShow extends React.Component {
   }
 
   render() {
+    console.log(this.state);
     const photo = this.props.photo;
     if (!photo) {
       return <div>Loading...</div>;
