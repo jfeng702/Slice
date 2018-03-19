@@ -37,7 +37,7 @@ class UploadButton extends React.Component {
       window.cloudinary_options,
       (errors, result) => {
         if(!errors){
-          console.log(result);
+          // console.log(result);
           this.postImage(result[0].secure_url);
           this.props.createPhoto(this.state).then(photo => this.props.history.push(`/photos/${photo.id}?new=true`));
           this.setState({
