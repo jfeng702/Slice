@@ -8,8 +8,8 @@ var masonryOptions = {
     fitWidth: true,
     // horizontalOrder: true,
     // stagger: 90,
-    // itemSelector: '.album-show-child',
-    gutter: 2,
+    itemSelector: '.album-show-child',
+    gutter: 1,
     // columnWidth: '.grid-show-sizer',
     // percentPosition: true
 };
