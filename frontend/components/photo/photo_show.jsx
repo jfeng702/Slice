@@ -79,7 +79,7 @@ class PhotoShow extends React.Component {
   }
 
   render() {
-    console.log(this.state);
+    // console.log(this.state);
     const photo = this.props.photo;
     if (!photo) {
       return <div>Loading...</div>;
