@@ -80,6 +80,9 @@ class PhotoShow extends React.Component {
 
   render() {
     // console.log(this.state);
+    // <button className="photo-del-btn" onClick={()=>this.props.deletePhoto(photo.id).then(() => this.props.history.push('/albums'))}>
+
+    // console.log(this.props.history);
     const photo = this.props.photo;
     if (!photo) {
       return <div>Loading...</div>;
@@ -89,7 +92,7 @@ class PhotoShow extends React.Component {
       ownerButtons = (
         <div className="owner-btns">
           <button className="photo-edit-btn" onClick={this.handleOpenModal}>Edit</button>
-          <button className="photo-del-btn" onClick={()=>this.props.deletePhoto(photo.id).then(() => this.props.history.push('/albums'))}>
+          <button className="photo-del-btn" onClick={()=>this.props.deletePhoto(photo.id).then(() => this.props.history.goBack())}>
             Delete
           </button>
         </div>
