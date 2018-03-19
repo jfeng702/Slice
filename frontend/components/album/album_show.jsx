@@ -49,7 +49,7 @@ class AlbumShow extends React.Component {
             }
           });
           this.postImage(result[0].secure_url);
-          console.log("working");
+          // console.log("working");
           this.props.createAlbumPhoto(this.state).then(photo => this.props.history.push(`/photos/${photo.id}?new=true`));
           this.setState({
             img_url: ''
