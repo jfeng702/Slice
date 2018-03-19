@@ -7,7 +7,7 @@ var masonryOptions = {
     // transitionDuration: '0.8s',
     fitWidth: true,
     // horizontalOrder: true,
-    stagger: 90,
+    // stagger: 90,
     itemSelector: '.photo-index-child',
     gutter: 1,
     // columnWidth: '.grid-sizer'
