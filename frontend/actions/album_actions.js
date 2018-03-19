@@ -62,7 +62,6 @@ export const fetchUserAlbums = () => dispatch => {
 };
 
 export const createAlbumPhoto = albumphoto => dispatch => {
-  console.log(albumphoto);
   return AlbumApiUtil.createAlbumPhoto(albumphoto)
   .then(serverAlbumPhoto => {
     dispatch(receivePhoto(serverAlbumPhoto));
