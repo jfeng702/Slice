@@ -25,7 +25,7 @@ class PhotoIndex extends React.Component {
               <div className="container">
                 <img className="photo-index-child" src={photo.img_url}/>
                 <div className="caption-overlay">
-                  <h1>{photo.title}</h1>
+                  <h1>{photo.title} by {photo.ownerName}</h1>
                 </div>
               </div>
             </Link>
@@ -35,7 +35,7 @@ class PhotoIndex extends React.Component {
     return (
       <Masonry
         className={'my-gallery-class'}
-        elementType={'ul'}
+        elementType={'div'}
         options={masonryOptions}
         disableImagesLoaded={false}
         updateOnEachImageLoad={false}
