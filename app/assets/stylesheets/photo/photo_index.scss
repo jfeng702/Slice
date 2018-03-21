@@ -6,7 +6,7 @@
 
 }
 
-.container {
+.photo-index-container {
   position: relative;
   width: 25%;
   max-width: 100vw;
@@ -39,7 +39,7 @@
   text-align: center;
 }
 
-.container:hover .caption-overlay {
+.photo-index-container:hover .caption-overlay {
   opacity: 1;
 }
 
