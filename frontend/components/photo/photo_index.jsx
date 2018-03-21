@@ -9,7 +9,7 @@ var masonryOptions = {
     // horizontalOrder: true,
     // stagger: 90,
     itemSelector: '.container',
-    gutter: 1,
+    gutter:0,
     // columnWidth: '.grid-sizer'
 };
 

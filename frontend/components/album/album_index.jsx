@@ -58,7 +58,7 @@ class AlbumIndex extends React.Component {
     if (album.cover_url) {
       return (
         <div>
-          <img className="image" src={`${album.cover_url}`}/>
+          <img className="album-index-image" src={`${album.cover_url}`}/>
         </div>
       );
     } else {
@@ -117,9 +117,9 @@ class AlbumIndex extends React.Component {
         this.props.albums.map(album =>
         <div className="album-tile" key={`${album.id}`}>
           <Link to={`albums/${album.id}`}>
-            <div className="container">
+            <div className="album-container-container">
               {this.albumRender(album)}
-              <div className="overlay">
+              <div className="album-index-overlay">
                 <h3 className="text">{album.title}</h3>
               </div>
             </div>

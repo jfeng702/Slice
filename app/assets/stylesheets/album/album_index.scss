@@ -50,8 +50,10 @@
   // margin: 1px;
   flex: 1 0 10em;
   margin: 1em;
-  min-width: 300px;
+  min-width: 350px;
+  width: 25%;
   max-width: 700px;
+
 }
 
 .showme {
@@ -65,20 +67,24 @@
 .album-tile-img {
   height: 300px;
   width: 300px;
+
 }
 
-.container {
+.album-container-container {
   position: relative;
   // width: 50%;
 }
 
-.image {
+.album-index-image {
   display: block;
   width: 100%;
   height: auto;
+  box-shadow: 5px 5px 5px #666;
+  -moz-box-shadow: 5px 5px 5px #666;
+  -webkit-box-shadow: 5px 5px 5px #666
 }
 
-.overlay {
+.album-index-overlay {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -92,11 +98,11 @@
 }
 
 
-.container:hover .image {
+.album-container-container:hover .album-index-image {
   // opacity: 0.3;
 }
 
-.container:hover .overlay {
+.album-container-container:hover .album-index-overlay {
   opacity: 1;
 }
 
