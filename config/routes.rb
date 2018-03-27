@@ -12,12 +12,10 @@ Rails.application.routes.draw do
     resource :session, only: [:create, :destroy]
     resources :photos do
       resources :comments, only: [:create, :index]
-      member do
-        post 'create_album_photo'
-      end
+      resources :tags, only: [:create, :index]
     end
     resources :comments, only: [:destroy]
-
+    resources :tags, only: [:destroy]
     resources :users, only: [] do
       get 'user_photos', on: :collection
       get 'user_albums', on: :collection

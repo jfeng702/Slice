@@ -3,6 +3,7 @@ import ReactModal from 'react-modal';
 import { Link } from 'react-router-dom';
 import CommentIndexContainer from '../comment/comment_index_container';
 
+
 class PhotoShow extends React.Component {
   constructor(props) {
     // console.log(props, 'photoshow');
@@ -145,7 +146,7 @@ class PhotoShow extends React.Component {
             </form>
           </ReactModal>
 
-          {/*<div className="comment-form">        </div>*/}
+
           <div className="comments">
             <form onSubmit={this.handleCommentSubmit}>
               <textarea
@@ -156,13 +157,9 @@ class PhotoShow extends React.Component {
               <button className="comment-btn">Comment</button>
             </form>
 
-
-          {/*<div className="comment-index">        </div>*/}
             <CommentIndexContainer photo={photo} deleteComment={this.props.deleteComment}/>
           </div>
         </div>
-
-
       </div>
     );
   }
