@@ -7,7 +7,7 @@ import { login, logout, signup } from './actions/session_actions';
 import { updatePhoto, deletePhoto, fetchPhotos, fetchPhoto, createPhoto  } from './actions/photo_actions';
 import { createComment, fetchComments, deleteComment } from './actions/comment_actions';
 import { fetchUserAlbums, fetchAlbumPhotos, fetchAlbums, fetchAlbum, createAlbum, updateAlbum, deleteAlbum } from './actions/album_actions';
-
+import { createTag, fetchTags, deleteTag } from './util/tag_api_util';
 
 document.addEventListener('DOMContentLoaded', () => {
   const root = document.getElementById('root');
@@ -22,6 +22,9 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // TESTING START
+  window.createTag = createTag;
+  window.fetchTags = fetchTags;
+  window.deleteTag = deleteTag;
   window.getState = store.getState;
   window.dispatch = store.dispatch;
   window.login = login;
