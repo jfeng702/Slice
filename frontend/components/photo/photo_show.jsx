@@ -2,6 +2,7 @@ import React from 'react';
 import ReactModal from 'react-modal';
 import { Link } from 'react-router-dom';
 import CommentIndexContainer from '../comment/comment_index_container';
+import TagIndexContainer from '../tag/tag_index_container';
 
 
 class PhotoShow extends React.Component {
@@ -19,6 +20,10 @@ class PhotoShow extends React.Component {
         photo_id: props.match.params.photoId,
         body: '',
         author_id: props.currentUser.id
+      },
+      tag: {
+        photo_id: props.match.params.photoId,
+        body: ''
       }
     };
 
@@ -26,6 +31,7 @@ class PhotoShow extends React.Component {
     this.handleCloseModal = this.handleCloseModal.bind(this);
     this.update = this.update.bind(this);
     this.handleCommentSubmit = this.handleCommentSubmit.bind(this);
+    this.handleTagSubmit = this.handleTagSubmit.bind(this);
   }
 
   update(field) {
@@ -40,6 +46,14 @@ class PhotoShow extends React.Component {
     const newState = Object.assign(this.state);
     return e => {
       newState.comment[field] = e.currentTarget.value;
+      this.setState(newState);
+    };
+  }
+
+  updateTag(field) {
+    const newState = Object.assign(this.state);
+    return e => {
+      newState.tag[field] = e.currentTarget.value;
       this.setState(newState);
     };
   }
@@ -75,8 +89,19 @@ class PhotoShow extends React.Component {
       {body:'',
       photo_id: this.props.match.params.photoId,
       author_id: this.props.currentUser.id,
-    }
-});
+      }
+    });
+  }
+
+  handleTagSubmit(e) {
+    e.preventDefault();
+    this.props.createTag(this.state.tag);
+    this.setState({
+      tag: {
+        body: '',
+        photo_id: this.props.match.params.photoId,
+      }
+    });
   }
 
   render() {
@@ -100,6 +125,11 @@ class PhotoShow extends React.Component {
       );
     }
 
+    // tag button saved
+    // <button type="button" className="tag-submit-btn"
+    //   onclick={()=>this.props.createTag(this.state.tag)}>
+    //   Tag
+    // </button>
     return (
       <div className="show">
         <div className="show-image">
@@ -113,9 +143,7 @@ class PhotoShow extends React.Component {
                 <h2 className="photo-date">Posted on {new Date(photo.created_at).toDateString()}</h2>
                 {ownerButtons}
               </div>
-
             </div>
-
           </div>
             <h3 className="photo-show-description">{photo.description}</h3>
           <ReactModal
@@ -145,7 +173,15 @@ class PhotoShow extends React.Component {
                   .then(this.handleCloseModal())}>Edit</button>
             </form>
           </ReactModal>
+          <form onSubmit={this.handleTagSubmit}>
+            <input
+              value={this.state.tag.body}
+              onChange={this.updateTag('body')}
+              type="text"/>
+            <input type="submit" value="Tag"/>
+          </form>
 
+          <TagIndexContainer photo={photo}/>
 
           <div className="comments">
             <form onSubmit={this.handleCommentSubmit}>
@@ -156,7 +192,6 @@ class PhotoShow extends React.Component {
                 className="comment-textarea"/>
               <button className="comment-btn">Comment</button>
             </form>
-
             <CommentIndexContainer photo={photo} deleteComment={this.props.deleteComment}/>
           </div>
         </div>

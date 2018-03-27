@@ -7,7 +7,7 @@ import { login, logout, signup } from './actions/session_actions';
 import { updatePhoto, deletePhoto, fetchPhotos, fetchPhoto, createPhoto  } from './actions/photo_actions';
 import { createComment, fetchComments, deleteComment } from './actions/comment_actions';
 import { fetchUserAlbums, fetchAlbumPhotos, fetchAlbums, fetchAlbum, createAlbum, updateAlbum, deleteAlbum } from './actions/album_actions';
-import { createTag, fetchTags, deleteTag } from './util/tag_api_util';
+import { createTag, fetchTags, deleteTag } from './actions/tag_actions';
 
 document.addEventListener('DOMContentLoaded', () => {
   const root = document.getElementById('root');

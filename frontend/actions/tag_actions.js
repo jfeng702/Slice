@@ -11,10 +11,10 @@ export const receiveTag = tag => {
   };
 };
 
-export const receiveTags = tag => {
+export const receiveTags = tags => {
   return {
     type: RECEIVE_TAGS,
-    tag: tag
+    tags
   };
 };
 
@@ -30,8 +30,8 @@ export const createTag = tag => dispatch => {
     .then(serverTag => dispatch(receiveTag(serverTag)));
 };
 
-export const fetchTags = () => dispatch => {
-  return TagApiUtil.fetchTags()
+export const fetchTags = (photoId) => dispatch => {
+  return TagApiUtil.fetchTags(photoId)
     .then(serverTags => dispatch(receiveTags(serverTags)));
 };
 
