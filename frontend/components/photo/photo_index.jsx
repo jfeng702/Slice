@@ -18,47 +18,6 @@ class PhotoIndex extends React.Component {
   componentDidMount() {
     this.props.fetchPhotos();
   }
-
-
-
-//     render() {
-//
-//
-//       var childElements = this.props.photos.map(function(photo){
-//          return (
-//               <Link className="photo-index-link" key={photo.id} to={`/photos/${photo.id}`}>
-//                 <div className="photo-index-container">
-//                   <img className="photo-index-child" src={photo.img_url}/>
-//                   <div className="caption-overlay">
-//                     <h1>{photo.title} by {photo.ownerName}</h1>
-//                   </div>
-//                 </div>
-//               </Link>
-//           );
-//       });
-//     return(
-//       <div className="my-gallery-class">
-//         <div className="grid-sizer"></div>
-//         {childElements}
-//       </div>
-//     );
-//
-//
-//   }
-// }
-
-// <div className="photo-index">
-//     {
-//       this.props.photos.map(photo => (
-//         <PhotoIndexItem
-//           key={photo.id}
-//           photo={photo}
-//           />
-//       ))
-//     }
-// </div>
-
-
   render() {
     var childElements = this.props.photos.map(function(photo){
        return (

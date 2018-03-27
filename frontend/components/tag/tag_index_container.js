@@ -4,11 +4,13 @@ import { createTag, fetchTags, deleteTag } from '../../actions/tag_actions';
 
 
 const mapStateToProps = (state, ownProps) => {
-  // console.log(state, 'state');
-  // console.log(ownProps, 'ownprops');
   return {
-    tags: ownProps.tags
+    tags: photoTags(state, ownProps.photo)
   };
+};
+
+const photoTags = (state, photo) => {
+  return Object.values(state.entities.tags).filter(tag => tag.photo_id === photo.id);
 };
 
 const mapDispatchToProps = dispatch => {
