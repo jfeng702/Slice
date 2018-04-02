@@ -8,6 +8,8 @@ class Api::TagsController < ApplicationController
     render :index
   end
 
+
+
   def create
     @tag = Tag.new(tag_params)
     if @tag.save

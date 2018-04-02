@@ -15,7 +15,7 @@ Rails.application.routes.draw do
       resources :tags, only: [:create, :index]
     end
     resources :comments, only: [:destroy]
-    resources :tags, only: [:destroy]
+    resources :tags, only: [:destroy, :show]
     resources :users, only: [] do
       get 'user_photos', on: :collection
       get 'user_albums', on: :collection
