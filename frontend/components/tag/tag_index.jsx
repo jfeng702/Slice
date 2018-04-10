@@ -14,13 +14,9 @@ class TagIndex extends React.Component {
       <div>
         {
           this.props.tags.map((tag,id) => (
-            <Link to='www.google.com'>
+            <Link to={`/tags/${tag.body}`}>
               {tag.body}
             </Link>
-
-            <h1 key={id}>
-              {tag.body}
-            </h1>
           ))
         }
       </div>
