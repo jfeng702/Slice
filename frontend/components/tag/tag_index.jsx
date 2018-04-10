@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 class TagIndex extends React.Component {
 
@@ -13,6 +14,10 @@ class TagIndex extends React.Component {
       <div>
         {
           this.props.tags.map((tag,id) => (
+            <Link to='www.google.com'>
+              {tag.body}
+            </Link>
+
             <h1 key={id}>
               {tag.body}
             </h1>
