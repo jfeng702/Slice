@@ -28,6 +28,13 @@ export const createAlbumPhoto = photo => (
   })
 );
 
+export const fetchTagPhotos = tagBody => (
+  $.ajax({
+    method: 'GET',
+    url: `api/tags/${tagBody}/tag_photos`
+  })
+);
+
 export const updatePhoto = photo => {
   return $.ajax({
     method: 'PATCH',

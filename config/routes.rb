@@ -6,7 +6,6 @@ Rails.application.routes.draw do
       member do
         get 'album_photos'
         post 'create_album_photo'
-
       end
     end
     resource :session, only: [:create, :destroy]
@@ -15,10 +14,11 @@ Rails.application.routes.draw do
       resources :tags, only: [:create, :index]
     end
     resources :comments, only: [:destroy]
-    resources :tags, only: [:destroy, :show] do
+    resources :tags, only: [:destroy, :show, :create], param: :tag do
       member do
         get 'tag_photos'
       end
+      resources :photos, only: [:index]
     end
     resources :users, only: [] do
       get 'user_photos', on: :collection

@@ -23,6 +23,10 @@ class Api::TagsController < ApplicationController
     render :show
   end
 
+  def tag_photos
+
+  end
+
   def tag_params
     params.require(:tag).permit(:body, :photo_id)
   end

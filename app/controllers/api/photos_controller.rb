@@ -4,7 +4,12 @@ class Api::PhotosController < ApplicationController
   end
 
   def index
-    @photos = Photo.all
+    if params[:tag]
+      @photos = Photo.tagged_with(params[:tag])
+    else
+      @photos = Photo.all
+    end
+
     render :index
   end
 

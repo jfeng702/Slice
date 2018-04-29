@@ -13,5 +13,6 @@ class Tag < ApplicationRecord
 
   validates :body, :photo_id, presence: true
 
-  belongs_to :photo
+  has_many :photos, through: :taggings
+  has_many :taggings
 end

@@ -28,14 +28,19 @@ class Photo < ApplicationRecord
     through: :album_photos,
     source: :album
 
-  has_many :tags
-
-
   has_many :comments
-  has_many :tags
+
+
+  has_many :tags,
+    through: :taggings,
+    source: :tag
 
   def user_photos
-    current_user.photos 
+    current_user.photos
+  end
+
+  def self.tagged_with(body)
+    Tag.find_by_body!(body).photos
   end
 
 
