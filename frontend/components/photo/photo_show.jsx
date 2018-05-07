@@ -95,7 +95,7 @@ class PhotoShow extends React.Component {
 
   handleTagSubmit(e) {
     e.preventDefault();
-    this.props.createTag(this.state.tag);
+    this.props.createTagging(this.state.tag.photo_id,this.state.tag.body);
     this.setState({
       tag: {
         body: '',
@@ -105,6 +105,7 @@ class PhotoShow extends React.Component {
   }
 
   render() {
+    console.warn(this.state, 'photo show state');
     // <button className="photo-del-btn" onClick={()=>this.props.deletePhoto(photo.id).then(() => this.props.history.push('/albums'))}>
 
     // console.log(this.props.history);

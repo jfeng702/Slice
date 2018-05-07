@@ -50,6 +50,11 @@ export const fetchPhotos = () => dispatch => {
       photoError => dispatch(receivePhotoErrors(photoError.responseJSON)));
 };
 
+export const fetchTagPhotos = body => dispatch => {
+  return PhotoApiUtil.fetchTagPhotos(body)
+    .then(serverPhotos => dispatch(receivePhotos(serverPhotos)));
+};
+
 export const deletePhoto = (id) => dispatch => {
   return PhotoApiUtil.deletePhoto(id)
     .then(serverPhoto => dispatch(removePhoto(serverPhoto)));

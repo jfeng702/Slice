@@ -9,6 +9,7 @@
 #  owner_id    :integer          not null
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
+#  album_id    :integer
 #
 
 class Photo < ApplicationRecord
@@ -28,14 +29,23 @@ class Photo < ApplicationRecord
     through: :album_photos,
     source: :album
 
-  has_many :tags
-
-
   has_many :comments
-  has_many :tags
+
+  has_many :taggings,
+    primary_key: :id,
+    foreign_key: :photo_id,
+    class_name: :Tagging
+
+  has_many :tags,
+    through: :taggings,
+    source: :tag
 
   def user_photos
-    current_user.photos 
+    current_user.photos
+  end
+
+  def self.tagged_with(body)
+    Tag.find_by_body!(body).photos
   end
 
 
