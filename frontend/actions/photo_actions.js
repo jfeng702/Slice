@@ -50,8 +50,8 @@ export const fetchPhotos = () => dispatch => {
       photoError => dispatch(receivePhotoErrors(photoError.responseJSON)));
 };
 
-export const fetchTagPhotos = () => dispatch => {
-  return PhotoApiUtil.fetchTagPhotos()
+export const fetchTagPhotos = body => dispatch => {
+  return PhotoApiUtil.fetchTagPhotos(body)
     .then(serverPhotos => dispatch(receivePhotos(serverPhotos)));
 };
 

@@ -27,7 +27,7 @@ const App = () => (
       <Route path="/albums" component={AlbumIndexContainer} />
       <Route path="/photos/:photoId" component={PhotoShowContainer}/>
       <ProtectedRoute path="/home" component={ PhotoIndexContainer } />
-      <Route path="/tags/:tagBody" component={ TagPhotoIndexContainer } />
+      <Route path="/tags/:tagBody/photos" component={ TagPhotoIndexContainer } />
       <AuthRoute path="/" component={Splash} />
       <Redirect to="/" />
     </Switch>

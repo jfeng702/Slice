@@ -1,9 +1,10 @@
 import { connect } from 'react-redux';
 import TagIndex from './tag_index';
-import { createTag, fetchTags, deleteTag } from '../../actions/tag_actions';
+import { createTagging, fetchTaggings, deleteTagging } from '../../actions/tag_actions';
 
 
 const mapStateToProps = (state, ownProps) => {
+  console.warn(state, 'state');
   return {
     tags: photoTags(state, ownProps.photo)
   };
@@ -15,9 +16,9 @@ const photoTags = (state, photo) => {
 
 const mapDispatchToProps = dispatch => {
   return {
-    createTag: tag => dispatch(createTag(tag)),
-    fetchTags: id => dispatch(fetchTags(id)),
-    deleteTag: id => dispatch(deleteTag(id))
+    createTagging: tag => dispatch(createTagging(tag)),
+    fetchTaggings: id => dispatch(fetchTaggings(id)),
+    deleteTagging: id => dispatch(deleteTagging(id))
   };
 };
 

@@ -1,16 +1,21 @@
 class Api::TagsController < ApplicationController
-  def new
-    @tag = Tag.new
-  end
 
   def index
-    @tags = Tag.where(photo_id: params[:photo_id])
-    render :index
+    @tag = Tag.find_by(body: params[:tag][:body])
   end
 
   def create
     @tag = Tag.new(tag_params)
     if @tag.save
+      render :show
+    else
+      render json: @tag.errors.full_messages, status: :unprocessable_entity
+    end
+  end
+
+  def show
+    @tag = Tag.find(params[:id])
+    if @tag
       render :show
     else
       render json: @tag.errors.full_messages, status: :unprocessable_entity
@@ -23,11 +28,7 @@ class Api::TagsController < ApplicationController
     render :show
   end
 
-  def tag_photos
-
-  end
-
   def tag_params
-    params.require(:tag).permit(:body, :photo_id)
+    params.require(:tag).permit(:body)
   end
 end

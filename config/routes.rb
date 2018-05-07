@@ -11,16 +11,13 @@ Rails.application.routes.draw do
     resource :session, only: [:create, :destroy]
     resources :photos do
       resources :comments, only: [:create, :index]
-      resources :tags, only: [:create, :index]
+      resources :taggings, only: [:create, :show, :destroy, :index]
     end
     resources :comments, only: [:destroy]
-    resources :tags, only: [:destroy, :show, :create], param: :tag do
-      member do
-        get 'tag_photos'
-      end
+    resources :tags, only: [:destroy, :show, :create, :index] do
       resources :photos, only: [:index]
     end
-    resources :users, only: [] do
+    resources :users do
       get 'user_photos', on: :collection
       get 'user_albums', on: :collection
     end

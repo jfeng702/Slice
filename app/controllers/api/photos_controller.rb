@@ -4,12 +4,12 @@ class Api::PhotosController < ApplicationController
   end
 
   def index
-    if params[:tag]
-      @photos = Photo.tagged_with(params[:tag])
+    if params[:tag_id]
+      # tag_id is actually tag body here
+      @photos = Photo.tagged_with(params[:tag_id])
     else
       @photos = Photo.all
     end
-
     render :index
   end
 

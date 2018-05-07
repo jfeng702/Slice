@@ -9,6 +9,7 @@
 #  owner_id    :integer          not null
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
+#  album_id    :integer
 #
 
 class Photo < ApplicationRecord
@@ -30,6 +31,10 @@ class Photo < ApplicationRecord
 
   has_many :comments
 
+  has_many :taggings,
+    primary_key: :id,
+    foreign_key: :photo_id,
+    class_name: :Tagging
 
   has_many :tags,
     through: :taggings,

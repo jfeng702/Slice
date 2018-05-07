@@ -31,7 +31,7 @@ export const createAlbumPhoto = photo => (
 export const fetchTagPhotos = tagBody => (
   $.ajax({
     method: 'GET',
-    url: `api/tags/${tagBody}/tag_photos`
+    url: `api/tags/${tagBody}/photos`
   })
 );
 
