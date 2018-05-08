@@ -40,7 +40,7 @@ class PhotoIndex extends React.Component {
         updateOnEachImageLoad={true}
       >
         <div className="grid-sizer"></div>
-          {childElements}
+        {childElements}
       </Masonry>
     );
   }

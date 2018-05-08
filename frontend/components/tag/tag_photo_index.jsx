@@ -1,4 +1,5 @@
 import React from 'react';
+import MasonryInfiniteScroller from 'react-masonry-infinite';
 
 class TagPhotoIndex extends React.Component {
   componentDidMount() {
@@ -9,11 +10,13 @@ class TagPhotoIndex extends React.Component {
     console.warn(this.props, 'props tag photo');
     console.warn(this.state, 'state');
     return (
-      <div>
+      <div className="tag-photo-wrapper">
         <h2>Recently Tagged: {this.props.tagBody}</h2>
-        {this.props.photos.map(photo =>
-          <img src={`${photo.img_url}`}/>
-        )}
+        <div className="masonry">
+          {this.props.photos.map(photo =>
+            <img className="masonry-item" src={`${photo.img_url}`}/>
+          )}
+        </div>
       </div>
     );
   }
