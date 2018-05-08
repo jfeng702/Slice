@@ -1,12 +1,21 @@
 .masonry {
 
-  @media (min-width: 511px) {columns: 2;}
-  @media (min-width: 769px) {columns: 4;}
-  @media (min-width: 1440px) {columns: 5;}
-  .masonry-item {
-    width: 100%;
-    display: block;
+  @media (min-width: 500px) {
+    columns: 2;
   }
+
+  @media (min-width: 900px) {
+    columns: 4;
+  }
+
+  @media (min-width: 1400px) {
+    columns: 5;
+  }
+}
+
+.masonry-item {
+  width: 100%;
+  display: block;
 }
 
 .tag-photo-wrapper {
