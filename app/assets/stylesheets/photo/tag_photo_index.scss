@@ -1,0 +1,38 @@
+.tag-photo-index {
+
+  @media (min-width: 500px) {
+    columns: 2;
+  }
+
+  @media (min-width: 900px) {
+    columns: 4;
+  }
+
+  @media (min-width: 1400px) {
+    columns: 5;
+  }
+}
+
+.tag-photo-item {
+  width: 100%;
+  display: block;
+  margin-top: 20px;
+}
+
+.tag-photo-item {
+  box-shadow: 5px 5px 5px #666;
+  -moz-box-shadow: 5px 5px 5px #666;
+  -webkit-box-shadow: 5px 5px 5px #666
+
+}
+
+.tag-photo-wrapper {
+  width: 95%;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.tag-photo-wrapper h2 {
+  margin-bottom: 20px;
+}
