@@ -13,6 +13,42 @@
   }
 }
 
+.photo-index-wrapper {
+
+  @media (min-width: 500px) {
+    columns: 2;
+  }
+
+  @media (min-width: 900px) {
+    columns: 4;
+  }
+
+  @media (min-width: 1400px) {
+    columns: 5;
+  }
+}
+
+.pi-item {
+  width: 100%;
+  display: block;
+  position: relative;
+  margin-top: 20px;
+}
+
+.pi-item img {
+  -webkit-box-shadow: 0 10px 50px -6px #777;
+     -moz-box-shadow: 0 10px 50px -6px #777;
+          box-shadow: 0 10px 50px -6px #777;
+}
+
+.photo-index-child {
+
+}
+
+.pi-item:hover .caption-overlay {
+  opacity: 1;
+}
+
 .masonry-item {
   width: 100%;
   display: block;

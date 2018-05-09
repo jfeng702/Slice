@@ -13,6 +13,20 @@ var masonryOptions = {
     // columnWidth: '.grid-sizer'
 };
 
+// saved the old masonry component for possible future usage
+var oldMasonryComponent =
+  <Masonry
+    className={'my-gallery-class'}
+    elementType={'div'}
+    options={masonryOptions}
+    disableImagesLoaded={false}
+    updateOnEachImageLoad={true}
+  >
+    <div className="grid-sizer"></div>
+    childElements
+  </Masonry>;
+
+
 class PhotoIndex extends React.Component {
 
   componentDidMount() {
@@ -31,17 +45,23 @@ class PhotoIndex extends React.Component {
             </Link>
         );
     });
+
+    var newChildElements = this.props.photos.map(function(photo){
+       return (
+            <Link className="pi-item" key={photo.id} to={`/photos/${photo.id}`}>
+              <div className="pi-item">
+                <img className="photo-index-child pi-item" src={photo.img_url}/>
+                <div className="caption-overlay">
+                  <h1>{photo.title} by {photo.ownerName}</h1>
+                </div>
+              </div>
+            </Link>
+        );
+    });
     return (
-      <Masonry
-        className={'my-gallery-class'}
-        elementType={'div'}
-        options={masonryOptions}
-        disableImagesLoaded={false}
-        updateOnEachImageLoad={true}
-      >
-        <div className="grid-sizer"></div>
-        {childElements}
-      </Masonry>
+      <div className="photo-index-wrapper">
+        {newChildElements}
+      </div>
     );
   }
 }
