@@ -36,9 +36,12 @@
 }
 
 .pi-item img {
-  -webkit-box-shadow: 0 10px 50px -6px #777;
-     -moz-box-shadow: 0 10px 50px -6px #777;
-          box-shadow: 0 10px 50px -6px #777;
+  // -webkit-box-shadow: 0 10px 50px -6px #777;
+  //    -moz-box-shadow: 0 10px 50px -6px #777;
+  //         box-shadow: 0 10px 50px -6px #777;
+          box-shadow: 5px 5px 5px #666;
+          -moz-box-shadow: 5px 5px 5px #666;
+          -webkit-box-shadow: 5px 5px 5px #666
 }
 
 .photo-index-child {
