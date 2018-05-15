@@ -1,5 +1,4 @@
 .tag-photo-index {
-
   @media (min-width: 500px) {
     columns: 2;
   }
@@ -17,12 +16,9 @@
   width: 100%;
   display: block;
   margin-top: 20px;
-}
-
-.tag-photo-item {
   box-shadow: 5px 5px 5px #666;
   -moz-box-shadow: 5px 5px 5px #666;
-  -webkit-box-shadow: 5px 5px 5px #666
+  -webkit-box-shadow: 5px 5px 5px #666;
 
 }
 

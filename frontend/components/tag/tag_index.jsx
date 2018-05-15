@@ -12,10 +12,10 @@ class TagIndex extends React.Component {
     console.warn(this.props, 'props');
     // Tags link to a photo index of photos with that tag.
     return (
-      <div>
+      <div className="tag-index-wrapper">
         {
           this.props.tags.map((tag,id) => (
-            <Link to={`/tags/${tag.body}/photos`}>
+            <Link className="tag-index-link" to={`/tags/${tag.body}/photos`}>
               {tag.body}
             </Link>
           ))
