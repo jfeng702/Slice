@@ -140,12 +140,11 @@ class PhotoShow extends React.Component {
             <div className="photo-show-top-row">
               <h1 className="photo-show-title">{photo.title}</h1>
               <div className="date-and-btns">
-                <h2 className="photo-date">Posted on {new Date(photo.created_at).toDateString()}</h2>
                 {ownerButtons}
               </div>
             </div>
           </div>
-            <h3 className="photo-show-description">{photo.description}</h3>
+          <h3 className="photo-show-description">{photo.description}</h3>
           <ReactModal
             isOpen={this.state.showModal}
             contentLabel="onRequestClose"
@@ -173,26 +172,32 @@ class PhotoShow extends React.Component {
                   .then(this.handleCloseModal())}>Edit</button>
             </form>
           </ReactModal>
-          <form onSubmit={this.handleTagSubmit}>
-            <input
-              value={this.state.tag.body}
-              onChange={this.updateTag('body')}
-              type="text"/>
-            <input type="submit" value="Tag"/>
-          </form>
+          <div className="tag-and-comment-wrapper">
+            <div className="comments">
+              <form onSubmit={this.handleCommentSubmit}>
+                <textarea
+                  placeholder="Add a comment"
+                  onChange={this.updateComment('body')}
+                  value={this.state.comment.body}
+                  className="comment-textarea"/>
+                <button className="comment-btn">Comment</button>
+              </form>
+              <CommentIndexContainer photo={photo} deleteComment={this.props.deleteComment}/>
+            </div>
 
-          <TagIndexContainer photo={photo}/>
+            <div className="parent-tag-wrapper">
+              <h2 className="photo-date">Posted on {new Date(photo.created_at).toDateString()}</h2>
+              <h3 className="tag-label">Tags</h3>
+              <form onSubmit={this.handleTagSubmit}>
+                <input
+                  value={this.state.tag.body}
+                  onChange={this.updateTag('body')}
+                  type="text"
+                  placeholder="Add a tag"/>
+              </form>
+              <TagIndexContainer photo={photo}/>
+            </div>
 
-          <div className="comments">
-            <form onSubmit={this.handleCommentSubmit}>
-              <textarea
-                placeholder="Add a comment"
-                onChange={this.updateComment('body')}
-                value={this.state.comment.body}
-                className="comment-textarea"/>
-              <button className="comment-btn">Comment</button>
-            </form>
-            <CommentIndexContainer photo={photo} deleteComment={this.props.deleteComment}/>
           </div>
         </div>
       </div>

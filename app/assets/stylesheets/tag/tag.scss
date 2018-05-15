@@ -5,6 +5,29 @@
 }
 
 .tag-index-wrapper {
-  width: 50%;
+  // width: 50%;
+  margin-top: 10px;
+}
 
+.parent-tag-wrapper {
+  width: 25%;
+  // float: left;
+  // margin-left: 300px;
+  // display: inline-block;
+  display: flex;
+  flex-direction: column;
+  // justify-content: flex-end;
+  align-items: flex-start;
+}
+
+.tag-label {
+  margin-bottom: 15px;
+  margin-top: 30px;
+}
+
+.tag-and-comment-wrapper {
+  display: flex;
+  // flex-direction: row;
+  // align-items: flex-start;
+  justify-content: space-between;
 }

@@ -11,6 +11,8 @@ textarea {
 .comments {
   padding: 15px 0;
   width: 40%;
+  /* float: left; */
+  /* display: inline-block; */
 }
 
 .comment-btn {
