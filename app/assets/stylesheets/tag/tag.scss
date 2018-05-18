@@ -9,20 +9,26 @@
   margin-top: 10px;
 }
 
-.parent-tag-wrapper {
-  width: 25%;
+.show-date-and-btns {
+  align-items: flex-end;
+  display: flex;
+  flex-direction: column;
+}
+
+.show-bot-right {
+  flex: 50%;
   // float: left;
   // margin-left: 300px;
   // display: inline-block;
   display: flex;
   flex-direction: column;
   // justify-content: flex-end;
-  align-items: flex-start;
+  // align-items: flex-end;
 }
 
 .tag-label {
-  margin-bottom: 15px;
-  margin-top: 30px;
+  margin-bottom: 10px;
+  margin-top: 10px;
 }
 
 .tag-and-comment-wrapper {

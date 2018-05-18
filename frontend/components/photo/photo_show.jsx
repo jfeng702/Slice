@@ -190,10 +190,10 @@ class PhotoShow extends React.Component {
           <img src={`${photo.img_url}`} />
         </div>
         <div className="show-bot-half">
-          <h1 className="photo-show-title">{photo.title}</h1>
-          <h3 className="photo-show-description">{photo.description}</h3>
-          {photoEditModal}
-          <div className="tag-and-comment-wrapper">
+          <div className="show-bot-left">
+            <h1 className="photo-show-title">{photo.title}</h1>
+            <h3 className="photo-show-description">{photo.description}</h3>
+            {photoEditModal}
             <div className="comments">
               <form onSubmit={this.handleCommentSubmit}>
                 <textarea
@@ -209,23 +209,26 @@ class PhotoShow extends React.Component {
                 deleteComment={this.props.deleteComment}
               />
             </div>
-
-            <div className="parent-tag-wrapper">
+          </div>
+          <div className="show-bot-right">
+            <div className="show-date-and-btns">
               <h2 className="photo-date">
                 Posted on {new Date(photo.created_at).toDateString()}
               </h2>
               <div className="date-and-btns">{ownerButtons}</div>
-              <h3 className="tag-label">Tags</h3>
-              <form onSubmit={this.handleTagSubmit}>
-                <input
-                  value={this.state.tag.body}
-                  onChange={this.updateTag('body')}
-                  type="text"
-                  placeholder="Add a tag"
-                />
-              </form>
-              <TagIndexContainer photo={photo} />
             </div>
+            <hr />
+
+            <h3 className="tag-label">Tags</h3>
+            <form onSubmit={this.handleTagSubmit}>
+              <input
+                value={this.state.tag.body}
+                onChange={this.updateTag('body')}
+                type="text"
+                placeholder="Add a tag"
+              />
+            </form>
+            <TagIndexContainer photo={photo} />
           </div>
         </div>
       </div>
