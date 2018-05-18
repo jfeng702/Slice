@@ -194,6 +194,7 @@ class PhotoShow extends React.Component {
             <h1 className="photo-show-title">{photo.title}</h1>
             <h3 className="photo-show-description">{photo.description}</h3>
             {photoEditModal}
+            <hr />
             <div className="comments">
               <form onSubmit={this.handleCommentSubmit}>
                 <textarea
@@ -210,6 +211,7 @@ class PhotoShow extends React.Component {
               />
             </div>
           </div>
+          <div className="show-bot-mid" />
           <div className="show-bot-right">
             <div className="show-date-and-btns">
               <h2 className="photo-date">

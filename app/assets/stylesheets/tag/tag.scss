@@ -16,7 +16,7 @@
 }
 
 .show-bot-right {
-  flex: 50%;
+  flex: 45%;
   // float: left;
   // margin-left: 300px;
   // display: inline-block;
@@ -24,6 +24,16 @@
   flex-direction: column;
   // justify-content: flex-end;
   // align-items: flex-end;
+}
+
+.show-bot-mid {
+  flex: 10%;
+}
+
+.show-bot-left {
+  display: flex;
+  flex-direction: column;
+  flex: 45%;
 }
 
 .tag-label {
