@@ -2,10 +2,16 @@
   margin-right: 5px;
   // display: inline-block;
   // overflow: auto;
+
+}
+
+.tag-btn {
+  -webkit-transition: width 2s;
+ // width: 100px;
 }
 
 .tag-index-wrapper {
-  // width: 50%;
+  width: 50%;
   margin-top: 10px;
 }
 
