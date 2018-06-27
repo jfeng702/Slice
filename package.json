@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "postinstall": "webpack",
     "start": "webpack --watch"
   },
@@ -39,6 +39,7 @@
   },
   "devDependencies": {
     "jest": "^23.2.0",
-    "redux-logger": "^3.0.6"
+    "redux-logger": "^3.0.6",
+    "redux-mock-store": "^1.5.3"
   }
 }

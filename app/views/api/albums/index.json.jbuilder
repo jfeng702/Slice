@@ -1,9 +1,6 @@
 @albums.each do |album|
   json.set! album.id do
     json.partial! 'album', album: album
-      p '=========================='
-      p album
-      p album.photos
     if !album.photos.empty?
 
       json.cover_url album.photos[-1].img_url
