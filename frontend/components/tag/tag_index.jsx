@@ -12,42 +12,43 @@ class TagIndex extends React.Component {
   }
   componentDidMount() {
     this.props.fetchTaggings(this.props.photo.id);
-    debugger;
-    this.setState({
-      width: this.buttonRef.getBoundingClientRect().width
-    });
+    // this.setState({
+    //   width: this.buttonRef.getBoundingClientRect().width
+    // });
   }
 
   buttonHandler(e) {
-    const width = e.target.getBoundingClientRect().width;
-    setTimeout(() => (e.target.style.width = `${width * 2}px`), 200);
-    e.target.style.width = `${width}px`;
+    // setTimeout(() => (e.target.style.width = `${width * 2}px`), 200);
+    //
+    // const width = e.target.getBoundingClientRect().width;
+    // var elementTransition = e.target.style.transition;
+    // e.target.style.transition = '';
+    // requestAnimationFrame(function() {
+    //   e.target.style.width = width + 'px';
+    //   e.target.style.transition = elementTransition;
+    // });
+    // e.target.style.width = `${width}px`;
     // e.target.style.width = `${width * 2}px`;
-    console.log(e.target.style.width);
+    // console.log(e.target.style.width);
 
   }
 
   getWidth() {
     const buttons = document.querySelectorAll('.tag-btn');
     for (let btn of buttons) {
-      console.log(btn.getBoundingClientRect().width);
       btn.style.width = btn.getBoundingClientRect().width;
     }
-    console.log(buttons);
   }
 
   render() {
-    this.getWidth();
-    console.warn(this.props, 'props');
-    // Tags link to a photo index of photos with that tag.
+    // this.getWidth();
     return (
       <div className="tag-index-wrapper">
         {this.props.tags.map((tag, id) => (
-          <div>
+          <div key={id}>
             <Link className="tag-index-link" to={`/tags/${tag.body}/photos`}>
               <button
                 className="tag-btn"
-                style={{width: this.getWidth()}}
                 onMouseEnter={this.buttonHandler}
                 ref={this.buttonRef}
               >

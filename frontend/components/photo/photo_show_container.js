@@ -3,7 +3,6 @@ import { connect } from 'react-redux';
 import { fetchPhoto, deletePhoto, updatePhoto } from '../../actions/photo_actions';
 import { createComment, deleteComment } from '../../actions/comment_actions';
 import { createTagging } from '../../actions/tag_actions';
-import { withRouter } from 'react-router-dom';
 
 
 const mapStateToProps = (state, ownProps) => {

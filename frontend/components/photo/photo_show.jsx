@@ -107,7 +107,6 @@ class PhotoShow extends React.Component {
   }
 
   render() {
-    console.warn(this.state, 'photo show state');
     // <button className="photo-del-btn" onClick={()=>this.props.deletePhoto(photo.id).then(() => this.props.history.push('/albums'))}>
 
     // console.log(this.props.history);

@@ -8,8 +8,8 @@ class TagPhotoIndex extends React.Component {
   }
 
   render() {
-    console.warn(this.props, 'props tag photo');
-    console.warn(this.state, 'state');
+    // console.warn(this.props, 'props tag photo');
+    // console.warn(this.state, 'state');
     return (
       <div className="tag-photo-wrapper">
         <h2>Recently Tagged: {this.props.tagBody}</h2>

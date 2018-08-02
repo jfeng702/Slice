@@ -4,7 +4,6 @@ import { createTagging, fetchTaggings, deleteTagging } from '../../actions/tag_a
 
 
 const mapStateToProps = (state, ownProps) => {
-  console.warn(state, 'state');
   return {
     tags: photoTags(state, ownProps.photo)
   };
